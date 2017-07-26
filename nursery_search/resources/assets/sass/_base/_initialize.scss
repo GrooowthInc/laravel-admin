@@ -1,0 +1,62 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $color-bg-dark;
+  font-family: $ff-base;
+  position: relative;
+  &.is-fixed {
+    position: fixed;
+    width: 100%;
+  }
+}
+
+// テキストリンク
+a {
+  color: $color-font;
+  text-decoration: underline;
+  &:hover {
+    color: $color-font-link;
+    text-decoration: underline;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// テキスト
+h1,h2,h3,h4,h5,h6,dt {
+  font-weight: 600;
+}
+p {
+  @include fz(16);
+  line-height: $lh-base;
+  color: $color-font;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+em, i {
+  font-style: normal;
+}
+
+// プレースホルダー
+input:focus::placeholder {
+  color: transparent;
+}
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+#{$prj-ns}-root {
+  width: 100%;
+  font-size: $fz-base;
+  line-height: $lh-base;
+  color: $color-font;
+}
