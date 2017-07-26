@@ -1,0 +1,14 @@
+/*******************************
+         Theme Overrides
+*******************************/
+
+
+.ui.form.error .error.message:not(:empty) {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.ui.form input[type="time"] {
+  opacity: 0;
+  z-index: 1;
+}

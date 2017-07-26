@@ -1,0 +1,16 @@
+/*******************************
+         Theme Overrides
+*******************************/
+
+
+.ui.table[class*="center aligned"] tbody {
+  display: table-row-group;
+}
+
+.ui.table[class*="center aligned"] tr {
+  display: table-row;
+}
+
+.ui.table[class*="center aligned"] td {
+  display: table-cell;
+}

@@ -1,0 +1,10 @@
+/*******************************
+         Theme Overrides
+*******************************/
+
+
+h3.ui.header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,35 @@
+/*******************************
+         Theme Overrides
+*******************************/
+.ui.modal {
+  margin: auto!important;
+  height: 80vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+}
+
+.ui.modal > .header {
+  display: table;
+  vertical-align: middle;
+  padding: 0.75rem 1rem !important;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.ui.modal > .header:not(.ui) {
+  font-size: 16px;
+}
+
+.ui.modal > .close {
+  padding: 0;
+  margin: 0;
+  width: 1rem;
+  height: 1rem;
+  top: 5px!important;
+  right: 0!important;
+}

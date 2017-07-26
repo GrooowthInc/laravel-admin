@@ -1,0 +1,21 @@
+/*******************************
+         Theme Overrides
+*******************************/
+.input[type="text"] {
+  opacity: 1!important;
+}
+
+.ui[class*="right labeled"].icon.button {
+  padding-left: 2em!important;
+  padding-right: 2em!important;
+}
+
+.ui[class*="right labeled"].icon.button > .icon {
+  left: 0;
+  right: 0;
+  margin: auto!important;
+}
+
+.ui.labeled.icon.buttons > .button > .icon, .ui.labeled.icon.button > .icon {
+  background-color: transparent!important;
+}
