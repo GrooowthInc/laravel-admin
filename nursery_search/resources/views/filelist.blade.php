@@ -1,95 +1,114 @@
 <!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1.0,user-scalable=0" name="viewport">
+<title>ベネッセ 保育園検索 ファイルリスト</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="format-detection" content="telephone=no">
+<!--
+<link href="favicon.ico" rel="icon" type="image/ico" />
+<link href="assets/images/icon.png" rel="apple-touch-icon">
+-->
+<link href="assets/css/app.css" rel="stylesheet" />
+<style>
+body {
+  color: #636b6f;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  margin: 0;
+  padding: 20px;
+  background-color: #fff;
+}
+h1 {
+  margin: 0 0 20px;
+  padding: 0;
+}
+table {
+  width: 100%;
+  margin: 0 0 20px;
+  font-size: 16px;
+}
+table th,
+table td {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  font-weight: normal;
+  text-align: left;
+}
+table th {
+  border-bottom-width: 3px;
+  border-bottom-style: double;
+  background-color: #f0f0f0;
+}
+table tr:nth-child(even) td {
+  background-color: #f8f8f8;
+}
+</style>
+</head>
+<body>
 
-        <title>Laravel</title>
+<h1>保活 画面一覧</h1>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+<table>
+  <thead>
+    <tr>
+      <th style="width:6.0em;">画面ID</th>
+      <th style="width:30.0em;">画面名</th>
+      <th>URL</th>
+      <!-- <th style="width:6.0em;">フェーズ</th> -->
+      <th style="width:10.0em;">パターン</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>modules</td>
+      <td>モジュールリスト</td>
+      <td><a href="./modules" target="_blank">modules</a></td>
+      <!-- <td>4中</td> -->
+      <td>モジュール</td>
+    </tr>
+    <tr>
+      <td>NON0001</td>
+      <td>トップページ</td>
+      <td><a href="/" target="_blank">NON0001</a></td>
+      <!-- <td>4中</td> -->
+      <td>トップページ</td>
+    </tr>
+    <tr>
+      <td>NON0002</td>
+      <td>保育園検索</td>
+      <td><a href="./NON0002" target="_blank">NON0002</a></td>
+      <!-- <td>4中</td> -->
+      <td>市区町村選択</td>
+    </tr>
+    <tr>
+      <td>NON0003</td>
+      <td>保育園検索</td>
+      <td><a href="./NON0003" target="_blank">NON0003</a></td>
+      <!-- <td>4中</td> -->
+      <td>沿線選択</td>
+    </tr>
+    <tr>
+      <td>NON0004</td>
+      <td>保育園検索</td>
+      <td><a href="./NON0004" target="_blank">NON0004</a></td>
+      <!-- <td>4中</td> -->
+      <td>駅名選択</td>
+    </tr>
+    <tr>
+      <td>NON0005</td>
+      <td>保育園検索</td>
+      <td><a href="./NON0005" target="_blank">NON0005</a></td>
+      <!-- <td>4中</td> -->
+      <td>地図選択</td>
+    </tr>
+  </tbody>
+</table>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
+<script src="assets/js/app.js" defer></script>
+</body>
 </html>
+
