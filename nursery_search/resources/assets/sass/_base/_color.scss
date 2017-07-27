@@ -1,14 +1,40 @@
 // Site Colors
 
 // Theme Colors
-$color-theme-main: #fff;
-$color-theme-sub: #fff;
+$color-theme-main: #fadb37;
+$color-theme-sub: #bedc5a;
 
 // Font Colors
-$color-font: #fff;
+$color-font: #555;
+$color-font--light: #bfbfbf;
+$color-font--exlight: #fff;
+$color-font--dark: #333;
+$color-font--exdark: #000;
+$color-font--link: #5286da;
+$color-font--button: #84562f;
+$color-font--info: #ffa096;
+$color-font--notice: #ff0000;
 
 // Border Colors
-$color-border: #fff;
+$color-border: #dcdcdc;
+$color-border--light: #fff;
+$color-border--exlight: #fff;
+$color-border--dark: #333;
+$color-border--exdark: #000;
+$color-border-main: #84562f;
+$color-border-sub: #ffa096;
 
 // Button Colors
 $color-button: #fff;
+$color-button-disable: #fff;
+$color-button-main: #fadb37;
+$color-button-sub: #bedc5a;
+
+// Background Colors
+$color-bg: #f5f5f5;
+$color-bg--light: #fff;
+$color-bg--exlight: #fff;
+$color-bg--dark: #fff;
+$color-bg--exdark: #fff;
+$color-bg-main: #faf096;
+$color-bg-sub: #fcf7ca;
