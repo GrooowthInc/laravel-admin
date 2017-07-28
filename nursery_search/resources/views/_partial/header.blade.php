@@ -1,3 +1,3 @@
-<header>
+<header class="bns-header">
   header
-</header>
+</header><!-- /.bns-header -->
