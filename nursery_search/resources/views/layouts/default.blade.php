@@ -70,7 +70,7 @@
     <main>
       @yield('contents')
     </main>
-
+    @include('_partial.banner-area')
     @include('_partial.footer')
   </body>
 </html>
