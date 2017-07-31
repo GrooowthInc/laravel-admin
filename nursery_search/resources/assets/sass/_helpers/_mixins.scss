@@ -24,6 +24,13 @@
   }
 }
 
+// Image responsive
+@mixin image-responsive {
+  width: 100%;
+  height: auto;
+  line-height: 0;
+}
+
 // Shadow
 @mixin shadow-outer {
   // box-shadow: 0px 1px 5px 0px rgba(#999, 0.5);

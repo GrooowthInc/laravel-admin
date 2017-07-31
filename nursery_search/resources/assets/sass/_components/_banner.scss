@@ -1,0 +1,13 @@
+// Banner
+#{$prj-ns}-banner {
+  display: block;
+  margin: $siteGutter-lg 0;
+  width: 100%;
+  &__item {
+    display: block;
+    margin: $siteGutter 0;
+    img {
+      @include image-responsive;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// Text
+#{$prj-ns}-text {
+  &-link {
+    display: inline-block;
+    margin: 0 $siteGutter-sm 0 0;
+    color: $color-font--link;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &-info {
+    color: $color-font--info;
+  }
+  &-notice {
+    color: $color-font--notice;
+  }
+}

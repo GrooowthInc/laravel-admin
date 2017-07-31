@@ -1,0 +1,51 @@
+// Header
+#{$prj-ns}-header {
+  background-color: $color-bg--exlight;
+  box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: $z-dropdown;
+  &__lead {
+    padding: $siteGutter-sm;
+    text-align: center;
+    background-color: $color-bg;
+  }
+  &-logo {
+    @include txt-hidden;
+    display: block;
+    width: 135px;
+    height: 44px;
+    background: url('http://placeimg.com/135/44/any') 50% 50% no-repeat;
+    background-size: contain;
+  }
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $siteGutter-sm;
+  }
+  &-func {
+    display: flex;
+  }
+  &__btn {
+    display: inline-block;
+  }
+  &-icon {
+    &--look,
+    &--menu {
+      display: block;
+      padding: $siteGutter;
+      position: relative;
+      &::before {
+        content: '';
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background-color: $color-bg--light;
+      }
+    }
+  }
+}

@@ -3,9 +3,12 @@ html {
 }
 
 body {
-  background-color: $color-bg-dark;
+  @include fz($fz-base);
+  line-height: $lh-base;
+  background-color: $color-bg--exlight;
   font-family: $ff-base;
   position: relative;
+  color: $color-font;
   &.is-fixed {
     position: fixed;
     width: 100%;
@@ -14,10 +17,9 @@ body {
 
 // テキストリンク
 a {
-  color: $color-font;
+  color: $color-font--link;
   text-decoration: underline;
   &:hover {
-    color: $color-font-link;
     text-decoration: underline;
   }
   img {
@@ -26,12 +28,22 @@ a {
   }
 }
 
+// ボタン
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
 // テキスト
 h1,h2,h3,h4,h5,h6,dt {
   font-weight: 600;
 }
 p {
-  @include fz(16);
+  @include fz($fz-base);
   line-height: $lh-base;
   color: $color-font;
   &:first-child {
@@ -54,9 +66,9 @@ textarea:focus::placeholder {
   color: transparent;
 }
 
-#{$prj-ns}-root {
-  width: 100%;
-  font-size: $fz-base;
-  line-height: $lh-base;
-  color: $color-font;
-}
+// #{$prj-ns}-root {
+//   width: 100%;
+//   font-size: $fz-base;
+//   line-height: $lh-base;
+//   color: $color-font;
+// }

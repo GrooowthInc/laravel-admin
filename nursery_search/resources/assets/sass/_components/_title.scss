@@ -1,0 +1,34 @@
+// Title
+#{$prj-ns}-title {
+  &-level1 {
+    @include fz($fz-xl);
+    margin-bottom: $siteGutter-lg;
+  }
+  &-level2 {
+    @include fz($fz-xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: $siteGutter;
+    margin-bottom: $siteGutter-lg;
+    border-bottom: 2px solid $color-border-main;
+  }
+  &-level3 {
+    @include fz(15);
+    margin-bottom: $siteGutter;
+  }
+  &-text {
+    display: inline-block;
+  }
+  &-label {
+    @include fz($fz-sm);
+    display: inline-block;
+    vertical-align: middle;
+    padding: $siteGutter-sm $siteGutter-lg;
+    text-align: center;
+    text-decoration: none;
+    color: $color-font--button;
+    background-color: $color-bg-active;
+    border-radius: 20px;
+  }
+}

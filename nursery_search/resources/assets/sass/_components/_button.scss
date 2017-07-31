@@ -1,0 +1,29 @@
+// Button
+#{$prj-ns}-btn {
+  @include fz(16);
+  display: inline-block;
+  padding: $siteGutter-lg $siteGutter-sm;
+  width: 100%;
+  border-radius: $rds-base;
+  text-align: center;
+  text-decoration: none;
+  color: $color-font;
+  background-color: $color-button;
+  &[disabled],
+  &.is-disabled {
+    color: $color-font--dark;
+    background-color: $color-button-disable;
+    pointer-events: none;
+    outline: none;
+  }
+  &--primary {
+    @extend #{$prj-ns}-btn;
+    color: $color-font--button;
+    background-color: $color-theme-main;
+  }
+  &--secondary {
+    @extend #{$prj-ns}-btn;
+    color: $color-font--button;
+    background-color: $color-button-secondary;
+  }
+}

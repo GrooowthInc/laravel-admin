@@ -1,0 +1,16 @@
+// Footer
+#{$prj-ns}-footer {
+  padding: $siteGutter;
+  margin: 0 auto;
+  width: 100%;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  background-color: $color-bg--light;
+  &-copyright {
+    margin: $siteGutter-sm 0 0;
+    color: $color-font--dark;
+    font-size: $fz-xs; 
+  }
+}

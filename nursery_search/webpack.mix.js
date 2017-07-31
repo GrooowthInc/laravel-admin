@@ -31,25 +31,25 @@ const path = require('path')
 mix.setResourceRoot('/hokatsu/');
 
 mix.webpackConfig({
-    resolve: {
-        modules: [
-            path.resolve(__dirname, 'resources/assets/semantic/dist'),
-            path.resolve(__dirname, 'node_modules')
-        ]
-    }
+  resolve: {
+    modules: [
+      path.resolve(__dirname, 'resources/assets/semantic/dist'),
+      path.resolve(__dirname, 'node_modules')
+    ]
+  }
 })
 
 mix.js('resources/assets/js/app.js', 'public/js')
-    .extract(['vue'])
-    .sass('resources/assets/sass/app.scss', 'public/css')
+  .extract(['vue'])
+  .sass('resources/assets/sass/app.scss', 'public/css')
 
 mix.copy('resources/assets/semantic/dist/themes/', 'public/themes/', false)
 mix.copy('node_modules/font-awesome/fonts', 'public/fonts/fontawesome', false)
 mix.copy('resources/assets/images', 'public/images', false)
 if (mix.config.inProduction) {
-    // mix.version();
+  // mix.version();
 }
 
 if (mix.config.inDevelopment) {
-    mix.sourceMaps()
+  mix.sourceMaps()
 }
