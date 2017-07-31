@@ -1,0 +1,52 @@
+// Block
+#{$prj-ns}-block {
+  // 最近見た保育園一覧
+  &-nursery {
+    padding: $siteGutter;
+    border-bottom: 1px solid $color-border;
+    &__heading {
+      display: flex;
+      align-items: center;
+      padding-bottom: $siteGutter;
+      margin-bottom: $siteGutter;
+      border-bottom: 1px dotted $color-border-main;
+    }
+    &__icon {
+      display: block;
+      margin-right: $siteGutter-md;
+      width: 100%;
+      max-width: 44px;
+      height: auto;
+      img {
+        @include image-responsive;
+        border-radius: $rds-base;
+      }
+    }
+    &__school {
+      @include fz(16);
+      display: block;
+      color: $color-font;
+      text-decoration: none;
+    }
+    &__body {
+      display: flex;
+      align-items: flex-start;
+    }
+    &__image {
+      display: block;
+      margin-right: $siteGutter-md;
+      width: 100%;
+      max-width: 80px;
+      height: auto;
+      img {
+        @include image-responsive;
+      }
+    }
+    &__status {
+      @include fz($fz-md);
+      display: block;
+      color: $color-font--dark;
+      text-decoration: none;
+    }
+  }
+}

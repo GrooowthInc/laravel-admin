@@ -39,7 +39,7 @@
           <a href="#" class="bns-btn is-disabled">disabled</a>
         </div>
       </div>
-    </div>
+    </div><!-- /.ui grid -->
 
     <div class="bns-layout">
       <button class="bns-btn--primary">primary large</button>
@@ -60,6 +60,52 @@
     <p class="bns-text-info">お知らせ的な強調したい文字</p>
     <p class="bns-text-notice">バリエラとかエラー時に強調したい文字</p>
     <a href="#" class="bns-text-link">テキストリンク</a>
+
+    <h2 class="bns-title-level2"><span class="bns-title-text">最近見た保育園</span> <a href="#" class="bns-title-label">あとで見る一覧</a></h2>
+    <div class="bns-layout--negative">
+      <div class="bns-block-nursery">
+        <div class="bns-block-nursery__heading">
+          <a href="#" class="bns-block-nursery__icon">
+            <img src="https://dummyimage.com/20x20/000/808080.png&text=dummy" alt="" />
+          </a>
+          <a href="#" class="bns-block-nursery__school">あげは幼稚園</a>
+        </div>
+        <div class="bns-block-nursery__body">
+          <a href="#" class="bns-block-nursery__image">
+            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
+          </a>
+          <a href="#" class="bns-block-nursery__status">保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可</a>
+        </div>
+      </div>
+      <div class="bns-block-nursery">
+        <div class="bns-block-nursery__heading">
+          <a href="#" class="bns-block-nursery__icon">
+            <img src="https://dummyimage.com/20x20/000/808080.png&text=dummy" alt="" />
+          </a>
+          <a href="#" class="bns-block-nursery__school">わかば幼稚園</a>
+        </div>
+        <div class="bns-block-nursery__body">
+          <a href="#" class="bns-block-nursery__image">
+            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
+          </a>
+          <a href="#" class="bns-block-nursery__status">保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可</a>
+        </div>
+      </div>
+      <div class="bns-block-nursery">
+        <div class="bns-block-nursery__heading">
+          <a href="#" class="bns-block-nursery__icon">
+            <img src="https://dummyimage.com/20x20/000/808080.png&text=dummy" alt="" />
+          </a>
+          <a href="#" class="bns-block-nursery__school">あああ幼稚園</a>
+        </div>
+        <div class="bns-block-nursery__body">
+          <a href="#" class="bns-block-nursery__image">
+            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
+          </a>
+          <a href="#" class="bns-block-nursery__status">保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可</a>
+        </div>
+      </div>
+    </div><!-- bns-layout--negative -->
   </section>
 </article>
 @stop
