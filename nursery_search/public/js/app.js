@@ -10965,7 +10965,17 @@ var app = new Vue({
 
 
 
-// Slick
+// NON0001 園生活におすすめ広告カルーセル
+new __WEBPACK_IMPORTED_MODULE_0__components_Slick__["a" /* Carousel */]({
+  target: '[data-bns-slick="target-recommend"]',
+  setting: {
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: true
+  }
+});
+
+// 施設詳細カルーセル
 new __WEBPACK_IMPORTED_MODULE_0__components_Slick__["a" /* Carousel */]({
   target: '[data-bns-slick="target"]',
   setting: {

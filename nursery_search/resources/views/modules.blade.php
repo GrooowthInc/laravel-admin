@@ -152,7 +152,7 @@
     <h2 class="bns-title-level2">広告カルーセル</h2>
     <div class="bns-block-ad">
       <div class="bns-block-ad__heading">園生活におすすめ</div>
-      <ul class="bns-block-ad-list">
+      <ul class="bns-block-ad-list" data-bns-slick="target-recommend">
         <li class="bns-block-ad-list__item">
           <a href="#" class="bns-block-ad-list__body">
             <div class="bns-block-ad-list__image">

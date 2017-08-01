@@ -96,7 +96,10 @@
       background-color: $color-bg--exlight;
     }
     &-list {
+      width: 100%;
+      overflow: hidden;
       &__item {
+        display: inline-block;
       }
       &__body {
         text-decoration: none;

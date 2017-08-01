@@ -23,7 +23,17 @@ const app = new Vue({
 
 import { Slick, Carousel } from './components/Slick';
 
-// Slick
+// NON0001 園生活におすすめ広告カルーセル
+new Carousel({
+  target: '[data-bns-slick="target-recommend"]',
+  setting: {
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: true
+  }
+});
+
+// 施設詳細カルーセル
 new Carousel({
   target: '[data-bns-slick="target"]',
   setting: {
