@@ -5,17 +5,16 @@
     padding: $siteGutter;
     border-bottom: 1px solid $color-border;
     &__heading {
-      display: flex;
-      align-items: center;
+      display: table;
+      width: 100%;
       padding-bottom: $siteGutter;
       margin-bottom: $siteGutter;
       border-bottom: 1px dotted $color-border-main;
     }
     &__icon {
-      display: block;
-      margin-right: $siteGutter-md;
-      width: 100%;
-      max-width: 44px;
+      display: table-cell;
+      vertical-align: middle;
+      width: 44px;
       height: auto;
       img {
         @include image-responsive;
@@ -24,7 +23,9 @@
     }
     &__school {
       @include fz(16);
-      display: block;
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: $siteGutter-md;
       color: $color-font;
       text-decoration: none;
     }
@@ -43,10 +44,71 @@
       }
     }
     &__status {
-      @include fz($fz-md);
+      @include fz(16);
       display: block;
       color: $color-font--dark;
       text-decoration: none;
+    }
+  }
+  // おすすめ記事
+  &-recommend {
+    &__item {
+      display: table;
+      width: 100%;
+      padding: $siteGutter;
+      text-decoration: none;
+      border-bottom: 1px solid $color-border;
+    }
+    &__image {
+      display: table-cell;
+      vertical-align: top;
+      width: 80px;
+      height: 80px;
+      img {
+        @include image-responsive;
+      }
+    }
+    &__body {
+      display: table-cell;
+      vertical-align: top;
+      padding: 0 $siteGutter;
+    }
+    &__date {
+      @include fz($fz-md);
+    }
+    &__title {
+      @include fz(16);
+    }
+  }
+  // 広告カルーセル
+  &-ad {
+    padding: $siteGutter;
+    border: 1px solid $color-border;
+    background-color: $color-bg--light;
+    &__heading {
+      @include fz($fz-lg);
+      padding: $siteGutter;
+      margin-bottom: $siteGutter;
+      color: $color-font;
+      text-align: center;
+      border-bottom: 2px solid $color-border-sub;
+      background-color: $color-bg--exlight;
+    }
+    &-list {
+      &__item {
+      }
+      &__body {
+        text-decoration: none;
+      }
+      &__image {
+        img {
+          @include image-responsive;
+        }
+      }
+      &__text {
+        margin-top: $siteGutter;
+        color: $color-font--dark;
+      }
     }
   }
 }

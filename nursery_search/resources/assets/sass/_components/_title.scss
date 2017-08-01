@@ -2,7 +2,7 @@
 #{$prj-ns}-title {
   &-level1 {
     @include fz($fz-xl);
-    margin-bottom: $siteGutter-lg;
+    margin: $siteGutter-lg 0;
   }
   &-level2 {
     @include fz($fz-xl);
@@ -10,12 +10,12 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: $siteGutter;
-    margin-bottom: $siteGutter-lg;
+    margin: $siteGutter-lg 0;
     border-bottom: 2px solid $color-border-main;
   }
   &-level3 {
     @include fz(15);
-    margin-bottom: $siteGutter;
+    margin: $siteGutter 0;
   }
   &-text {
     display: inline-block;
