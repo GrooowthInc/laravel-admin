@@ -3,10 +3,12 @@
   $title = 'NON0001';
   $description = 'ディスクリプションが入りますよ';
   $keywords = 'キーワードが入りますよ';
+  $catchtext = '保育園探しから申し込みまでサポート';
 ?>
 @section('title', $title)
 @section('description', $description)
 @section('keywords', $keywords)
+@section('catchtext', $catchtext)
 
 @section('contents')
 <article class="bns-article">

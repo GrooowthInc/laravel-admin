@@ -3,10 +3,12 @@
   $title = 'modules';
   $description = '保活ナビのモジュールページです';
   $keywords = '保活ナビ,モジュールページ';
+  $catchtext = 'キャッチテキスト、ページ毎に固有になる';
 ?>
 @section('title', $title)
 @section('description', $description)
 @section('keywords', $keywords)
+@section('catchtext', $catchtext)
 
 @section('contents')
 <article class="bns-article">
