@@ -26,6 +26,7 @@
     "font-awesome": "^4.7.0",
     "iframe-resizer": "^3.5.9",
     "moment": "^2.17.1",
-    "semantic-ui": "^2.2.7"
+    "semantic-ui": "^2.2.7",
+    "slick-carousel": "^1.6.0"
   }
 }

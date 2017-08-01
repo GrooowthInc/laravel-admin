@@ -1,4 +1,12 @@
 @extends('layouts.default')
+<?php
+  $title = 'modules';
+  $description = '保活ナビのモジュールページです';
+  $keywords = '保活ナビ,モジュールページ';
+?>
+@section('title', $title)
+@section('description', $description)
+@section('keywords', $keywords)
 
 @section('contents')
 <article class="bns-article">
@@ -59,6 +67,7 @@
     <p class="bns-text">吾輩は猫である。名前はまだない。</p>
     <p class="bns-text-info">お知らせ的な強調したい文字</p>
     <p class="bns-text-notice">バリエラとかエラー時に強調したい文字</p>
+    <p class="bns-text-bold">fw:bのテキスト</p>
     <a href="#" class="bns-text-link">テキストリンク</a>
 
     <h2 class="bns-title-level2"><span class="bns-title-text">最近見た保育園</span> <a href="#" class="bns-title-label">あとで見る一覧</a></h2>
@@ -175,6 +184,24 @@
             </div>
             <p class="bns-block-ad-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </a>
+        </li>
+      </ul><!-- /.bns-carousel -->
+    </div><!-- /.bns-block-ad -->
+
+    <h2 class="bns-title-level2">施設詳細カルーセル</h2>
+    <div class="bns-layout--negative">
+      <ul class="bns-carousel" data-bns-slick="target">
+        <li class="bns-carousel__item">
+          <img src="https://dummyimage.com/640x400/000/808080.png&text=dummy1" alt="" />
+        </li>
+        <li class="bns-carousel__item">
+          <img src="https://dummyimage.com/640x400/000/808080.png&text=dummy2" alt="" />
+        </li>
+        <li class="bns-carousel__item">
+          <img src="https://dummyimage.com/640x400/000/808080.png&text=dummy3" alt="" />
+        </li>
+        <li class="bns-carousel__item">
+          <img src="https://dummyimage.com/640x400/000/808080.png&text=dummy4" alt="" />
         </li>
       </ul><!-- /.bns-carousel -->
     </div><!-- /.bns-block-ad -->

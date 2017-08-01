@@ -18,5 +18,16 @@ window.Vue = require('vue');
 Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
-    el: '#app'
+  el: '#dashboard'
+});
+
+import { Slick, Carousel } from './components/Slick';
+
+// Slick
+new Carousel({
+  target: '[data-bns-slick="target"]',
+  setting: {
+    dots: true,
+    arrows: true
+  }
 });

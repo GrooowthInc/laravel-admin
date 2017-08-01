@@ -1,4 +1,12 @@
 @extends('layouts.default')
+<?php
+  $title = 'NON0001';
+  $description = 'ディスクリプションが入りますよ';
+  $keywords = 'キーワードが入りますよ';
+?>
+@section('title', $title)
+@section('description', $description)
+@section('keywords', $keywords)
 
 @section('contents')
 <article class="bns-article">

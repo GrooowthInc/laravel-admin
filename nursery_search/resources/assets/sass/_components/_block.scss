@@ -83,6 +83,7 @@
   // 広告カルーセル
   &-ad {
     padding: $siteGutter;
+    margin: $siteGutter-lg*2 0;
     border: 1px solid $color-border;
     background-color: $color-bg--light;
     &__heading {

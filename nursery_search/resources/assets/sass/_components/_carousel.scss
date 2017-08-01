@@ -1,3 +1,13 @@
 // Carousel
 #{$prj-ns}-carousel {
+  @include flatten;
+  width: 100%;
+  overflow: hidden;
+  &__item {
+    display: inline-block;
+    width: 100%;
+    img {
+      @include image-responsive;
+    }
+  }
 }
