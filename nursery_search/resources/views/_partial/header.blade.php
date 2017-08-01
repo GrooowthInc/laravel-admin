@@ -1,6 +1,6 @@
-<header class="bns-header">
+<header class="bns-header" data-bns-nav="content">
   <div class="bns-header__lead">@yield('catchtext')</div>
-  <nav class="bns-header-nav">
+  <nav class="bns-header-nav" data-bns-nav="target">
     <h1 class="bns-header-logo">保活ナビ</h1>
     <div class="bns-header-func">
       <div class="bns-header__btn">

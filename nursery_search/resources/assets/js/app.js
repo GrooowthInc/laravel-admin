@@ -21,23 +21,29 @@ const app = new Vue({
   el: '#dashboard'
 });
 
+import Nav from './components/Nav';
 import { Slick, Carousel } from './components/Slick';
 
-// NON0001 園生活におすすめ広告カルーセル
-new Carousel({
-  target: '[data-bns-slick="target-recommend"]',
-  setting: {
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    arrows: true
-  }
-});
+$(function(){
+  // NON0001 園生活におすすめ広告カルーセル
+  new Carousel({
+    target: '[data-bns-slick="target-recommend"]',
+    setting: {
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows: true
+    }
+  });
 
-// 施設詳細カルーセル
-new Carousel({
-  target: '[data-bns-slick="target"]',
-  setting: {
-    dots: true,
-    arrows: true
-  }
+  // 施設詳細カルーセル
+  new Carousel({
+    target: '[data-bns-slick="target"]',
+    setting: {
+      dots: true,
+      arrows: true
+    }
+  });
+
+  new Nav();
+
 });

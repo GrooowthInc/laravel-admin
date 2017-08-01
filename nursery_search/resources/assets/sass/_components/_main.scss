@@ -4,5 +4,8 @@
   padding: $siteGutter;
   margin: 0 auto;
   width: 100%;
-  max-width: $site-width; 
+  max-width: $site-width;
+  &.is-fixed {
+    margin: $siteGutter-xl*2 auto 0;
+  }
 }

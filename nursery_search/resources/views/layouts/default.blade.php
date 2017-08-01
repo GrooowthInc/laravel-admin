@@ -22,7 +22,7 @@
   <body>
     @include('_partial.header')
 
-    <main id="dashboard" class="bns-main">
+    <main id="dashboard" class="bns-main" data-bns-nav="main">
       @yield('contents')
       @include('_partial.banner-area')
     </main>

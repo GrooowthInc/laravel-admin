@@ -10938,8 +10938,9 @@ module.exports = function bind(fn, thisArg) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Slick__ = __webpack_require__(33);
+/* WEBPACK VAR INJECTION */(function($) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Nav__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Slick__ = __webpack_require__(34);
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -10957,7 +10958,7 @@ window.Vue = __webpack_require__(4);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', __webpack_require__(37));
+Vue.component('example', __webpack_require__(38));
 
 var app = new Vue({
   el: '#dashboard'
@@ -10965,24 +10966,30 @@ var app = new Vue({
 
 
 
-// NON0001 園生活におすすめ広告カルーセル
-new __WEBPACK_IMPORTED_MODULE_0__components_Slick__["a" /* Carousel */]({
-  target: '[data-bns-slick="target-recommend"]',
-  setting: {
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    arrows: true
-  }
-});
 
-// 施設詳細カルーセル
-new __WEBPACK_IMPORTED_MODULE_0__components_Slick__["a" /* Carousel */]({
-  target: '[data-bns-slick="target"]',
-  setting: {
-    dots: true,
-    arrows: true
-  }
+$(function () {
+  // NON0001 園生活におすすめ広告カルーセル
+  new __WEBPACK_IMPORTED_MODULE_1__components_Slick__["a" /* Carousel */]({
+    target: '[data-bns-slick="target-recommend"]',
+    setting: {
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows: true
+    }
+  });
+
+  // 施設詳細カルーセル
+  new __WEBPACK_IMPORTED_MODULE_1__components_Slick__["a" /* Carousel */]({
+    target: '[data-bns-slick="target"]',
+    setting: {
+      dots: true,
+      arrows: true
+    }
+  });
+
+  new __WEBPACK_IMPORTED_MODULE_0__components_Nav__["a" /* default */]();
 });
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
 /* 12 */
@@ -11865,7 +11872,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(35);
+window._ = __webpack_require__(36);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -11876,7 +11883,7 @@ window._ = __webpack_require__(35);
 try {
   window.$ = window.jQuery = __webpack_require__(1);
 
-  __webpack_require__(34);
+  __webpack_require__(35);
 } catch (e) {}
 
 /**
@@ -11923,7 +11930,84 @@ if (token) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slick_carousel__ = __webpack_require__(36);
+/* WEBPACK VAR INJECTION */(function($) {var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/**
+ * Nav
+ * @export
+ * @class Nav
+ */
+
+var Nav = function () {
+
+  /**
+   * Creates an instance of Nav.
+   * @constructor
+   */
+  function Nav(opts) {
+    _classCallCheck(this, Nav);
+
+    var defaults = {
+      target: '[data-bns-nav="target"]',
+      content: '[data-bns-nav="content"]',
+      main: '[data-bns-nav="main"]',
+      fixed: 'is-fixed',
+      event: '.Nav'
+    };
+    this.conf = Object.assign({}, defaults, opts);
+    this._init();
+  }
+
+  /**
+   * _init
+   * @private
+   */
+
+
+  _createClass(Nav, [{
+    key: '_init',
+    value: function _init() {
+      var _conf = this.conf,
+          target = _conf.target,
+          content = _conf.content,
+          main = _conf.main,
+          fixed = _conf.fixed,
+          event = _conf.event;
+
+      var self = this;
+
+      if ($(target).length !== 0 && window.innerWidth) {
+        var navHeight = $(target).outerHeight(),
+            navPos = $(target).offset().top;
+
+        $(window).on('load scroll', function () {
+          var value = $(this).scrollTop();
+          if (value > navPos) {
+            $(target).addClass(fixed);
+            $(main).addClass(fixed);
+          } else {
+            $(target).removeClass(fixed);
+            $(main).removeClass(fixed);
+          }
+        });
+      }
+    }
+  }]);
+
+  return Nav;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (Nav);
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
+
+/***/ }),
+/* 34 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slick_carousel__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slick_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_slick_carousel__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Carousel; });
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -12058,7 +12142,7 @@ var Carousel = function (_Slick) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/*!
@@ -14442,7 +14526,7 @@ if (typeof jQuery === 'undefined') {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -31531,10 +31615,10 @@ if (typeof jQuery === 'undefined') {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10), __webpack_require__(40)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10), __webpack_require__(41)(module)))
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -34435,14 +34519,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(38)(
+var Component = __webpack_require__(39)(
   /* script */
   __webpack_require__(31),
   /* template */
-  __webpack_require__(39),
+  __webpack_require__(40),
   /* scopeId */
   null,
   /* cssModules */
@@ -34469,7 +34553,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 module.exports = function normalizeComponent (
@@ -34522,7 +34606,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -34551,7 +34635,7 @@ if (false) {
 }
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -34579,7 +34663,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
@@ -34587,4 +34671,4 @@ module.exports = __webpack_require__(12);
 
 
 /***/ })
-],[41]);
+],[42]);
