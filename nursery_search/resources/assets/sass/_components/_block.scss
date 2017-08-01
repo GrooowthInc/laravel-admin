@@ -101,6 +101,7 @@
       &__item {
         display: inline-block;
         vertical-align: middle;
+        padding: 0 $siteGutter-sm;
       }
       &__body {
         text-decoration: none;

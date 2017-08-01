@@ -171,6 +171,7 @@
       </div>
     </div><!-- /.bns-layout--negative -->
 
+    <!-- 作ったらパーシャル化する -->
     <h2 class="bns-title-level2">広告カルーセル</h2>
     <div class="bns-block-ad">
       <div class="bns-block-ad__heading">園生活におすすめ</div>

@@ -1,0 +1,48 @@
+// Breadcrumb
+#{$prj-ns}-breadcrumb {
+  margin: $siteGutter-lg 0;
+  height: 40px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  border: 1px dotted $color-border;
+  border-right-width: 0;
+  border-left-width: 0;
+  &-list {
+    @include flatten;
+    display: table;
+    width: 100%;
+    @include fz($fz-md);
+    &__item {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 $siteGutter-lg 0 0;
+      white-space: nowrap;
+      position: relative;
+      &::after {
+        content: '';
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 15px;
+        width: 8px;
+        height: 8px;
+        border-top: 1px solid $color-border--dark;
+        border-right: 1px solid $color-border--dark;
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        &::after {
+          content: none;
+        }
+      }
+    }
+    &__link {
+      display: inline-block;
+      width: 100%;
+      padding: $siteGutter 0;
+      color: $color-font--button;
+      text-decoration: none;
+    }
+  }
+}

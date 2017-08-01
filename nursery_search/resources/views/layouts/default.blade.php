@@ -25,7 +25,12 @@
     <main id="dashboard" class="bns-main" data-bns-nav="main">
       @yield('contents')
       @include('_partial.banner-area')
+
+      @if(!Request::is('/'))
+        @include('_partial.breadcrumb')
+      @endif
     </main>
+
     @include('_partial.footer')
 
     <script src="{{ mix('js/manifest.js')}}"></script>
