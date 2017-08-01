@@ -206,6 +206,105 @@
       </ul><!-- /.bns-carousel -->
     </div><!-- /.bns-block-ad -->
 
+    <h2 class="bns-title-level2">テーブル</h2>
+    <table class="bns-table">
+      <tbody>
+        <tr>
+          <td class="bns-table__heading" colspan="4">見出し付きテーブル</td>
+        </tr>
+        <tr>
+          <td>項目1</td>
+          <td>項目2</td>
+          <td>項目3</td>
+          <td>項目4</td>
+        </tr>
+        <tr>
+          <td>項目5</td>
+          <td>項目6</td>
+          <td>項目7</td>
+          <td>項目8</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="bns-table">
+      <tbody>
+        <tr>
+          <td class="bns-table__heading" colspan="2">見出し付きテーブル</td>
+        </tr>
+        <tr>
+          <td class="bns-table-cell--sm">01月</td>
+          <td>項目1</td>
+        </tr>
+        <tr>
+          <td class="bns-table-cell--sm">02月</td>
+          <td>項目2</td>
+        </tr>
+        <tr>
+          <td class="bns-table-cell--sm">03月</td>
+          <td>項目3</td>
+        </tr>
+        <tr>
+          <td class="bns-table-cell--sm">04月</td>
+          <td>項目4</td>
+        </tr>
+        <tr>
+          <td class="bns-table-cell--sm">05月</td>
+          <td>項目5</td>
+        </tr>
+        <tr>
+          <td class="bns-table-cell--sm">06月</td>
+          <td>項目6</td>
+        </tr>
+        <tr>
+          <td class="bns-table-cell--sm">07月</td>
+          <td>項目7</td>
+        </tr>
+        <tr>
+          <td class="bns-table-cell--sm">08月</td>
+          <td>項目8</td>
+        </tr>
+        <tr>
+          <td class="bns-table-cell--sm">09月</td>
+          <td>項目9</td>
+        </tr>
+        <tr>
+          <td class="bns-table-cell--sm">10月</td>
+          <td>項目10</td>
+        </tr>
+        <tr>
+          <td class="bns-table-cell--sm">11月</td>
+          <td>項目11</td>
+        </tr>
+        <tr>
+          <td class="bns-table-cell--sm">12月</td>
+          <td>項目12</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="bns-table">
+      <tbody>
+        <tr>
+          <th>タイトル1</th>
+          <th>タイトル2</th>
+          <th>タイトル3</th>
+          <th>タイトル4</th>
+        </tr>
+        <tr>
+          <td>項目1</td>
+          <td>項目2</td>
+          <td>項目3</td>
+          <td>項目4</td>
+        </tr>
+        <tr>
+          <td>項目5</td>
+          <td>項目6</td>
+          <td>項目7</td>
+          <td>項目8</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 </article>
 @stop

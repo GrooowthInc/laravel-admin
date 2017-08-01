@@ -1,0 +1,42 @@
+// Table
+#{$prj-ns}-table {
+  @include fz(16);
+  display: table;
+  margin: $siteGutter 0;
+  width: 100%;
+  color: $color-font--dark;
+  border-collapse: collapse;
+  &__heading {
+    background-color: $color-bg--dark !important;
+  }
+  tr {
+    border: 1px solid $color-border;
+  }
+  th {
+    padding: $siteGutter;
+    font-weight: normal;
+    text-align: left;
+    border-left: 1px solid $color-border;
+    &:nth-child(odd) {
+      background-color: $color-bg--light;
+    }
+    &:first-child {
+      border-left-width: 0;
+    }
+  }
+  td {
+    padding: $siteGutter;
+    border-left: 1px solid $color-border;
+    &:nth-child(odd) {
+      background-color: $color-bg--light;
+    }
+    &:first-child {
+      border-left-width: 0;
+    }
+  }
+  &-cell {
+    &--sm {
+      width: 15%;
+    }
+  }
+}
