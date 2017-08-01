@@ -21,8 +21,10 @@ const app = new Vue({
   el: '#dashboard'
 });
 
+import HeightLine from './components/HeightLine';
 import Nav from './components/Nav';
 import { Slick, Carousel } from './components/Slick';
+import TextOverflow from './components/TextOverflow';
 
 $(function(){
   // NON0001 園生活におすすめ広告カルーセル
@@ -44,6 +46,11 @@ $(function(){
     }
   });
 
+  new HeightLine({
+    target: '[data-bns-height="carousel"]'
+  });
+
   new Nav();
+  new TextOverflow();
 
 });
