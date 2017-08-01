@@ -1,0 +1,17 @@
+// Label
+#{$prj-ns}-label {
+  display: inline-block;
+  padding: $siteGutter-md /2;
+  text-align: center;
+  color: $color-font--button;
+  border: 1px solid $color-border-main;
+  position: relative;
+  .column &{
+    width: 100%;
+  }
+  &--disabled {
+    @extend #{$prj-ns}-label;
+    color: $color-font--light;
+    border: 1px solid $color-border--light;
+  }
+}

@@ -66,6 +66,24 @@
       <button class="bns-btn" disabled>disabled large</button>
     </div>
 
+    <h2 class="bns-title-level2">ラベル</h2>
+    <div class="ui grid">
+      <div class="doubling four column row">
+        <div class="column">
+          <i class="bns-label">認可</i>
+        </div>
+        <div class="column">
+          <i class="bns-label--disabled">認可</i>
+        </div>
+        <div class="column">
+          <i class="bns-label">hoge</i>
+        </div>
+        <div class="column">
+          <i class="bns-label--disabled">hogehoge</i>
+        </div>
+      </div>
+    </div><!-- /.ui grid -->
+
     <h2 class="bns-title-level2">テキスト</h2>
     <p>人間は考える葦である。</p>
     <p class="bns-text">吾輩は猫である。名前はまだない。</p>
