@@ -115,4 +115,31 @@
       }
     }
   }
+  // 施設詳細ページ大分類カテゴリ
+  &-category {
+    margin: $siteGutter-lg 0;
+    &__item {
+      padding: $siteGutter-lg 0;
+      border-top: 1px dotted $color-border-main;
+      &:last-child {
+        border-bottom: 1px dotted $color-border-main;
+      }
+    }
+    &__body {
+      margin-bottom: $siteGutter-lg;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-detail {
+    margin: $siteGutter 0 $siteGutter-lg;
+    &__item {
+      padding: $siteGutter 0;
+      border-top: 1px dotted $color-border;
+      &:last-child {
+        border-bottom: 1px dotted $color-border;
+      }
+    }
+  }
 }

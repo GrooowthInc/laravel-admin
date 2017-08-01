@@ -17,4 +17,14 @@
   &-bold {
     font-weight: bold;
   }
+  &-detail {
+    @include fz(16);
+    font-weight: bold;
+    color: $color-font--dark;
+    &--link {
+      @extend #{$prj-ns}-text-detail;
+      color: $color-font--link;
+      text-decoration: none;
+    }
+  }
 }

@@ -14,9 +14,17 @@
     border-bottom: 2px solid $color-border-main;
   }
   &-level3 {
-    @include fz(15);
+    @include fz(16);
     margin: $siteGutter 0;
+    &--emphasis {
+      @extend #{$prj-ns}-title-level3;
+      color: $color-font--button;
+    }
   }
+  &-level4 {
+    @include fz($fz-md);
+    margin: $siteGutter 0;
+  }  
   &-text {
     display: inline-block;
   }

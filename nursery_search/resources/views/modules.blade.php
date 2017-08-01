@@ -20,6 +20,8 @@
     <h2 class="bns-title-level2">タイトルレベル2</h2>
     <h2 class="bns-title-level2"><span class="bns-title-text">タイトルレベル2</span> <a href="#" class="bns-title-label">ラベル有り</a></h2>
     <h3 class="bns-title-level3">タイトルレベル3</h3>
+    <h3 class="bns-title-level3--emphasis">タイトルレベル3 色付き</h3>
+    <h4 class="bns-title-level4">タイトルレベル4</h4>
 
     <h2 class="bns-title-level2">ボタン</h2>
     <div class="ui grid">
@@ -227,8 +229,7 @@
           <td>項目8</td>
         </tr>
       </tbody>
-    </table>
-
+    </table><!-- /.bns-table -->
     <table class="bns-table">
       <tbody>
         <tr>
@@ -283,8 +284,7 @@
           <td>項目12</td>
         </tr>
       </tbody>
-    </table>
-
+    </table><!-- /.bns-table -->
     <table class="bns-table">
       <tbody>
         <tr>
@@ -306,7 +306,47 @@
           <td>項目8</td>
         </tr>
       </tbody>
-    </table>
+    </table><!-- /.bns-table -->
+
+    <h2 class="bns-title-level2">施設詳細ページで使用するブロック</h2>
+    <div class="bns-block-category">
+      <div class="bns-block-category__item">
+        <div class="bns-block-category__body">
+          <h3 class="bns-title-level3--emphasis">見出しですよ見出しですよ</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ducimus sunt voluptates quae, impedit excepturi hic, saepe commodi, reiciendis minus similique, sit cupiditate amet rem quam vero quia quo quasi.</p>
+        </div>
+        <div class="bns-block-category__body">
+          <h3 class="bns-title-level3--emphasis">見出し見出し見出し見出し</h3>
+          <p>棒は風のお世話セロ屋が子にしぎてしまいはもうじぶんがたな。<br>
+          せすぎそこも巻をないたて前のゴーシュの先生汁がつっ込ん第二テープたちの病気をあいと行っんます。</p>
+        </div>
+      </div>
+      <div class="bns-block-category__item">
+        <div class="bns-block-category__body">
+          <h3 class="bns-title-level3--emphasis">見出しですよ見出しですよ</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        <div class="bns-block-category__body">
+          <h3 class="bns-title-level3--emphasis">見出し見出し見出し見出し</h3>
+          <p>棒は風のお世話セロ屋が子にしぎてしまいはもうじぶんがたな。<br>
+          そしてどうそれどころたましという楽隊たまし。まじめたない気たしかたそして舌の粗末がいのときにはちゃんとくたくたございたて、みんなまで慈悲から云っられのたた。せすぎそこも巻をないたて前のゴーシュの先生汁がつっ込ん第二テープたちの病気をあいと行っんます。</p>
+        </div>
+      </div>
+    </div><!-- /.bns-block-category -->
+    <div class="bns-block-detail">
+      <div class="bns-block-detail__item">
+        <h4 class="bns-title-level4">タイトル詳細</h4>
+        <p class="bns-text-detail">内容詳細内容詳細内容詳細内容詳細</p>
+      </div>
+      <div class="bns-block-detail__item">
+        <h4 class="bns-title-level4">タイトル詳細</h4>
+        <p class="bns-text-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+      <div class="bns-block-detail__item">
+        <h4 class="bns-title-level4">タイトル詳細</h4>
+        <a href="#" class="bns-text-detail--link">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+      </div>
+    </div><!-- /.bns-block-detail -->
   </section>
 </article>
 @stop
