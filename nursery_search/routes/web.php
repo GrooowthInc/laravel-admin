@@ -14,21 +14,35 @@
 Route::get('/', function () {
   return view('NON0001');
 })->name('home');
+
 Route::get('NON0002', function () {
   return view('NON0002');
 })->name('NON0002');
+
 Route::get('NON0003', function () {
   return view('NON0003');
 })->name('NON0003');
+
 Route::get('NON0004', function () {
   return view('NON0004');
 })->name('NON0004');
+
 Route::get('NON0005', function () {
   return view('NON0005');
 })->name('NON0005');
+
+Route::get('NON0006', function () {
+  return view('NON0006');
+})->name('NON0006');
+
+Route::get('NON0007', function () {
+  return view('NON0007');
+})->name('facility-detail');
+
 Route::get('modules', function () {
   return view('modules');
 })->name('modules');
+
 Route::get('filelist', function () {
   return view('filelist');
 })->name('filelist');
