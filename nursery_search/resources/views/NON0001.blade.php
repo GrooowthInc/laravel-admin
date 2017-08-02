@@ -45,9 +45,50 @@
 
     <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>最近見た保育園</h2>
     <div class="bns-layout--negative">
-      ほげ
-    </div>
-    
+      <div class="bns-block-nursery">
+        <div class="bns-block-nursery__heading">
+          <a href="#" class="bns-block-nursery__school">あげは幼稚園</a>
+          <a href="#" class="bns-block-nursery__icon">
+            <img src="https://dummyimage.com/20x20/000/808080.png&text=dummy" alt="" />
+          </a>
+        </div>
+        <div class="bns-block-nursery__body">
+          <a href="#" class="bns-block-nursery__image">
+            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
+          </a>
+          <div class="bns-block-nursery__status">保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可</div>
+        </div>
+      </div>
+      <div class="bns-block-nursery">
+        <div class="bns-block-nursery__heading">
+          <a href="#" class="bns-block-nursery__school">わかば幼稚園</a>
+          <a href="#" class="bns-block-nursery__icon">
+            <img src="https://dummyimage.com/20x20/000/808080.png&text=dummy" alt="" />
+          </a>
+        </div>
+        <div class="bns-block-nursery__body">
+          <a href="#" class="bns-block-nursery__image">
+            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
+          </a>
+          <div class="bns-block-nursery__status">保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可</div>
+        </div>
+      </div>
+      <div class="bns-block-nursery">
+        <div class="bns-block-nursery__heading">
+          <a href="#" class="bns-block-nursery__school">あああ幼稚園</a>
+          <a href="#" class="bns-block-nursery__icon">
+            <img src="https://dummyimage.com/20x20/000/808080.png&text=dummy" alt="" />
+          </a>
+        </div>
+        <div class="bns-block-nursery__body">
+          <a href="#" class="bns-block-nursery__image">
+            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
+          </a>
+          <div class="bns-block-nursery__status">保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可</div>
+        </div>
+      </div>
+    </div><!-- /.bns-layout--negative -->
+
     <!-- ▼広告カルーセル▼ -->
     @include('_partial.ad-carousel')
     <!-- ▲広告カルーセル▲ -->
@@ -87,6 +128,19 @@
     <div class="bns-layout">
       <button class="bns-btn--secondary">記事一覧へ</button>
     </div>
+
+    <div class="bns-layout">
+      <h3 class="bns-title-level3">保育園を探す</h3>
+      <a href="#" class="bns-text-link">東京都</a>
+      <a href="#" class="bns-text-link">神奈川県</a>
+      <a href="#" class="bns-text-link">千葉県</a>
+      <a href="#" class="bns-text-link">埼玉県</a>
+      <p class="bns-text">「保育園探しナビ」では各地域の保育園探しから、見学までをサポ―ト。<br>
+      各地域の認可保育園はもちろん、認証保育園、小規模保育園、認定こども園、家庭的保育などの情報をまとめました。<br>
+      施設情報に加え、教育方針や子どもの過ごし方がわかる、「保育園探しナビ」オリジナルの情報も掲載しています。<br>
+      さらに、保育園探しに役立つポイントがわかる記事や読み物もお届けします。<br>
+      はじめての保育園探しにぜひお役立てくださいね。</p>
+    </div><!-- /.bns-layout -->
 
   </section>
 </article>

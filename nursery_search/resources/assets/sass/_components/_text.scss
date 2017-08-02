@@ -2,8 +2,9 @@
 #{$prj-ns}-text {
   &-link {
     display: inline-block;
-    margin: 0 $siteGutter-sm 0 0;
+    margin: 0 $siteGutter-sm;
     color: $color-font--link;
+    &:first-child,
     &:last-child {
       margin: 0;
     }
