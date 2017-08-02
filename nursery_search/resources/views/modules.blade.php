@@ -18,15 +18,14 @@
   <section class="bns-section">
     <h1 class="bns-title-level1">タイトルレベル1</h1>
     <h2 class="bns-title-level2">
-      <i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>
-      タイトルレベル2
+      <i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>タイトルレベル2
     </h2>
     <h2 class="bns-title-level2"><span class="bns-title-text">タイトルレベル2</span> <a href="#" class="bns-title-label">ラベル有り</a></h2>
     <h3 class="bns-title-level3">タイトルレベル3</h3>
     <h3 class="bns-title-level3--emphasis">タイトルレベル3 色付き</h3>
     <h4 class="bns-title-level4">タイトルレベル4</h4>
 
-    <h2 class="bns-title-level2">ボタン</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>ボタン</h2>
     <div class="ui grid">
       <div class="doubling four column row">
         <div class="column">
@@ -69,7 +68,7 @@
       <button class="bns-btn" disabled>disabled large</button>
     </div>
 
-    <h2 class="bns-title-level2">ラベル</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>ラベル</h2>
     <div class="ui grid">
       <div class="doubling four column row">
         <div class="column">
@@ -87,7 +86,7 @@
       </div>
     </div><!-- /.ui grid -->
 
-    <h2 class="bns-title-level2">テキスト</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>テキスト</h2>
     <p>人間は考える葦である。</p>
     <p class="bns-text">吾輩は猫である。名前はまだない。</p>
     <p class="bns-text-info">お知らせ的な強調したい文字</p>
@@ -95,7 +94,7 @@
     <p class="bns-text-bold">fw:bのテキスト</p>
     <a href="#" class="bns-text-link">テキストリンク</a>
 
-    <h2 class="bns-title-level2"><span class="bns-title-text">最近見た保育園</span> <a href="#" class="bns-title-label">あとで見る一覧</a></h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>最近見た保育園</h2>
     <div class="bns-layout--negative">
       <div class="bns-block-nursery">
         <div class="bns-block-nursery__heading">
@@ -141,7 +140,7 @@
       </div>
     </div><!-- /.bns-layout--negative -->
 
-    <h2 class="bns-title-level2">おすすめ記事</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>おすすめ記事</h2>
     <div class="bns-layout--negative">
       <div class="bns-block-recommend">
         <a href="#" class="bns-block-recommend__item">
@@ -175,7 +174,7 @@
     </div><!-- /.bns-layout--negative -->
 
     <!-- 作ったらパーシャル化する -->
-    <h2 class="bns-title-level2">広告カルーセル</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>広告カルーセル</h2>
     <div class="bns-block-ad">
       <div class="bns-block-ad__heading">園生活におすすめ</div>
       <ul class="bns-block-ad-list" data-bns-slick="target-recommend">
@@ -214,7 +213,7 @@
       </ul><!-- /.bns-carousel -->
     </div><!-- /.bns-block-ad -->
 
-    <h2 class="bns-title-level2">施設詳細カルーセル</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>施設詳細カルーセル</h2>
     <div class="bns-layout--negative">
       <ul class="bns-carousel" data-bns-slick="target">
         <li class="bns-carousel__item">
@@ -232,7 +231,7 @@
       </ul><!-- /.bns-carousel -->
     </div><!-- /.bns-block-ad -->
 
-    <h2 class="bns-title-level2">テーブル</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>テーブル</h2>
     <table class="bns-table">
       <tbody>
         <tr>
@@ -330,7 +329,7 @@
       </tbody>
     </table><!-- /.bns-table -->
 
-    <h2 class="bns-title-level2">施設詳細ページで使用するブロック</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>施設詳細ページで使用するブロック</h2>
     <div class="bns-block-category">
       <div class="bns-block-category__item">
         <div class="bns-block-category__body">
