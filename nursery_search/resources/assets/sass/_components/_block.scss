@@ -1,5 +1,16 @@
 // Block
 #{$prj-ns}-block {
+  &-active {
+    background-color: $color-bg-active;
+    // padding-top: $siteGutter-md*2;
+    // margin-bottom: $siteGutter;
+    &:first-of-type {
+      padding-top: $siteGutter-md*2;
+    }
+    &:last-of-type {
+      margin-bottom: $siteGutter;
+    }
+  }
   // 最近見た保育園一覧
   &-nursery {
     padding: $siteGutter;
@@ -83,7 +94,7 @@
   // 広告カルーセル
   &-ad {
     padding: $siteGutter;
-    margin: $siteGutter-lg*2 0;
+    margin: $siteGutter-lg 0;
     border: 1px solid $color-border;
     background-color: $color-bg--light;
     &__heading {

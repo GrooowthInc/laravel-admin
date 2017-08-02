@@ -3,8 +3,9 @@
   display: inline-block;
   padding: $siteGutter-md /2;
   text-align: center;
-  color: $color-font--button;
+  color: $color-font--navy;
   border: 1px solid $color-border-main;
+  background-color: $color-bg;
   position: relative;
   .column &{
     width: 100%;
@@ -13,5 +14,6 @@
     @extend #{$prj-ns}-label;
     color: $color-font--light;
     border: 1px solid $color-border--light;
+    background-color: $color-bg--exlight;
   }
 }
