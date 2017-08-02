@@ -39,4 +39,13 @@
     background-color: $color-bg-active;
     border-radius: 20px;
   }
+  &-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 15px;
+    img{
+      @include image-responsive;
+    }
+  }
 }

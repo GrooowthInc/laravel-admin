@@ -7,22 +7,27 @@
   &__lead {
     padding: $siteGutter-sm;
     text-align: center;
-    background-color: $color-bg;
+    background-color: $color-bg--secondary;
   }
   &-logo {
     @include txt-hidden;
     display: block;
+    float: left;
     width: 135px;
     height: 44px;
     background: url('http://placeimg.com/135/44/any') 50% 50% no-repeat;
     background-size: contain;
   }
   &-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: $siteGutter-sm;
+    display: block;
+    width: 100%;
+    height: 50px;
     background-color: $color-bg--exlight;
+    &::after {
+      content: '';
+      clear: both;
+      display: table;
+    }
     &.is-fixed {
       margin: auto;
       position: fixed;
@@ -34,28 +39,44 @@
     }
   }
   &-func {
-    display: flex;
+    display: table;
+    height: 100%;
+    float: right;
   }
   &__btn {
-    display: inline-block;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    &::before {
+      content: '';
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background-color: $color-bg--light;
+    }
   }
   &-icon {
     &--look,
     &--menu {
       display: block;
       padding: $siteGutter;
-      position: relative;
-      &::before {
-        content: '';
-        margin: auto;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 2px;
-        height: 100%;
-        background-color: $color-bg--light;
-      }
+      
+    }
+    &--badge {
+      @include fz($fz-sm);
+      display: inline-block;
+      padding: $siteGutter-sm;
+      margin: auto;
+      position: absolute;
+      bottom: 5px;
+      right: 0;
+      color: $color-font--navy;
+      border-radius: 50%;
+      background-color: $color-bg--secondary;
     }
   }
 }

@@ -26,9 +26,7 @@
       @yield('contents')
       @include('_partial.banner-area')
 
-      @if(!Request::is('/'))
-        @include('_partial.breadcrumb')
-      @endif
+      @yield('breadcrumbs')
     </main>
 
     @include('_partial.footer')

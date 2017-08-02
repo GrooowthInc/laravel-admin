@@ -17,7 +17,10 @@
   </div>
   <section class="bns-section">
     <h1 class="bns-title-level1">タイトルレベル1</h1>
-    <h2 class="bns-title-level2">タイトルレベル2</h2>
+    <h2 class="bns-title-level2">
+      <i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>
+      タイトルレベル2
+    </h2>
     <h2 class="bns-title-level2"><span class="bns-title-text">タイトルレベル2</span> <a href="#" class="bns-title-label">ラベル有り</a></h2>
     <h3 class="bns-title-level3">タイトルレベル3</h3>
     <h3 class="bns-title-level3--emphasis">タイトルレベル3 色付き</h3>
@@ -368,4 +371,6 @@
     </div><!-- /.bns-block-detail -->
   </section>
 </article>
+
+{!! Breadcrumbs::render('modules',$title ) !!}
 @stop

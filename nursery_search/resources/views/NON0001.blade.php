@@ -19,4 +19,6 @@
     <h2 class="bns-title-level2">エリアを選んでください</h2>
   </section>
 </article>
+
+{!! Breadcrumbs::render('home') !!}
 @stop

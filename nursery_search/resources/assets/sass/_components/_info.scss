@@ -2,6 +2,6 @@
 #{$prj-ns}-info {
   position: relative;
   padding: $siteGutter;
-  margin: -$siteGutter;
-  background-color: $color-bg-active;
+  background-color: $color-bg--exlight;
+  border: 1px solid $color-border;
 }

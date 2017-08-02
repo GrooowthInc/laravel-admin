@@ -5,6 +5,7 @@
     <div class="bns-header-func">
       <div class="bns-header__btn">
         <a href="javascript: void(0);" class="bns-header-icon--look">hoge</a>
+        <i class="bns-header-icon--badge">20</i>
       </div>
       <div class="bns-header__btn">
         <a href="javascript: void(0);" class="bns-header-icon--menu">hoge</a>
