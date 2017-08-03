@@ -49,3 +49,12 @@
     }
   }
 }
+
+#{$prj-ns}-text {
+  &--sm {
+    @include fz($fz-xs);
+  }
+  &--lg {
+    @include fz($fz-lg);
+  }
+}

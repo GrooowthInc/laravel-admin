@@ -1,15 +1,44 @@
+<div class="bns-header-overlay" data-bns-dropmenu="overlay"></div>
+
 <header class="bns-header" data-bns-nav="content">
   <div class="bns-header__lead">@yield('catchtext')</div>
   <nav class="bns-header-nav" data-bns-nav="target">
-    <h1 class="bns-header-logo">保活ナビ</h1>
-    <div class="bns-header-func">
-      <div class="bns-header__btn">
-        <a href="javascript: void(0);" class="bns-header-icon--look">hoge</a>
-        <i class="bns-header-icon--badge">20</i>
-      </div>
-      <div class="bns-header__btn">
-        <a href="javascript: void(0);" class="bns-header-icon--menu">hoge</a>
+    <div class="bns-header-nav__inner">
+      <h1 class="bns-header-logo">保活ナビ</h1>
+      <div class="bns-header-func">
+        <div class="bns-header__btn">
+          <a href="javascript: void(0);" class="bns-header-icon--look">hoge</a>
+          <i class="bns-header-icon--badge">20</i>
+        </div>
+        <div class="bns-header__btn">
+          <a href="javascript: void(0);" class="bns-header-icon--menu" data-bns-dropmenu="target">hoge</a>
+        </div>
       </div>
     </div>
+
+    <aside class="bns-header-dropmenu" data-bns-dropmenu="content">
+      <div class="bns-header-dropmenu__heading">
+        <div class="ui grid">
+          <div class="four wide column">
+            <a href="javascript: void(0);" class="bns-btn--secondary" data-bns-dropmenu="close">戻る</a>
+          </div>
+          <div class="twelve wide column">
+            <p class="bns-text--lg">探し方を選んでください</p>
+          </div>
+        </div>
+      </div>
+      <div class="bns-header-dropmenu__body">
+        <div class="ui grid">
+          <div class="doubling eight column row">
+            <div class="column">
+              <a href="#" class="bns-btn--primary">市区町村から探す</a>
+            </div>
+            <div class="column">
+              <a href="#" class="bns-btn--primary">沿線・駅から探す</a>
+            </div>
+          </div>
+        </div><!-- /.ui grid -->
+      </div>
+    </aside><!-- /.bns-header-dropmenu -->
   </nav>
 </header><!-- /.bns-header -->

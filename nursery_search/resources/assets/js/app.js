@@ -21,6 +21,7 @@ const app = new Vue({
   el: '#dashboard'
 });
 
+import Dropmenu from './components/Dropmenu';
 import HeightLine from './components/HeightLine';
 import Nav from './components/Nav';
 import { Slick, Carousel } from './components/Slick';
@@ -45,6 +46,9 @@ $(function(){
       arrows: true
     }
   });
+
+  // ヘッダーのハンバーガーメニュー
+  new Dropmenu();
 
   new HeightLine({
     target: '[data-bns-height="carousel"]'
