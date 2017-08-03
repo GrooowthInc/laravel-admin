@@ -25,4 +25,25 @@
     color: $color-font--button;
     background-color: $color-button-secondary;
   }
+  &-radius {
+    @extend #{$prj-ns}-btn;
+    border-radius: 50px;
+    &--primary {
+      @extend #{$prj-ns}-btn-radius;
+      color: $color-font--button;
+      background-color: $color-theme-main;
+    }
+    &--secondary {
+      @extend #{$prj-ns}-btn-radius;
+      color: $color-font--button;
+      background-color: $color-button-secondary;
+    }
+    &[disabled],
+    &.is-disabled {
+      color: $color-font--dark;
+      background-color: $color-button-disable;
+      pointer-events: none;
+      outline: none;
+    }
+  }
 }

@@ -48,6 +48,18 @@
       width: 60%;
     }
   }
+  &--right {
+    display: block;
+    text-align: right;
+  }
+  &--left {
+    display: block;
+    text-align: left;
+  }
+  &--center {
+    display: block;
+    text-align: center;
+  }
 }
 
 #{$prj-ns}-text {

@@ -68,6 +68,15 @@
       <button class="bns-btn" disabled>disabled large</button>
     </div>
     <div class="bns-layout">
+      <button class="bns-btn-radius--primary">primary large</button>
+    </div>
+    <div class="bns-layout">
+      <button class="bns-btn-radius--secondary">secondary large</button>
+    </div>
+    <div class="bns-layout">
+      <button class="bns-btn-radius">default large</button>
+    </div>
+    <div class="bns-layout">
       <form class="bns-form">
         <input class="bns-form-search__textbox" type="search" name="freeword_search" placeholder="市区町村・駅名等を検索">
         <button class="bns-form-search__button" type="submit" name="action" value="send"></button>
