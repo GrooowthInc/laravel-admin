@@ -94,142 +94,18 @@
     <p class="bns-text-bold">fw:bのテキスト</p>
     <a href="#" class="bns-text-link">テキストリンク</a>
 
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>最近見た保育園</h2>
-    <div class="bns-layout--negative">
-      <div class="bns-block-nursery">
-        <div class="bns-block-nursery__heading">
-          <a href="#" class="bns-block-nursery__school">あげは幼稚園</a>
-          <a href="#" class="bns-block-nursery__icon">
-            <img src="https://dummyimage.com/20x20/000/808080.png&text=dummy" alt="" />
-          </a>
-        </div>
-        <div class="bns-block-nursery__body">
-          <a href="#" class="bns-block-nursery__image">
-            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
-          </a>
-          <div class="bns-block-nursery__status">保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可</div>
-        </div>
-      </div>
-      <div class="bns-block-nursery">
-        <div class="bns-block-nursery__heading">
-          <a href="#" class="bns-block-nursery__school">わかば幼稚園</a>
-          <a href="#" class="bns-block-nursery__icon">
-            <img src="https://dummyimage.com/20x20/000/808080.png&text=dummy" alt="" />
-          </a>
-        </div>
-        <div class="bns-block-nursery__body">
-          <a href="#" class="bns-block-nursery__image">
-            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
-          </a>
-          <div class="bns-block-nursery__status">保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可</div>
-        </div>
-      </div>
-      <div class="bns-block-nursery">
-        <div class="bns-block-nursery__heading">
-          <a href="#" class="bns-block-nursery__school">あああ幼稚園</a>
-          <a href="#" class="bns-block-nursery__icon">
-            <img src="https://dummyimage.com/20x20/000/808080.png&text=dummy" alt="" />
-          </a>
-        </div>
-        <div class="bns-block-nursery__body">
-          <a href="#" class="bns-block-nursery__image">
-            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
-          </a>
-          <div class="bns-block-nursery__status">保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可</div>
-        </div>
-      </div>
-    </div><!-- /.bns-layout--negative -->
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>近くの保育園</h2>
+    @include('_partial.near-nursery')
 
     <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>おすすめ記事</h2>
-    <div class="bns-layout--negative">
-      <div class="bns-block-recommend">
-        <a href="#" class="bns-block-recommend__item">
-          <div class="bns-block-recommend__image">
-            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
-          </div>
-          <div class="bns-block-recommend__body">
-            <p class="bns-block-recommend__date">2017.08.01</p>
-            <p class="bns-block-recommend__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-        </a>
-        <a href="#" class="bns-block-recommend__item">
-          <div class="bns-block-recommend__image">
-            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
-          </div>
-          <div class="bns-block-recommend__body">
-            <p class="bns-block-recommend__date">2017.12.17</p>
-            <p class="bns-block-recommend__title">年末年始お休みのお知らせ</p>
-          </div>
-        </a>
-        <a href="#" class="bns-block-recommend__item">
-          <div class="bns-block-recommend__image">
-            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
-          </div>
-          <div class="bns-block-recommend__body">
-            <p class="bns-block-recommend__date">2018.01.01</p>
-            <p class="bns-block-recommend__title">明けましておめでとうございます。今年も宜しくお願いいたします。</p>
-          </div>
-        </a>
-      </div>
-    </div><!-- /.bns-layout--negative -->
+    @include('_partial.recommend-news')
 
     <!-- 作ったらパーシャル化する -->
     <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>広告カルーセル</h2>
-    <div class="bns-block-ad">
-      <div class="bns-block-ad__heading">園生活におすすめ</div>
-      <ul class="bns-block-ad-list" data-bns-slick="target-recommend">
-        <li class="bns-block-ad-list__item" data-bns-height="carousel">
-          <a href="#" class="bns-block-ad-list__body">
-            <div class="bns-block-ad-list__image">
-              <img src="https://dummyimage.com/135x165/000/808080.png&text=dummy" alt="" />
-            </div>
-            <p class="bns-block-ad-list__text">おすすめアイテムその1</p>
-          </a>
-        </li>
-        <li class="bns-block-ad-list__item" data-bns-height="carousel">
-          <a href="#" class="bns-block-ad-list__body">
-            <div class="bns-block-ad-list__image">
-              <img src="https://dummyimage.com/135x165/000/808080.png&text=dummy" alt="" />
-            </div>
-            <p class="bns-block-ad-list__text">おすすめアイテムその2</p>
-          </a>
-        </li>
-        <li class="bns-block-ad-list__item" data-bns-height="carousel">
-          <a href="#" class="bns-block-ad-list__body">
-            <div class="bns-block-ad-list__image">
-              <img src="https://dummyimage.com/135x165/000/808080.png&text=dummy" alt="" />
-            </div>
-            <p class="bns-block-ad-list__text">テキスト長いよテキスト長いよテキスト長いよテキスト長いよ</p>
-          </a>
-        </li>
-        <li class="bns-block-ad-list__item" data-bns-height="carousel">
-          <a href="#" class="bns-block-ad-list__body">
-            <div class="bns-block-ad-list__image">
-              <img src="https://dummyimage.com/135x165/000/808080.png&text=dummy" alt="" />
-            </div>
-            <p class="bns-block-ad-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </a>
-        </li>
-      </ul><!-- /.bns-carousel -->
-    </div><!-- /.bns-block-ad -->
+    @include('_partial.ad-carousel')
 
     <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>施設詳細カルーセル</h2>
-    <div class="bns-layout--negative">
-      <ul class="bns-carousel" data-bns-slick="target">
-        <li class="bns-carousel__item">
-          <img src="https://dummyimage.com/640x400/000/808080.png&text=dummy1" alt="" />
-        </li>
-        <li class="bns-carousel__item">
-          <img src="https://dummyimage.com/640x400/000/808080.png&text=dummy2" alt="" />
-        </li>
-        <li class="bns-carousel__item">
-          <img src="https://dummyimage.com/640x400/000/808080.png&text=dummy3" alt="" />
-        </li>
-        <li class="bns-carousel__item">
-          <img src="https://dummyimage.com/640x400/000/808080.png&text=dummy4" alt="" />
-        </li>
-      </ul><!-- /.bns-carousel -->
-    </div><!-- /.bns-block-ad -->
+    @include('_partial.facility-carousel')
 
     <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>テーブル</h2>
     <table class="bns-table">

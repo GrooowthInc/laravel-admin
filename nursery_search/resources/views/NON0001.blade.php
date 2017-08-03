@@ -46,90 +46,14 @@
     </div>
 
     <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>最近見た保育園</h2>
-    <div class="bns-layout--negative">
-      <div class="bns-block-nursery">
-        <div class="bns-block-nursery__heading">
-          <a href="#" class="bns-block-nursery__school">あげは幼稚園</a>
-          <a href="#" class="bns-block-nursery__icon">
-            <img src="https://dummyimage.com/20x20/000/808080.png&text=dummy" alt="" />
-          </a>
-        </div>
-        <div class="bns-block-nursery__body">
-          <a href="#" class="bns-block-nursery__image">
-            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
-          </a>
-          <div class="bns-block-nursery__status">保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可</div>
-        </div>
-      </div>
-      <div class="bns-block-nursery">
-        <div class="bns-block-nursery__heading">
-          <a href="#" class="bns-block-nursery__school">わかば幼稚園</a>
-          <a href="#" class="bns-block-nursery__icon">
-            <img src="https://dummyimage.com/20x20/000/808080.png&text=dummy" alt="" />
-          </a>
-        </div>
-        <div class="bns-block-nursery__body">
-          <a href="#" class="bns-block-nursery__image">
-            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
-          </a>
-          <div class="bns-block-nursery__status">保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可</div>
-        </div>
-      </div>
-      <div class="bns-block-nursery">
-        <div class="bns-block-nursery__heading">
-          <a href="#" class="bns-block-nursery__school">あああ幼稚園</a>
-          <a href="#" class="bns-block-nursery__icon">
-            <img src="https://dummyimage.com/20x20/000/808080.png&text=dummy" alt="" />
-          </a>
-        </div>
-        <div class="bns-block-nursery__body">
-          <a href="#" class="bns-block-nursery__image">
-            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
-          </a>
-          <div class="bns-block-nursery__status">保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可</div>
-        </div>
-      </div>
-    </div><!-- /.bns-layout--negative -->
+    @include('_partial.recently-see-nursery')
 
     <!-- ▼広告カルーセル▼ -->
     @include('_partial.ad-carousel')
     <!-- ▲広告カルーセル▲ -->
 
     <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>おすすめ記事</h2>
-    <div class="bns-layout--negative">
-      <div class="bns-block-recommend">
-        <a href="#" class="bns-block-recommend__item">
-          <div class="bns-block-recommend__image">
-            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
-          </div>
-          <div class="bns-block-recommend__body">
-            <p class="bns-block-recommend__date">2017.08.01</p>
-            <p class="bns-block-recommend__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-        </a>
-        <a href="#" class="bns-block-recommend__item">
-          <div class="bns-block-recommend__image">
-            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
-          </div>
-          <div class="bns-block-recommend__body">
-            <p class="bns-block-recommend__date">2017.12.17</p>
-            <p class="bns-block-recommend__title">年末年始お休みのお知らせ</p>
-          </div>
-        </a>
-        <a href="#" class="bns-block-recommend__item">
-          <div class="bns-block-recommend__image">
-            <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
-          </div>
-          <div class="bns-block-recommend__body">
-            <p class="bns-block-recommend__date">2018.01.01</p>
-            <p class="bns-block-recommend__title">明けましておめでとうございます。今年も宜しくお願いいたします。</p>
-          </div>
-        </a>
-      </div>
-    </div><!-- /.bns-layout--negative -->
-    <div class="bns-layout">
-      <button class="bns-btn--secondary">記事一覧へ</button>
-    </div>
+    @include('_partial.recommend-news')
 
     <div class="bns-layout">
       <h3 class="bns-title-level3">保育園を探す</h3>

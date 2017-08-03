@@ -122,7 +122,253 @@
           </div>
         </div>
       </div><!-- /.bns-block-category__item -->
+      <div class="bns-block-category__item">
+        <div class="bns-block-category__body">
+          <h3 class="bns-title-level3--emphasis">開園時間</h3>
+          <table class="bns-table--with-heading">
+            <tbody>
+              <tr>
+                <th>受け入れ開始年齢</th>
+                <th>生後8週～</th>
+                <th>定員合計</th>
+                <th>93名</th>
+              </tr>
+              <tr>
+                <td>0才</td>
+                <td>3名</td>
+                <td>1才</td>
+                <td>10名</td>
+              </tr>
+              <tr>
+                <td>0才</td>
+                <td>3名</td>
+                <td>1才</td>
+                <td>10名</td>
+              </tr>
+              <tr>
+                <td>0才</td>
+                <td>3名</td>
+                <td>1才</td>
+                <td>10名</td>
+              </tr>
+            </tbody>
+          </table><!-- /.bns-table -->
+
+          <table class="bns-table">
+            <tbody>
+              <tr>
+                <td class="bns-table__heading" colspan="4">常勤職員数</td>
+              </tr>
+              <tr>
+                <td>0才</td>
+                <td>3名</td>
+                <td>1才</td>
+                <td>10名</td>
+              </tr>
+              <tr>
+                <td>0才</td>
+                <td>3名</td>
+                <td>1才</td>
+                <td>10名</td>
+              </tr>
+              <tr>
+                <td>0才</td>
+                <td>3名</td>
+                <td>1才</td>
+                <td>10名</td>
+              </tr>
+            </tbody>
+          </table><!-- /.bns-table -->
+
+          <table class="bns-table">
+            <tbody>
+              <tr>
+                <td class="bns-table__heading" colspan="4">非常勤職員数</td>
+              </tr>
+              <tr>
+                <td>0才</td>
+                <td>3名</td>
+                <td>1才</td>
+                <td>10名</td>
+              </tr>
+              <tr>
+                <td>0才</td>
+                <td>3名</td>
+                <td>1才</td>
+                <td>10名</td>
+              </tr>
+              <tr>
+                <td>0才</td>
+                <td>3名</td>
+                <td>1才</td>
+                <td>10名</td>
+              </tr>
+            </tbody>
+          </table><!-- /.bns-table -->
+
+          <div class="bns-block-category__body">
+            <h3 class="bns-title-level3--emphasis">保護者様に必要な情報</h3>
+            <div class="bns-text-table">
+              <p class="bns-text-table__heading">ベビーカー置き場</p>
+              <p class="bns-text-table__body">あり</p>
+            </div>
+            <div class="bns-text-table">
+              <p class="bns-text-table__heading">ベビーカー置き場</p>
+              <p class="bns-text-table__body">なし</p>
+            </div>
+            <div class="bns-text-table">
+              <p class="bns-text-table__heading">ベビーカー置き場</p>
+              <p class="bns-text-table__body">あり</p>
+            </div>
+            <div class="bns-text-table">
+              <p class="bns-text-table__heading">ベビーカー置き場</p>
+              <p class="bns-text-table__body">なし</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.bns-block-category__item -->
+      <div class="bns-block-category__item">
+        <div class="bns-block-category__body">
+          <h3 class="bns-title-level3--emphasis">1年間の過ごし方(行事等)</h3>
+          <table class="bns-table">
+            <tbody>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">01月</td>
+                <td>項目1</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">00時</td>
+                <td>項目2</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">00時</td>
+                <td>項目3</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">00時</td>
+                <td>項目4</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">05月</td>
+                <td>項目5</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">06月</td>
+                <td>項目6</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">07月</td>
+                <td>項目7</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">08月</td>
+                <td>項目8</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">09月</td>
+                <td>項目9</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">10月</td>
+                <td>項目10</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">11月</td>
+                <td>項目11</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">12月</td>
+                <td>項目12</td>
+              </tr>
+            </tbody>
+          </table><!-- /.bns-table -->
+        </div>
+        <div class="bns-block-category__body">
+          <h3 class="bns-title-level3--emphasis">1年間の過ごし方(行事等)</h3>
+          <table class="bns-table">
+            <tbody>
+              <tr>
+                <td class="bns-table__heading" colspan="2">乳児</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">00時</td>
+                <td>項目1</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">00時</td>
+                <td>項目2</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">00時</td>
+                <td>項目3</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">00時</td>
+                <td>項目4</td>
+              </tr>
+            </tbody>
+          </table><!-- /.bns-table -->
+          <table class="bns-table">
+            <tbody>
+              <tr>
+                <td class="bns-table__heading" colspan="2">乳児</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">00時</td>
+                <td>項目1</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">00時</td>
+                <td>項目2</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">00時</td>
+                <td>項目3</td>
+              </tr>
+              <tr>
+                <td class="bns-table-cell--sm bns-table__head">00時</td>
+                <td>項目4</td>
+              </tr>
+            </tbody>
+          </table><!-- /.bns-table -->
+        </div>
+      </div><!-- /.bns-block-category__item -->
+
+      <h3 class="bns-title-level3--emphasis">基本情報</h3>
+      <div class="bns-block-detail">
+        <div class="bns-block-detail__item">
+          <h4 class="bns-title-level4">住所</h4>
+          <p class="bns-text-detail">〒181-0016&nbsp;&nbsp;東京都三鷹市深大寺3-3-10</p>
+        </div>
+        <div class="bns-block-detail__item">
+          <h4 class="bns-title-level4">交通手段</h4>
+          <p class="bns-text-detail">
+            小田急バス「第二住宅」から徒歩2分<br>
+            JR中央線&nbsp;&nbsp;武蔵境駅からバス7分
+          </p>
+        </div>
+        <div class="bns-block-detail__item">
+          <h4 class="bns-title-level4">運営会社</h4>
+          <p class="bns-text-detail">社会福祉法人&nbsp;&nbsp;三鷹市社会福祉事業団</p>
+        </div>
+        <div class="bns-block-detail__item">
+          <h4 class="bns-title-level4">設立年</h4>
+          <p class="bns-text-detail">0000年</p>
+        </div>
+        <div class="bns-block-detail__item">
+          <h4 class="bns-title-level4">ホームページ</h4>
+          <a href="http://www.dummy.jp" target="_blank" class="bns-text-detail--link">http://www.dummy.jp</a>
+        </div>
+        <div class="bns-block-detail__item">
+          <h4 class="bns-title-level4">電話番号</h4>
+          <a href="tel:0422-00-0000" class="bns-text-detail--link">0422-00-0000</a>
+        </div>
+      </div><!-- /.bns-block-detail -->
     </div><!-- /.bns-block-catgory -->
+
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>近くの保育園</h2>
+    @include('_partial.near-nursery')
+
   </section>
 </article>
 
