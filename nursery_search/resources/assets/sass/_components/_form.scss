@@ -1,0 +1,47 @@
+// Form
+#{$prj-ns}-form {
+  display: block;
+  width: 100%;
+  position: relative;
+  &-search {
+    &__textbox {
+      padding: $siteGutter;
+      width: 100%;
+      border-radius: $rds-base;
+      border: 2px solid $color-border;
+      &::placeholder {
+        color: $color-font--light;
+      }
+    }
+    &__button {
+      @include txt-hidden;
+      position: absolute;
+      padding: $siteGutter;
+      margin: auto;
+      width: 44px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background-color: $color-bg;
+      border: 2px solid $color-border;
+      border-left-width: 0;
+      border-radius: $rds-base;
+      cursor: pointer;
+      outline: none;
+      appearance: none;
+      &::after {
+        content: '';
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background: url('https://dummyimage.com/20x20/000/808080.png&text=dummy') 50% 50% no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}

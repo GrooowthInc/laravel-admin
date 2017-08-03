@@ -67,6 +67,12 @@
     <div class="bns-layout">
       <button class="bns-btn" disabled>disabled large</button>
     </div>
+    <div class="bns-layout">
+      <form class="bns-form">
+        <input class="bns-form-search__textbox" type="search" name="freeword_search" placeholder="市区町村・駅名等を検索">
+        <button class="bns-form-search__button" type="submit" name="action" value="send"></button>
+      </form><!-- /.bns-form -->
+    </div>
 
     <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>ラベル</h2>
     <div class="ui grid">
