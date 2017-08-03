@@ -28,4 +28,24 @@
       text-decoration: none;
     }
   }
+  &-table {
+    display: flex;
+    margin-bottom: $siteGutter-sm;
+    width: 100%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &__heading {
+      display: inline-block;
+      vertical-align: top;
+      padding-right: $siteGutter;
+      width: 35%;
+    }
+    &__body {
+      display: inline-block;
+      vertical-align: top;
+      font-weight: bold;
+      width: 65%;
+    }
+  }
 }

@@ -105,6 +105,20 @@ table tr:nth-child(even) td {
       <!-- <td>4中</td> -->
       <td>地図選択</td>
     </tr>
+    <tr>
+      <td>NON0006</td>
+      <td>保育園検索</td>
+      <td><a href="./NON0006" target="_blank">NON0006</a></td>
+      <!-- <td>4中</td> -->
+      <td>地図選択</td>
+    </tr>
+    <tr>
+      <td>NON0007</td>
+      <td>保育園検索</td>
+      <td><a href="./NON0007" target="_blank">NON0007</a></td>
+      <!-- <td>4中</td> -->
+      <td>地図選択</td>
+    </tr>
   </tbody>
 </table>
 

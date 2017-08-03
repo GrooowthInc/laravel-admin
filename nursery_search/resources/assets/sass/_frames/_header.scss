@@ -5,8 +5,10 @@
   position: relative;
   z-index: $z-dropdown;
   &__lead {
+    @include fz($fz-sm);
+    display: flex;
+    justify-content: center;
     padding: $siteGutter-sm;
-    text-align: center;
     background-color: $color-bg--secondary;
   }
   &-logo {

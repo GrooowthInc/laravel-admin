@@ -18,9 +18,6 @@
     &__heading {
       display: table;
       width: 100%;
-      padding-bottom: $siteGutter;
-      margin-bottom: $siteGutter;
-      border-bottom: 1px dotted $color-border-main;
     }
     &__icon {
       display: table-cell;
@@ -42,6 +39,10 @@
     &__body {
       display: flex;
       align-items: flex-start;
+      padding-top: $siteGutter;
+      margin-top: $siteGutter;
+      width: 100%;
+      border-top: 1px dotted $color-border-main;
     }
     &__image {
       display: block;
@@ -130,6 +131,28 @@
   // 施設詳細ページ大分類カテゴリ
   &-category {
     margin: $siteGutter-lg 0;
+    &__heading {
+      display: table;
+      margin-bottom: $siteGutter;
+      width: 100%;
+    }
+    &__icon {
+      display: table-cell;
+      vertical-align: middle;
+      width: 44px;
+      height: auto;
+      img {
+        @include image-responsive;
+        border-radius: $rds-base;
+      }
+    }
+    &__school {
+      display: table-cell;
+      vertical-align: middle;
+      padding-right: $siteGutter-md;
+      color: $color-font;
+      text-decoration: none;
+    }
     &__item {
       padding: $siteGutter-lg 0;
       border-top: 1px dotted $color-border-main;
