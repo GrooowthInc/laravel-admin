@@ -16,7 +16,7 @@
     ニュースのコピーですLorem ipsum dolor sit amet, consectetur adipisicing elit.
   </div>
   <section class="bns-section">
-    <h2 class="bns-title-area"><span class="bns-title-area__text">エリアを選んでください</span></h2>
+    <h2 class="bns-title-area"><span class="bns-title-area__text"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>エリアを選んでください</span></h2>
     <div class="bns-block-active ui grid">
       <div class="doubling four column row">
         <div class="column">
@@ -36,11 +36,13 @@
     <div class="bns-block-active ui grid centered">
       <div class="fifteen wide column">
         <button class="bns-btn--primary">現在地からさがす</button>
+        <p class="bns-text">保育園情報は東京都・神奈川県・千葉県・埼玉県のみです</p>
       </div>
+      
     </div><!-- /.ui grid -->
 
     <div class="bns-layout">
-      <button class="bns-btn--secondary">保育園選びのポイント</button>
+      <button class="bns-btn--secondary">初めての保育園の探しかた</button>
     </div>
 
     <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>最近見た保育園</h2>

@@ -9,8 +9,8 @@
   // right: 0;
   background-color: $color-bg--light;
   &-copyright {
+    @include fz($fz-sm);
     margin: $siteGutter-sm 0 0;
     color: $color-font--dark;
-    font-size: $fz-xs; 
   }
 }

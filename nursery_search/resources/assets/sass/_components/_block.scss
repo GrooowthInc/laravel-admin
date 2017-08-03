@@ -33,7 +33,6 @@
       }
     }
     &__school {
-      @include fz(16);
       display: table-cell;
       vertical-align: middle;
       padding-right: $siteGutter-md;
@@ -55,10 +54,11 @@
       }
     }
     &__status {
-      @include fz(16);
+      @include fz($fz-sm);
       display: block;
       color: $color-font--dark;
       text-decoration: none;
+      line-height: $lh-md;
     }
   }
   // おすすめ記事
@@ -85,10 +85,9 @@
       padding: 0 $siteGutter;
     }
     &__date {
-      @include fz($fz-md);
+      @include fz($fz-sm);
     }
     &__title {
-      @include fz(16);
     }
   }
   // 広告カルーセル

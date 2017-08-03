@@ -20,7 +20,7 @@
     }
   }
   &-level3 {
-    @include fz(16);
+    @include fz($fz-md);
     margin: $siteGutter 0;
     &--emphasis {
       @extend #{$prj-ns}-title-level3;
@@ -28,7 +28,7 @@
     }
   }
   &-level4 {
-    @include fz($fz-md);
+    @include fz($fz-sm);
     margin: $siteGutter 0;
   }  
   &-text {
@@ -74,8 +74,27 @@
       margin: auto;
       font-weight: bold;
       color: $color-font--navy;
-      background-color: $color-bg--exlight;
-      border-radius: 20px;
+      background-color: $color-bg-active;
+      position: relative;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+      }
+      &::before {
+        left: 0;
+        border-width: 20px 20px 0 0;
+        border-color: $color-bg--exlight transparent transparent transparent;
+      }
+      &::after {
+        right: 0;
+        border-width: 0 20px 20px 0;
+        border-color: transparent $color-bg--exlight transparent transparent;
+      }
     }
   }
 }

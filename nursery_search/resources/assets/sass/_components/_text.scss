@@ -1,5 +1,6 @@
 // Text
 #{$prj-ns}-text {
+  @include fz($fz-sm);
   &-link {
     display: inline-block;
     margin: 0 $siteGutter-sm;
@@ -19,7 +20,6 @@
     font-weight: bold;
   }
   &-detail {
-    @include fz(16);
     font-weight: bold;
     color: $color-font--dark;
     &--link {
