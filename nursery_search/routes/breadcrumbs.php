@@ -11,8 +11,14 @@ Breadcrumbs::register('modules', function ($breadcrumbs, $title) {
   $breadcrumbs->push($title, route('modules'));
 });
 
-// トップ > 施設詳細
+// トップ > 施設詳細 NON0007
 Breadcrumbs::register('facility-detail', function ($breadcrumbs, $title) {
   $breadcrumbs->parent('home');
   $breadcrumbs->push($title, route('facility-detail'));
+});
+
+// トップ > ご利用規約 NON0008
+Breadcrumbs::register('agreement', function ($breadcrumbs, $title) {
+  $breadcrumbs->parent('home');
+  $breadcrumbs->push($title, route('agreement'));
 });

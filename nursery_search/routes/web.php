@@ -39,6 +39,10 @@ Route::get('NON0007', function () {
   return view('NON0007');
 })->name('facility-detail');
 
+Route::get('NON0008', function () {
+  return view('NON0008');
+})->name('agreement');
+
 Route::get('modules', function () {
   return view('modules');
 })->name('modules');
