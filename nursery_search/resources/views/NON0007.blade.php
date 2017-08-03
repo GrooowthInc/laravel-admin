@@ -368,9 +368,58 @@
 
     <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>近くの保育園</h2>
     @include('_partial.near-nursery')
-
   </section>
+
+  <div class="bns-section">
+    <div class="bns-layout">
+      <h3 class="bns-title-level3">かえで幼稚園周辺の病院</h3>
+      <a href="#" class="bns-text-link">聖路加国際病院</a>
+      <a href="#" class="bns-text-link">カンガルー小児科</a>
+    </div><!-- /.bns-layout -->
+    <div class="bns-layout">
+      <h3 class="bns-title-level3">かえで幼稚園周辺の公共施設</h3>
+      <a href="#" class="bns-text-link">中央区立堀留町区民館</a>
+      <a href="#" class="bns-text-link">日本橋小学校図書館</a>
+    </div><!-- /.bns-layout -->
+
+    {!! Breadcrumbs::render('facility-detail',$title ) !!}
+
+    <div class="bns-layout">
+      <h3 class="bns-title-level3">都県別に保育園を探す</h3>
+      <a href="#" class="bns-text-link">東京都</a>
+      <a href="#" class="bns-text-link">神奈川県</a>
+      <a href="#" class="bns-text-link">千葉県</a>
+      <a href="#" class="bns-text-link">埼玉県</a>
+    </div><!-- /.bns-layout -->
+    <div class="bns-layout">
+      <h3 class="bns-title-level3">市区町村別に保育園を探す</h3>
+      <a href="#" class="bns-text-link">足立区</a>
+      <a href="#" class="bns-text-link">荒川区</a>
+      <a href="#" class="bns-text-link">板橋区</a>
+      <a href="#" class="bns-text-link">江戸川区</a>
+      <a href="#" class="bns-text-link">大田区</a>
+      <a href="#" class="bns-text-link">葛飾区</a>
+      <a href="#" class="bns-text-link">北区</a>
+      <a href="#" class="bns-text-link">江東区</a>
+      <a href="#" class="bns-text-link">品川区</a>
+      <a href="#" class="bns-text-link">渋谷区</a>
+      <a href="#" class="bns-text-link">新宿区</a>
+      <a href="#" class="bns-text-link">杉並区</a>
+      <a href="#" class="bns-text-link">墨田区</a>
+      <a href="#" class="bns-text-link">世田谷区</a>
+      <a href="#" class="bns-text-link">台東区</a>
+      <a href="#" class="bns-text-link">中央区</a>
+      <a href="#" class="bns-text-link">千代田区</a>
+      <a href="#" class="bns-text-link">豊島区</a>
+      <a href="#" class="bns-text-link">中野区</a>
+      <a href="#" class="bns-text-link">練馬区</a>
+      <a href="#" class="bns-text-link">文京区</a>
+      <a href="#" class="bns-text-link">港区</a>
+      <a href="#" class="bns-text-link">目黒区</a>
+      <p class="bns-text">（以下省略）</p>
+    </div><!-- /.bns-layout -->
+  </div><!-- /.bns-section -->
 </article>
 
-{!! Breadcrumbs::render('facility-detail',$title ) !!}
+
 @stop

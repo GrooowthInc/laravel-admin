@@ -5,6 +5,7 @@
     display: inline-block;
     margin: 0 $siteGutter-sm;
     color: $color-font--link;
+    line-height: $lh-md;
     &:first-child,
     &:last-child {
       margin: 0;
