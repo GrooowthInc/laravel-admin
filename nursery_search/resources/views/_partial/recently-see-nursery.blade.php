@@ -10,7 +10,10 @@
       <a href="#" class="bns-block-nursery__image">
         <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
       </a>
-      <div class="bns-block-nursery__status">保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可</div>
+      <div class="bns-block-nursery__status">
+        <i class="bns-label">認可</i>
+        <p>保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可<p>
+      </div>
     </div>
   </div>
   <div class="bns-block-nursery">
@@ -24,7 +27,10 @@
       <a href="#" class="bns-block-nursery__image">
         <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
       </a>
-      <div class="bns-block-nursery__status">保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可</div>
+      <div class="bns-block-nursery__status">
+        <i class="bns-label">認可</i>
+        <p>保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可<p>
+      </div>
     </div>
   </div>
   <div class="bns-block-nursery">
@@ -38,7 +44,10 @@
       <a href="#" class="bns-block-nursery__image">
         <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
       </a>
-      <div class="bns-block-nursery__status">保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可</div>
+      <div class="bns-block-nursery__status">
+        <i class="bns-label">認可</i>
+        <p>保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可<p>
+      </div>
     </div>
   </div>
 </div><!-- /.bns-layout--negative -->
