@@ -10,6 +10,26 @@
   }
   tr {
     border: 1px solid $color-border;
+    &:nth-child(odd) {
+      td {
+        &:nth-child(odd) {
+          background-color: $color-bg-active;
+        }
+        &:nth-child(even) {
+          background-color: $color-bg--light;
+        }
+      }
+    }
+    &:nth-child(even) {
+      td {
+        &:nth-child(odd) {
+          background-color: $color-bg-active;
+        }
+        &:nth-child(even) {
+          background-color: $color-bg--exlight;
+        }
+      }
+    }
   }
   th {
     padding: $siteGutter;
@@ -17,7 +37,7 @@
     text-align: left;
     border-left: 1px solid $color-border;
     &:nth-child(odd) {
-      background-color: $color-bg--light;
+      background-color: $color-bg-active;
     }
     &:first-child {
       border-left-width: 0;
@@ -26,9 +46,6 @@
   td {
     padding: $siteGutter;
     border-left: 1px solid $color-border;
-    &:nth-child(odd) {
-      background-color: $color-bg--light;
-    }
     &:first-child {
       border-left-width: 0;
     }
@@ -36,6 +53,53 @@
   &-cell {
     &--sm {
       width: 15%;
+    }
+  }
+}
+
+// th付きのテーブル
+#{$prj-ns}-table--with-heading {
+  @extend #{$prj-ns}-table;
+  th {
+    padding: $siteGutter;
+    font-weight: normal;
+    text-align: left;
+    border-left: 1px solid $color-border;
+    &:nth-child(odd) {
+      background-color: $color-bg-active;
+    }
+    &:first-child {
+      border-left-width: 0;
+    }
+  }
+  tr {
+    border: 1px solid $color-border;
+    &:nth-child(odd) {
+      td {
+        &:nth-child(odd) {
+          background-color: $color-bg-active;
+        }
+        &:nth-child(even) {
+          background-color: $color-bg--exlight;
+        }
+      }
+    }
+    &:nth-child(even) {
+      td {
+        &:nth-child(odd) {
+          background-color: $color-bg-active;
+        }
+        &:nth-child(even) {
+          background-color: $color-bg--light;
+        }
+      }
+    }
+  }
+  td {
+    padding: $siteGutter;
+    border-left: 1px solid $color-border;
+    &:first-child {
+      border-left-width: 0;
     }
   }
 }

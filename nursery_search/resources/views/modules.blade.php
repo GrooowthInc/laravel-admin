@@ -257,56 +257,56 @@
           <td class="bns-table__heading" colspan="2">見出し付きテーブル</td>
         </tr>
         <tr>
-          <td class="bns-table-cell--sm">01月</td>
+          <td class="bns-table-cell--sm bns-table__head">01月</td>
           <td>項目1</td>
         </tr>
         <tr>
-          <td class="bns-table-cell--sm">02月</td>
+          <td class="bns-table-cell--sm bns-table__head">02月</td>
           <td>項目2</td>
         </tr>
         <tr>
-          <td class="bns-table-cell--sm">03月</td>
+          <td class="bns-table-cell--sm bns-table__head">03月</td>
           <td>項目3</td>
         </tr>
         <tr>
-          <td class="bns-table-cell--sm">04月</td>
+          <td class="bns-table-cell--sm bns-table__head">04月</td>
           <td>項目4</td>
         </tr>
         <tr>
-          <td class="bns-table-cell--sm">05月</td>
+          <td class="bns-table-cell--sm bns-table__head">05月</td>
           <td>項目5</td>
         </tr>
         <tr>
-          <td class="bns-table-cell--sm">06月</td>
+          <td class="bns-table-cell--sm bns-table__head">06月</td>
           <td>項目6</td>
         </tr>
         <tr>
-          <td class="bns-table-cell--sm">07月</td>
+          <td class="bns-table-cell--sm bns-table__head">07月</td>
           <td>項目7</td>
         </tr>
         <tr>
-          <td class="bns-table-cell--sm">08月</td>
+          <td class="bns-table-cell--sm bns-table__head">08月</td>
           <td>項目8</td>
         </tr>
         <tr>
-          <td class="bns-table-cell--sm">09月</td>
+          <td class="bns-table-cell--sm bns-table__head">09月</td>
           <td>項目9</td>
         </tr>
         <tr>
-          <td class="bns-table-cell--sm">10月</td>
+          <td class="bns-table-cell--sm bns-table__head">10月</td>
           <td>項目10</td>
         </tr>
         <tr>
-          <td class="bns-table-cell--sm">11月</td>
+          <td class="bns-table-cell--sm bns-table__head">11月</td>
           <td>項目11</td>
         </tr>
         <tr>
-          <td class="bns-table-cell--sm">12月</td>
+          <td class="bns-table-cell--sm bns-table__head">12月</td>
           <td>項目12</td>
         </tr>
       </tbody>
     </table><!-- /.bns-table -->
-    <table class="bns-table">
+    <table class="bns-table--with-heading">
       <tbody>
         <tr>
           <th>タイトル1</th>
@@ -325,6 +325,12 @@
           <td>項目6</td>
           <td>項目7</td>
           <td>項目8</td>
+        </tr>
+        <tr>
+          <td>項目9</td>
+          <td>項目10</td>
+          <td>項目11</td>
+          <td>項目12</td>
         </tr>
       </tbody>
     </table><!-- /.bns-table -->
