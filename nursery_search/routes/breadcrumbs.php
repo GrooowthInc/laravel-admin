@@ -11,6 +11,12 @@ Breadcrumbs::register('modules', function ($breadcrumbs, $title) {
   $breadcrumbs->push($title, route('modules'));
 });
 
+// トップ > 市区町村検索 NON0002
+Breadcrumbs::register('city-search', function ($breadcrumbs, $title) {
+  $breadcrumbs->parent('home');
+  $breadcrumbs->push($title, route('city-search'));
+});
+
 // トップ > 施設詳細 NON0007
 Breadcrumbs::register('facility-detail', function ($breadcrumbs, $title) {
   $breadcrumbs->parent('home');

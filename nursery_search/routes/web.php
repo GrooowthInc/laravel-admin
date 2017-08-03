@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('NON0002', function () {
   return view('NON0002');
-})->name('NON0002');
+})->name('city-search');
 
 Route::get('NON0003', function () {
   return view('NON0003');
