@@ -11999,7 +11999,6 @@ var Accordion = function () {
         e.preventDefault();
         $(e.currentTarget).toggleClass(active);
         $(e.currentTarget).next(content).slideToggle('500');
-        // $(content).slideToggle('500');
         return false;
       });
     }

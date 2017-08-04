@@ -3,6 +3,7 @@
   display: block;
   width: 100%;
   position: relative;
+  // フリーワード検索ボックス
   &-search {
     &__textbox {
       padding: $siteGutter;
@@ -44,4 +45,19 @@
       }
     }
   }
+  // チェックボックス
+  &-select {
+    &__label {
+      display: block;
+      padding: $siteGutter $siteGutter-md;
+      width: 100%;
+      border-bottom: 1px solid $color-border;
+    }
+    &__check {
+    }
+    &__text {
+      padding-left: $siteGuuter-lg;
+    }
+  }
+  
 }
