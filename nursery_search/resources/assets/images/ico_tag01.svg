@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="38" viewBox="0 0 32 38">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #365899;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="ico_tag01.svg" class="cls-1" d="M598,1304H570a2,2,0,0,0-2,2v34a2,2,0,0,0,2,2l14-9,14,9a2,2,0,0,0,2-2v-34a2,2,0,0,0-2-2h0Z" transform="translate(-568 -1304)"/>
+</svg>
