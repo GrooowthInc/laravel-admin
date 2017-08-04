@@ -18,14 +18,14 @@
   <section class="bns-section">
     <h1 class="bns-title-level1">タイトルレベル1</h1>
     <h2 class="bns-title-level2">
-      <i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>タイトルレベル2
+      <i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>タイトルレベル2
     </h2>
     <h2 class="bns-title-level2"><span class="bns-title-text">タイトルレベル2</span> <a href="#" class="bns-title-label">ラベル有り</a></h2>
     <h3 class="bns-title-level3">タイトルレベル3</h3>
     <h3 class="bns-title-level3--emphasis">タイトルレベル3 色付き</h3>
     <h4 class="bns-title-level4">タイトルレベル4</h4>
 
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>ボタン</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>ボタン</h2>
     <div class="ui grid">
       <div class="doubling four column row">
         <div class="column">
@@ -83,7 +83,7 @@
       </form><!-- /.bns-form -->
     </div>
 
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>ラベル</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>ラベル</h2>
     <div class="ui grid">
       <div class="doubling four column row">
         <div class="column">
@@ -101,7 +101,7 @@
       </div>
     </div><!-- /.ui grid -->
 
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>テキスト</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>テキスト</h2>
     <p>人間は考える葦である。</p>
     <p class="bns-text">吾輩は猫である。名前はまだない。</p>
     <p class="bns-text-info">お知らせ的な強調したい文字</p>
@@ -109,20 +109,20 @@
     <p class="bns-text-bold">fw:bのテキスト</p>
     <a href="#" class="bns-text-link">テキストリンク</a>
 
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>近くの保育園</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>近くの保育園</h2>
     @include('_partial.near-nursery')
 
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>おすすめ記事</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>おすすめ記事</h2>
     @include('_partial.recommend-news')
 
     <!-- 作ったらパーシャル化する -->
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>広告カルーセル</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>広告カルーセル</h2>
     @include('_partial.ad-carousel')
 
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>施設詳細カルーセル</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>施設詳細カルーセル</h2>
     @include('_partial.facility-carousel')
 
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>テーブル</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>テーブル</h2>
     <table class="bns-table">
       <tbody>
         <tr>
@@ -226,7 +226,7 @@
       </tbody>
     </table><!-- /.bns-table -->
 
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>施設詳細ページで使用するブロック</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>施設詳細ページで使用するブロック</h2>
     <div class="bns-block-category">
       <div class="bns-block-category__item">
         <div class="bns-block-category__body">
@@ -266,7 +266,7 @@
       </div>
     </div><!-- /.bns-block-detail -->
 
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>アコーディオンモジュール</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>アコーディオンモジュール</h2>
     <div class="bns-accordion">
       <ul class="bns-accordion-list">
         <li class="bns-accordion-list__item">

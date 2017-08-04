@@ -15,8 +15,8 @@
     display: block;
     float: left;
     width: 135px;
-    height: 44px;
-    background: url('http://placeimg.com/135/44/any') 50% 50% no-repeat;
+    height: 50px;
+    background: url('/images/btn_hokatsuNavi.svg') 50% 50% no-repeat;
     background-size: contain;
   }
   &-nav {
@@ -72,19 +72,22 @@
     &--look,
     &--menu {
       display: block;
-      padding: $siteGutter;
+      img {
+        @include image-responsive;
+        max-height: 42px;
+      }
       
     }
     &--badge {
       @include fz($fz-sm);
       display: inline-block;
-      padding: $siteGutter-sm;
+      padding: $siteGutter-sm /2;
       margin: auto;
       position: absolute;
-      bottom: 5px;
+      bottom: 15px;
       right: 0;
       color: $color-font--navy;
-      border-radius: 50%;
+      border-radius: 10px;
       background-color: $color-bg--secondary;
     }
   }

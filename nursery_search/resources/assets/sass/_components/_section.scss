@@ -1,8 +1,11 @@
 // Section
 #{$prj-ns}-section {
   position: relative;
-  margin: $siteGutter-lg*2 0;
+  margin: $siteGutter-lg 0;
   &:first-child {
+    margin: 0 0 $siteGutter-lg;
+  }
+  &:last-of-type {
     margin: 0 0 $siteGutter-lg*2;
   }
 }

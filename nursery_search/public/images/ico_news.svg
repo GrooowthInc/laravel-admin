@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" viewBox="0 0 40 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #365899;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="ico_news.svg" class="cls-1" d="M60,2593v-5H25v27.5a2.5,2.5,0,0,0,2.5,2.5H61.25a3.751,3.751,0,0,0,3.75-3.75V2593H60Zm-2.5,22.5h-30v-25h30v25Zm-27.5-20H55v2.5H30v-2.5Zm15,5H55v2.5H45v-2.5Zm0,5H55v2.5H45v-2.5Zm0,5h7.5v2.5H45v-2.5Zm-15-10H42.5V2613H30v-12.5Z" transform="translate(-25 -2588)"/>
+</svg>

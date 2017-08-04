@@ -370,7 +370,7 @@
     @include('_partial.near-nursery')
   </section>
 
-  <div class="bns-section">
+  <section class="bns-section">
     <div class="bns-layout">
       <h3 class="bns-title-level3">かえで幼稚園周辺の病院</h3>
       <a href="#" class="bns-text-link">聖路加国際病院</a>
@@ -418,7 +418,7 @@
       <a href="#" class="bns-text-link">目黒区</a>
       <p class="bns-text">（以下省略）</p>
     </div><!-- /.bns-layout -->
-  </div><!-- /.bns-section -->
+  </section><!-- /.bns-section -->
 </article>
 
 

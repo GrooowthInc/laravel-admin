@@ -22,6 +22,7 @@ const app = new Vue({
 });
 
 import Accordion from './components/Accordion';
+import AllCheck from './components/AllCheck';
 import Dropmenu from './components/Dropmenu';
 import HeightLine from './components/HeightLine';
 import Nav from './components/Nav';
@@ -31,8 +32,9 @@ import TextOverflow from './components/TextOverflow';
 $(function(){
   // FAQのアコーディオン
   new Accordion();
-
-  // NON0001 園生活におすすめ広告カルーセル
+  // NON0002 チェックボックスの一括解除
+  new AllCheck();
+  // 園生活におすすめ広告カルーセル
   new Carousel({
     target: '[data-bns-slick="target-recommend"]',
     setting: {
@@ -41,7 +43,6 @@ $(function(){
       arrows: true
     }
   });
-
   // 施設詳細カルーセル
   new Carousel({
     target: '[data-bns-slick="target"]',
@@ -50,15 +51,15 @@ $(function(){
       arrows: true
     }
   });
-
   // ヘッダーのハンバーガーメニュー
   new Dropmenu();
-
+  // 広告カルーセルの要素の高さ揃える
   new HeightLine({
     target: '[data-bns-height="carousel"]'
   });
-
+  // グロナビ追従
   new Nav();
+  // 三点リーダ―
   new TextOverflow();
 
 });

@@ -51,7 +51,7 @@
     </p>
   </section>
 
-  <div class="bns-section">
+  <section class="bns-section">
     {!! Breadcrumbs::render('facility-detail',$title ) !!}
 
     <div class="bns-layout">
@@ -61,6 +61,6 @@
       <a href="#" class="bns-text-link">千葉県</a>
       <a href="#" class="bns-text-link">埼玉県</a>
     </div><!-- /.bns-layout -->
-  </div><!-- /.bns-section -->
+  </section><!-- /.bns-section -->
 </article>
 @stop

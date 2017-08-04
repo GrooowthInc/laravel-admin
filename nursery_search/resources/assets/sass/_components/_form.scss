@@ -40,7 +40,7 @@
         right: 0;
         width: 20px;
         height: 20px;
-        background: url('https://dummyimage.com/20x20/000/808080.png&text=dummy') 50% 50% no-repeat;
+        background: url('/images/img_sign.svg') 50% 50% no-repeat;
         background-size: contain;
       }
     }
@@ -56,14 +56,14 @@
       width: 100%;
       border-bottom: 1px solid $color-border;
       background-color: $color-bg--exlight;
-      &.is-checked {
+      &.is-active {
         background-color: $color-bg-active;
       }
     }
     &__check {
       display: none;
       &:checked + #{$prj-ns}-form-select__text::after {
-        background: url('https://dummyimage.com/18x9/000/808080.png&text=dummy') 50% 50% no-repeat;
+        background: url('/images/ico_check.svg') 50% 50% no-repeat;
         background-size: contain;
       }
     }
@@ -85,6 +85,7 @@
         height: 20px;
         border: 1px solid $color-border;
         border-radius: $rds-base;
+        background-color: $color-border--exlight;
       }
       &::after {
         display: block;
