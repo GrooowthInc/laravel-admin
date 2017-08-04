@@ -1,4 +1,4 @@
-<div class="bns-header-overlay" data-bns-dropmenu="overlay"></div>
+<div class="bns-overlay" data-bns-dropmenu="overlay"></div>
 
 <header class="bns-header" data-bns-nav="content">
   <div class="bns-header__lead">@yield('catchtext')</div>
@@ -20,8 +20,8 @@
       </div>
     </div>
 
-    <aside class="bns-header-dropmenu" data-bns-dropmenu="content">
-      <div class="bns-header-dropmenu__heading">
+    <aside class="bns-dropmenu" data-bns-dropmenu="content">
+      <div class="bns-dropmenu__heading">
         <div class="ui grid">
           <div class="four wide column">
             <a href="javascript: void(0);" class="bns-btn--secondary" data-bns-dropmenu="close">戻る</a>
@@ -31,7 +31,7 @@
           </div>
         </div>
       </div>
-      <div class="bns-header-dropmenu__body">
+      <div class="bns-dropmenu__body">
         <div class="ui grid">
           <div class="doubling eight column row">
             <div class="column">
@@ -43,6 +43,6 @@
           </div>
         </div><!-- /.ui grid -->
       </div>
-    </aside><!-- /.bns-header-dropmenu -->
+    </aside><!-- /.bns-dropmenu -->
   </nav>
 </header><!-- /.bns-header -->

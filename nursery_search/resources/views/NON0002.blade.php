@@ -112,4 +112,29 @@
     </div><!-- /.bns-layout -->
   </section><!-- /.bns-section -->
 </article>
+
+<aside class="bns-dropmenu" data-bns-dropmenu="content">
+  <div class="bns-dropmenu__heading">
+    <div class="ui grid">
+      <div class="four wide column">
+        <a href="javascript: void(0);" class="bns-btn--secondary" data-bns-dropmenu="close">戻る</a>
+      </div>
+      <div class="twelve wide column">
+        <p class="bns-text--lg">探し方を選んでください</p>
+      </div>
+    </div>
+  </div>
+  <div class="bns-dropmenu__body">
+    <div class="ui grid">
+      <div class="doubling eight column row">
+        <div class="column">
+          <a href="#" class="bns-btn--primary">市区町村から探す</a>
+        </div>
+        <div class="column">
+          <a href="#" class="bns-btn--primary">沿線・駅から探す</a>
+        </div>
+      </div>
+    </div><!-- /.ui grid -->
+  </div>
+</aside><!-- /.bns-dropmenu -->
 @stop
