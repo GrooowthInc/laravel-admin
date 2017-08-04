@@ -29,6 +29,72 @@
       @yield('breadcrumbs')
     </main>
 
+    @if(Request::is('NON0002'))
+      <aside class="bns-dropmenu-modal" data-bns-dropmenu="content">
+        <div class="bns-dropmenu__heading">
+          <div class="ui grid">
+            <div class="four wide column">
+              <a href="javascript: void(0);" class="bns-btn--secondary" data-bns-dropmenu="close">戻る</a>
+            </div>
+            <div class="twelve wide column">
+              <p class="bns-text--lg">更に条件を絞り込む</p>
+            </div>
+          </div>
+        </div>
+        <div class="bns-dropmenu__body">
+          <div class="bns-form-select--doubling">
+            <div class="bns-layout--negative" data-bns-checkbox="container">
+              <label class="bns-form-select__label">
+                <input type="checkbox" name="checkbox01" class="bns-form-select__check" data-bns-checkbox="check">
+                <span class="bns-form-select__text">許可</span>
+              </label>
+              <label class="bns-form-select__label">
+                <input type="checkbox" name="checkbox02" class="bns-form-select__check" data-bns-checkbox="check">
+                <span class="bns-form-select__text">許可</span>
+              </label>
+              <label class="bns-form-select__label">
+                <input type="checkbox" name="checkbox03" class="bns-form-select__check" data-bns-checkbox="check">
+                <span class="bns-form-select__text">認証</span>
+              </label>
+              <label class="bns-form-select__label">
+                <input type="checkbox" name="checkbox04" class="bns-form-select__check" data-bns-checkbox="check">
+                <span class="bns-form-select__text">認証</span>
+              </label>
+              <label class="bns-form-select__label">
+                <input type="checkbox" name="checkbox05" class="bns-form-select__check" data-bns-checkbox="check">
+                <span class="bns-form-select__text">7:00～OK</span>
+              </label>
+              <label class="bns-form-select__label">
+                <input type="checkbox" name="checkbox06" class="bns-form-select__check" data-bns-checkbox="check">
+                <span class="bns-form-select__text">7:00～OK</span>
+              </label>
+              <label class="bns-form-select__label">
+                <input type="checkbox" name="checkbox7" class="bns-form-select__check" data-bns-checkbox="check">
+                <span class="bns-form-select__text">18:00～OK</span>
+              </label>
+              <label class="bns-form-select__label">
+                <input type="checkbox" name="checkbox08" class="bns-form-select__check" data-bns-checkbox="check">
+                <span class="bns-form-select__text">18:00～OK</span>
+              </label>
+            </div><!-- /.bns-layout--negative -->
+          </div><!-- /.bns-form-select--doubling -->
+          <div class="bns-layout">
+            <p class="bns-text--left">
+              <label>
+                <input type="checkbox" name="all-release" class="bns-form-select__check" data-bns-checkbox="release-trigger">
+                <span class="bns-text-link--area"><i class="bns-icon-carret"></i>全てのチェックを外す</span>
+              </label>
+            </p>
+          </div><!-- /.bns-layout -->
+          <div class="ui grid centered">
+            <div class="fifteen wide column">
+              <button class="bns-btn--primary">追加した条件で検索</button>
+            </div>
+          </div><!-- /.ui.grid -->
+        </div>
+      </aside><!-- /.bns-dropmenu-modal -->
+    @endif
+
     @include('_partial.footer')
 
     <script src="{{ mix('js/manifest.js')}}"></script>

@@ -50,6 +50,10 @@
     padding: $siteGutter 0;
     margin: $siteGutter 0;
     border-top: 1px dotted $color-border-main;
+    &--doubling {
+      @extend #{$prj-ns}-form-select;
+      overflow: hidden;
+    }
     &__label {
       display: block;
       padding: $siteGutter-md;
@@ -58,6 +62,13 @@
       background-color: $color-bg--exlight;
       &.is-active {
         background-color: $color-bg-active;
+      }
+      #{$prj-ns}-form-select--doubling &{
+        width: 50%;
+        float: left;
+        &:nth-child(odd) {
+          border-left: 1px solid $color-border;
+        }
       }
     }
     &__check {
