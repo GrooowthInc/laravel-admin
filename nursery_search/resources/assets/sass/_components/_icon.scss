@@ -1,0 +1,29 @@
+// Icon
+#{$prj-ns}-icon {
+  &-carret {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: $siteGutter-sm;
+    width: 16px;
+    height: 16px;
+    background: url('/images/img_sign.svg') 50% 50% no-repeat;
+    background-size: contain;
+    &:first-child {
+      margin-left: 0;
+    }
+    &--sm {
+      @extend #{$prj-ns}-icon-carret;
+      width: 14px;
+      height: 14px;
+    }
+    &--lg {
+      @extend #{$prj-ns}-icon-carret;
+      width: 18px;
+      height: 18px;
+    }
+    &__top {
+      @extend #{$prj-ns}-icon-carret;
+      transform: rotate(-90deg);
+    }
+  }
+}

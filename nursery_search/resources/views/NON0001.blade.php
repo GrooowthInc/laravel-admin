@@ -12,11 +12,13 @@
 
 @section('contents')
 <article class="bns-article">
-  <div class="bns-info">
-    ニュースのコピーですLorem ipsum dolor sit amet, consectetur adipisicing elit.
+  <div class="bns-section">
+    <div class="bns-info">
+      ニュースのコピーですLorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </div>
   </div>
   <section class="bns-section">
-    <h2 class="bns-title-area"><span class="bns-title-area__text"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>エリアを選んでください</span></h2>
+    <h2 class="bns-title-area"><span class="bns-title-area__text"><i class="bns-title-icon"><img src="/images/ico_japan.svg" alt="" /></i>エリアを選んでください</span></h2>
     <div class="bns-block-active ui grid">
       <div class="doubling four column row">
         <div class="column">
@@ -52,14 +54,14 @@
       <button class="bns-btn-radius--secondary">初めての保育園の探しかた</button>
     </div>
 
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>最近見た保育園</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>最近見た保育園</h2>
     @include('_partial.recently-see-nursery')
 
     <!-- ▼広告カルーセル▼ -->
     @include('_partial.ad-carousel')
     <!-- ▲広告カルーセル▲ -->
 
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>おすすめ記事</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_news.svg" alt="" /></i>おすすめ記事</h2>
     @include('_partial.recommend-news')
 
     <div class="bns-layout">

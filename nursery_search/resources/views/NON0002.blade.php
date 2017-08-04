@@ -45,7 +45,7 @@
         <p class="bns-text--left">
           <label>
             <input type="checkbox" name="all-release" class="bns-form-select__check" data-bns-checkbox="release-trigger">
-            <span class="bns-text-link--area">全てのチェックを外す</span>
+            <span class="bns-text-link--area"><i class="bns-icon-carret"></i>全てのチェックを外す</span>
           </label>
         </p>
       </div><!-- /.bns-layout -->
@@ -67,12 +67,12 @@
     <!-- ▲広告カルーセル▲ -->
     
     <!-- ▼最近見た保育園▼ -->
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>最近見た保育園</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>最近見た保育園</h2>
     @include('_partial.recently-see-nursery')
     <!-- ▲最近見た保育園▲ -->
     
     <!-- ▼おすすめ記事▼ -->
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>おすすめ記事</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_news.svg" alt="" /></i>おすすめ記事</h2>
     @include('_partial.recommend-news')
     <!-- ▲おすすめ記事▲ -->
 
