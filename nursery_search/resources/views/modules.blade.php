@@ -265,6 +265,28 @@
         <a href="#" class="bns-text-detail--link">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
       </div>
     </div><!-- /.bns-block-detail -->
+
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="https://dummyimage.com/40x30/000/808080.png&text=dummy" alt="" /></i>アコーディオンモジュール</h2>
+    <div class="bns-accordion">
+      <ul class="bns-accordion-list">
+        <li class="bns-accordion-list__item">
+          <a href="javascript: void(0);" class="bns-accordion__title" data-bns-accordion="trigger">
+            <span class="bns-accordion__text">1日の流れはどのような感じですか？</span>
+          </a>
+          <div class="bns-accordion__body" data-bns-accordion="content">
+            <p class="bns-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti nesciunt eveniet, eos doloribus praesentium ratione. Similique natus <a href="#" class="bns-text-link">nobis</a> voluptatibus magnam quasi, repellendus neque dolore, exercitationem quae, esse beatae doloribus sapiente?</p>
+          </div>
+        </li>
+        <li class="bns-accordion-list__item">
+          <a href="javascript: void(0);" class="bns-accordion__title" data-bns-accordion="trigger">
+            <span class="bns-accordion__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolor architecto, hic velit?</span>
+          </a>
+          <div class="bns-accordion__body" data-bns-accordion="content">
+            <p class="bns-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti nesciunt eveniet, eos doloribus praesentium ratione. Similique natus <a href="#" class="bns-text-link">nobis</a> voluptatibus magnam quasi, repellendus neque dolore, exercitationem quae, esse beatae doloribus sapiente?</p>
+          </div>
+        </li>
+      </ul>
+    </div><!-- /.bns-accordion -->
   </section>
 </article>
 

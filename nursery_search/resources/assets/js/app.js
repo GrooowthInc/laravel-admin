@@ -21,6 +21,7 @@ const app = new Vue({
   el: '#dashboard'
 });
 
+import Accordion from './components/Accordion';
 import Dropmenu from './components/Dropmenu';
 import HeightLine from './components/HeightLine';
 import Nav from './components/Nav';
@@ -28,6 +29,9 @@ import { Slick, Carousel } from './components/Slick';
 import TextOverflow from './components/TextOverflow';
 
 $(function(){
+  // FAQのアコーディオン
+  new Accordion();
+
   // NON0001 園生活におすすめ広告カルーセル
   new Carousel({
     target: '[data-bns-slick="target-recommend"]',

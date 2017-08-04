@@ -1,0 +1,54 @@
+// Accordion
+#{$prj-ns}-accordion {
+  width: 100%;
+  &-list {
+    &__item {
+      margin: $siteGutter 0;
+      border: 1px solid $color-border;
+    }
+  }
+  &__title {
+    display: block;
+    padding: $siteGutter $siteGutter 0;
+    width: 100%;
+    position: relative;
+    text-decoration: none;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      width: 18px;
+      height: 9px;
+      background: url('https://dummyimage.com/18x9/000/808080.png&text=dummy') 50% 50% no-repeat;
+      background-size: content;
+    }
+    &.is-active {
+    }
+  }
+  &__text {
+    display: block;
+    padding-left: $siteGutter-lg*2;
+    padding-bottom: $siteGutter;
+    width: 100%;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: 10px;
+      height: 13px;
+      background: url('https://dummyimage.com/10x13/000/808080.png&text=dummy') 50% 50% no-repeat;
+      background-size: content;
+    }
+    .is-active &{
+      border-bottom: 1px dotted $color-border;
+    }
+  }
+  &__body {
+    display: none;
+    padding: $siteGutter;
+    width: 100%;
+    background-color: $color-bg-active;
+  }
+}
