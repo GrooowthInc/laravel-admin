@@ -10,4 +10,12 @@
       @include image-responsive;
     }
   }
+  &.slick-arrow,
+  &.slick-next,
+  &.slick-prev,
+  &.slick-dots {
+    @include txt-hidden;
+  }
+  &.slick-dots {
+  }
 }

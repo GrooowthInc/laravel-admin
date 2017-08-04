@@ -31,6 +31,6 @@
 </div><!-- /.bns-layout--negative -->
 <div class="bns-layout">
   <p class="bns-text--right">
-    <a href="#" class="bns-text-link">記事一覧へ</a>
+    <a href="#" class="bns-text-link--area">記事一覧へ</a>
   </p>
 </div><!-- /.bns-layout -->

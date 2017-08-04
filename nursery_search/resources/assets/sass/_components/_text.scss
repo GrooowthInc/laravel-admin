@@ -10,6 +10,13 @@
     &:last-child {
       margin: 0;
     }
+    &--area {
+      @extend #{$prj-ns}-text-link;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
   &-info {
     color: $color-font--info;

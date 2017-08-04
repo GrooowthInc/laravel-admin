@@ -13,7 +13,50 @@
 @section('contents')
 <article class="bns-article">
   <section class="bns-section">
-    hoge
+    <h2 class="bns-title-level2">東京都のエリアから保育園をさがす</h2>
+    <p class="bns-text">東京都の保育園事情は、ダミーコピーです。ダミーコピーです。ダミーコピーです。ダミーコピーです。ダミーコピーです。</p>
+
+    <h3 class="bns-title-level3">東京都・市区町村を選択</h3>
+
+    <div class="bns-form-select">
+      <div class="bns-layout--negative">
+        <label class="bns-form-select__label">
+          <input type="checkbox" name="checkbox01" class="bns-form-select__check">
+          <span class="bns-form-select__text">千代田区</span>
+        </label>
+        <label class="bns-form-select__label">
+          <input type="checkbox" name="checkbox01" class="bns-form-select__check">
+          <span class="bns-form-select__text">荒川区</span>
+        </label>
+        <label class="bns-form-select__label">
+          <input type="checkbox" name="checkbox01" class="bns-form-select__check">
+          <span class="bns-form-select__text">足立区</span>
+        </label>
+        <label class="bns-form-select__label">
+          <input type="checkbox" name="checkbox01" class="bns-form-select__check">
+          <span class="bns-form-select__text">板橋区</span>
+        </label>
+        <label class="bns-form-select__label">
+          <input type="checkbox" name="checkbox01" class="bns-form-select__check">
+          <span class="bns-form-select__text">文京区</span>
+        </label>
+      </div><!-- /.bns-layout--negative -->
+      <div class="bns-layout">
+        <p class="bns-text--left">
+          <a href="javascript: void(0);" class="bns-text-link--area">全てのチェックを外す</a>
+        </p>
+      </div><!-- /.bns-layout -->
+      <div class="ui grid">
+        <div class="doubling four column row">
+          <div class="column">
+            <a href="#" class="bns-btn--primary">検索</a>
+          </div>
+          <div class="column">
+            <a href="#" class="bns-btn--primary">条件で絞り込む</a>
+          </div>
+        </div>
+      </div><!-- /.ui grid -->
+    </div><!-- /.bns-form-select -->
   </section>
 </article>
 
