@@ -17,6 +17,12 @@ Breadcrumbs::register('city-search', function ($breadcrumbs, $title) {
   $breadcrumbs->push($title, route('city-search'));
 });
 
+// トップ > 沿線選択 NON0003
+Breadcrumbs::register('wayside', function ($breadcrumbs, $title) {
+  $breadcrumbs->parent('home');
+  $breadcrumbs->push($title, route('wayside'));
+});
+
 // トップ > 施設詳細 NON0007
 Breadcrumbs::register('facility-detail', function ($breadcrumbs, $title) {
   $breadcrumbs->parent('home');
@@ -27,4 +33,10 @@ Breadcrumbs::register('facility-detail', function ($breadcrumbs, $title) {
 Breadcrumbs::register('agreement', function ($breadcrumbs, $title) {
   $breadcrumbs->parent('home');
   $breadcrumbs->push($title, route('agreement'));
+});
+
+// トップ > FAQ NON0013
+Breadcrumbs::register('faq', function ($breadcrumbs, $title) {
+  $breadcrumbs->parent('home');
+  $breadcrumbs->push($title, route('faq'));
 });

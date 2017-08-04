@@ -21,7 +21,7 @@ Route::get('NON0002', function () {
 
 Route::get('NON0003', function () {
   return view('NON0003');
-})->name('NON0003');
+})->name('wayside');
 
 Route::get('NON0004', function () {
   return view('NON0004');
@@ -42,6 +42,10 @@ Route::get('NON0007', function () {
 Route::get('NON0008', function () {
   return view('NON0008');
 })->name('agreement');
+
+Route::get('NON0013', function () {
+  return view('NON0013');
+})->name('faq');
 
 Route::get('modules', function () {
   return view('modules');
