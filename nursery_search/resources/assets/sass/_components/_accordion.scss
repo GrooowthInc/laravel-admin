@@ -20,7 +20,7 @@
       width: 18px;
       height: 9px;
       background: url('https://dummyimage.com/18x9/000/808080.png&text=dummy') 50% 50% no-repeat;
-      background-size: content;
+      background-size: contain;
     }
     &.is-active {
     }
@@ -39,7 +39,7 @@
       width: 10px;
       height: 13px;
       background: url('https://dummyimage.com/10x13/000/808080.png&text=dummy') 50% 50% no-repeat;
-      background-size: content;
+      background-size: contain;
     }
     .is-active &{
       border-bottom: 1px dotted $color-border;

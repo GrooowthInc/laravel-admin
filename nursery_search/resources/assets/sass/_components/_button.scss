@@ -8,6 +8,9 @@
   text-decoration: none;
   color: $color-font;
   background-color: $color-button;
+  &:hover {
+    text-decoration: none;
+  }
   &[disabled],
   &.is-disabled {
     color: $color-font--dark;

@@ -47,16 +47,50 @@
   }
   // チェックボックス
   &-select {
+    padding: $siteGutter 0;
+    margin: $siteGutter 0;
+    border-top: 1px dotted $color-border-main;
     &__label {
       display: block;
-      padding: $siteGutter $siteGutter-md;
+      padding: $siteGutter-md;
       width: 100%;
       border-bottom: 1px solid $color-border;
+      background-color: $color-bg--exlight;
+      &.is-checked {
+        background-color: $color-bg-active;
+      }
     }
     &__check {
+      display: none;
+      &:checked + #{$prj-ns}-form-select__text::after {
+        background: url('https://dummyimage.com/18x9/000/808080.png&text=dummy') 50% 50% no-repeat;
+        background-size: contain;
+      }
     }
     &__text {
-      padding-left: $siteGuuter-lg;
+      padding-left: $siteGutter-md*2;
+      position: relative;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+      }
+      &::before {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $color-border;
+        border-radius: $rds-base;
+      }
+      &::after {
+        display: block;
+        width: 18px;
+        height: 18px;
+      }
     }
   }
   
