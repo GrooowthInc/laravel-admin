@@ -1,16 +1,17 @@
 // Icon
 #{$prj-ns}-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: $siteGutter-sm;
+  width: 16px;
+  height: 16px;
+  &:first-child {
+    margin-left: 0;
+  }
   &-carret {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: $siteGutter-sm;
-    width: 16px;
-    height: 16px;
+    @extend #{$prj-ns}-icon;
     background: url('/images/img_sign.svg') 50% 50% no-repeat;
     background-size: contain;
-    &:first-child {
-      margin-left: 0;
-    }
     &--sm {
       @extend #{$prj-ns}-icon-carret;
       width: 14px;
@@ -25,5 +26,26 @@
       @extend #{$prj-ns}-icon-carret;
       transform: rotate(-90deg);
     }
+  }
+  &-pin {
+    @extend #{$prj-ns}-icon;
+    width: 13px;
+    height: 19px;
+    background: url('/images/ico_map.svg') 50% 50% no-repeat;
+    background-size: contain;
+  }
+  &-external {
+    @extend #{$prj-ns}-icon;
+    width: 15px;
+    height: 15px;
+    background: url('/images/ico_external.svg') 50% 50% no-repeat;
+    background-size: contain;
+  }
+  &-tel {
+    @extend #{$prj-ns}-icon;
+    width: 15px;
+    height: 15px;
+    background: url('/images/ico_phone.svg') 50% 50% no-repeat;
+    background-size: contain;
   }
 }

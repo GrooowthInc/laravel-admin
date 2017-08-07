@@ -13,6 +13,7 @@
   &-logo {
     @include txt-hidden;
     display: block;
+    margin: 0 $siteGutter;
     float: left;
     width: 135px;
     height: 50px;

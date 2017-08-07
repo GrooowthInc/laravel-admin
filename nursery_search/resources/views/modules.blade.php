@@ -41,6 +41,18 @@
           <a href="#" class="bns-btn--secondary">secondary</a>
         </div>
         <div class="column">
+          <button class="bns-btn--third">third</button>
+        </div>
+        <div class="column">
+          <a href="#" class="bns-btn--third">third</a>
+        </div>
+        <div class="column">
+          <button class="bns-btn--default">nomal</button>
+        </div>
+        <div class="column">
+          <a href="#" class="bns-btn--default is-active">nomal</a>
+        </div>
+        <div class="column">
           <button class="bns-btn">default</button>
         </div>
         <div class="column">
@@ -97,6 +109,12 @@
         </div>
         <div class="column">
           <i class="bns-label--disabled">hogehoge</i>
+        </div>
+        <div class="column">
+          <i class="bns-label--certification">hoge</i>
+        </div>
+        <div class="column">
+          <i class="bns-label--unauthenticate">hogehoge</i>
         </div>
       </div>
     </div><!-- /.ui grid -->

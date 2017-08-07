@@ -10943,9 +10943,10 @@ module.exports = function bind(fn, thisArg) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_AllCheck__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Dropmenu__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_HeightLine__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Nav__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Slick__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_TextOverflow__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_MapUrlScheme__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Nav__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Slick__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_TextOverflow__ = __webpack_require__(40);
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -10963,11 +10964,12 @@ window.Vue = __webpack_require__(4);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', __webpack_require__(44));
+Vue.component('example', __webpack_require__(45));
 
 var app = new Vue({
   el: '#dashboard'
 });
+
 
 
 
@@ -10983,7 +10985,7 @@ $(function () {
   // NON0002 チェックボックスの一括解除
   new __WEBPACK_IMPORTED_MODULE_1__components_AllCheck__["a" /* default */]();
   // 園生活におすすめ広告カルーセル
-  new __WEBPACK_IMPORTED_MODULE_5__components_Slick__["a" /* Carousel */]({
+  new __WEBPACK_IMPORTED_MODULE_6__components_Slick__["a" /* Carousel */]({
     target: '[data-bns-slick="target-recommend"]',
     setting: {
       slidesToShow: 2,
@@ -10992,7 +10994,7 @@ $(function () {
     }
   });
   // 施設詳細カルーセル
-  new __WEBPACK_IMPORTED_MODULE_5__components_Slick__["a" /* Carousel */]({
+  new __WEBPACK_IMPORTED_MODULE_6__components_Slick__["a" /* Carousel */]({
     target: '[data-bns-slick="target"]',
     setting: {
       dots: true,
@@ -11005,10 +11007,12 @@ $(function () {
   new __WEBPACK_IMPORTED_MODULE_3__components_HeightLine__["a" /* default */]({
     target: '[data-bns-height="carousel"]'
   });
+  // GoogleMapに誘導するスキーム
+  new __WEBPACK_IMPORTED_MODULE_4__components_MapUrlScheme__["a" /* default */]();
   // グロナビ追従
-  new __WEBPACK_IMPORTED_MODULE_4__components_Nav__["a" /* default */]();
+  new __WEBPACK_IMPORTED_MODULE_5__components_Nav__["a" /* default */]();
   // 三点リーダ―
-  new __WEBPACK_IMPORTED_MODULE_6__components_TextOverflow__["a" /* default */]();
+  new __WEBPACK_IMPORTED_MODULE_7__components_TextOverflow__["a" /* default */]();
 });
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
@@ -11893,7 +11897,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(42);
+window._ = __webpack_require__(43);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -11904,7 +11908,7 @@ window._ = __webpack_require__(42);
 try {
   window.$ = window.jQuery = __webpack_require__(0);
 
-  __webpack_require__(40);
+  __webpack_require__(41);
 } catch (e) {}
 
 /**
@@ -12174,7 +12178,7 @@ var Dropmenu = function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_heightline__ = __webpack_require__(41);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_heightline__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_heightline___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_heightline__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -12232,6 +12236,77 @@ var HeightLine = function () {
 
 /***/ }),
 /* 37 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/**
+ * MapUrlScheme
+ * @export
+ * @class MapUrlScheme
+ */
+
+var MapUrlScheme = function () {
+
+  /**
+   * Creates an instance of MapUrlScheme.
+   * @constructor
+   */
+  function MapUrlScheme(opts) {
+    _classCallCheck(this, MapUrlScheme);
+
+    var defaults = {
+      objectName: '[data-bns-url-scheme]',
+      event: '.MapUrlScheme'
+    };
+    this.conf = Object.assign({}, defaults, opts);
+    this._init();
+  }
+
+  /**
+   * _init
+   * @private
+   */
+
+
+  _createClass(MapUrlScheme, [{
+    key: '_init',
+    value: function _init() {
+      var _conf = this.conf,
+          objectName = _conf.objectName,
+          event = _conf.event;
+
+      $(document).on('click' + event, objectName, function (e) {
+        e.preventDefault();
+        var target = $(e.target).attr('href');
+        var iOS_Scheme = 'comgooglemaps://';
+        var iOS_Store = 'https://itunes.apple.com/jp/app/id585027354';
+        if ($('html').hasClass('ios')) {
+          var urlPalams = target.replace(/\/\/maps.google.com\/maps/g, iOS_Scheme);
+
+          $(objectName).attr('href', urlPalams);
+          location.href = urlPalams;
+          var _timerId = setTimeout(function () {
+            location.href = iOS_Store;
+          }, 500);
+        } else {
+          window.open(target, '_blank');
+        }
+      });
+    }
+  }]);
+
+  return MapUrlScheme;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (MapUrlScheme);
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12308,11 +12383,11 @@ var Nav = function () {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slick_carousel__ = __webpack_require__(43);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slick_carousel__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slick_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_slick_carousel__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Carousel; });
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -12447,7 +12522,7 @@ var Carousel = function (_Slick) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12518,7 +12593,7 @@ var TextOverflow = function () {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/*!
@@ -14902,7 +14977,7 @@ if (typeof jQuery === 'undefined') {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/*!--------------------------------------------------------------------------*
@@ -15007,7 +15082,7 @@ if (typeof jQuery === 'undefined') {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -32096,10 +32171,10 @@ if (typeof jQuery === 'undefined') {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10), __webpack_require__(47)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10), __webpack_require__(48)(module)))
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -35000,14 +35075,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(45)(
+var Component = __webpack_require__(46)(
   /* script */
   __webpack_require__(31),
   /* template */
-  __webpack_require__(46),
+  __webpack_require__(47),
   /* scopeId */
   null,
   /* cssModules */
@@ -35034,7 +35109,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 module.exports = function normalizeComponent (
@@ -35087,7 +35162,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -35116,7 +35191,7 @@ if (false) {
 }
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -35144,7 +35219,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
@@ -35152,4 +35227,4 @@ module.exports = __webpack_require__(12);
 
 
 /***/ })
-],[48]);
+],[49]);

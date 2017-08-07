@@ -25,6 +25,7 @@ import Accordion from './components/Accordion';
 import AllCheck from './components/AllCheck';
 import Dropmenu from './components/Dropmenu';
 import HeightLine from './components/HeightLine';
+import MapUrlScheme from './components/MapUrlScheme';
 import Nav from './components/Nav';
 import { Slick, Carousel } from './components/Slick';
 import TextOverflow from './components/TextOverflow';
@@ -57,6 +58,8 @@ $(function(){
   new HeightLine({
     target: '[data-bns-height="carousel"]'
   });
+  // GoogleMapに誘導するスキーム
+  new MapUrlScheme();
   // グロナビ追従
   new Nav();
   // 三点リーダ―

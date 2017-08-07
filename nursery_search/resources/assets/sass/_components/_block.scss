@@ -22,11 +22,13 @@
     &__icon {
       display: table-cell;
       vertical-align: middle;
-      width: 44px;
-      height: auto;
-      img {
-        @include image-responsive;
-        border-radius: $rds-base;
+      width: 21px;
+      height: 24px;
+      background: url('/images/ico_tag.svg') 50% 50% no-repeat;
+      background-size: contain;
+      &.is-active {
+        background: url('/images/ico_tag-active.svg') 50% 50% no-repeat;
+        background-size: contain;
       }
     }
     &__school {
@@ -84,6 +86,19 @@
       display: table-cell;
       vertical-align: top;
       padding: 0 $siteGutter;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background: url('/images/img_sign.svg') 50% 50% no-repeat;
+        background-size: contain;
+      }
     }
     &__date {
       @include fz($fz-sm);
@@ -95,7 +110,7 @@
   &-ad {
     padding: $siteGutter;
     margin: $siteGutter-lg 0;
-    border: 1px solid $color-border;
+    border: 2px solid $color-border;
     background-color: $color-bg--light;
     &__heading {
       @include fz($fz-lg);
@@ -175,6 +190,9 @@
       &:last-child {
         border-bottom: 1px dotted $color-border;
       }
+    }
+    &__icon {
+      float: right;
     }
   }
 }

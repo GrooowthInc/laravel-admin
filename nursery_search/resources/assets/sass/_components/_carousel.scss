@@ -10,12 +10,76 @@
       @include image-responsive;
     }
   }
-  &.slick-arrow,
-  &.slick-next,
-  &.slick-prev,
-  &.slick-dots {
-    @include txt-hidden;
+  .slick-arrow,
+  .slick-next,
+  .slick-prev {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: $z-menu-base*3;
   }
-  &.slick-dots {
+  .slick-next,
+  .slick-prev {
+    &::before {
+      content: "";
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 20px;
+      height: 20px;
+      background: url('/images/img_sign-exlight.svg') 50% 50% no-repeat;
+      background-size: contain;
+    }
+  }
+  .slick-next {
+    right: 0;
+  }
+  .slick-prev {
+    left: 0;
+    transform: rotate(180deg);
+  }
+  .slick-dots {
+    margin: auto;
+    position: absolute;
+    top: auto;
+    bottom: 10px;
+    z-index: $z-menu-base*3;
+    li {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      &.slick-active {
+        background-color: $color-border--exlight;
+      }
+      button {
+        width: 12px;
+        height: 12px;
+        border: 2px solid $color-border--exlight;
+        border-radius: 50%;
+        .slick-active &{
+          &::before {
+            background-color: $color-bg--exlight;
+            opacity: 1;
+          }
+        }
+        &::before {
+          content: "";
+          margin: auto;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          opacity: 0;
+        }
+      }
+    }
   }
 }

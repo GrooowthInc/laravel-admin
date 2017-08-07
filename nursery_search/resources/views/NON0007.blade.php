@@ -338,7 +338,10 @@
       <div class="bns-block-detail">
         <div class="bns-block-detail__item">
           <h4 class="bns-title-level4">住所</h4>
-          <p class="bns-text-detail">〒181-0016&nbsp;&nbsp;東京都三鷹市深大寺3-3-10</p>
+          <p class="bns-text-detail">
+            〒181-0016&nbsp;&nbsp;東京都三鷹市深大寺3-3-10
+            <a href="//maps.google.com/maps?daddr=35.692038,139.536631" class="bns-block-detail__icon" data-bns-url-scheme><i class="bns-icon-pin"></i></a>
+          </p>
         </div>
         <div class="bns-block-detail__item">
           <h4 class="bns-title-level4">交通手段</h4>
@@ -357,11 +360,11 @@
         </div>
         <div class="bns-block-detail__item">
           <h4 class="bns-title-level4">ホームページ</h4>
-          <a href="http://www.dummy.jp" target="_blank" class="bns-text-detail--link">http://www.dummy.jp</a>
+          <a href="http://www.dummy.jp" target="_blank" class="bns-text-detail--link">http://www.dummy.jp <i class="bns-icon-external"></i></a>
         </div>
         <div class="bns-block-detail__item">
           <h4 class="bns-title-level4">電話番号</h4>
-          <a href="tel:0422-00-0000" class="bns-text-detail--link">0422-00-0000</a>
+          <a href="tel:0422-00-0000" class="bns-text-detail--link">0422-00-0000 <i class="bns-icon-tel"></i></a>
         </div>
       </div><!-- /.bns-block-detail -->
     </div><!-- /.bns-block-catgory -->

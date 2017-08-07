@@ -40,3 +40,9 @@ Breadcrumbs::register('faq', function ($breadcrumbs, $title) {
   $breadcrumbs->parent('home');
   $breadcrumbs->push($title, route('faq'));
 });
+
+// トップ > サイトマップ NON0014
+Breadcrumbs::register('sitemap', function ($breadcrumbs, $title) {
+  $breadcrumbs->parent('home');
+  $breadcrumbs->push($title, route('sitemap'));
+});

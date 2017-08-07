@@ -30,8 +30,16 @@
   &-detail {
     font-weight: bold;
     color: $color-font--dark;
+    position: relative;
+    &::after {
+      content: '';
+      clear: both;
+      display: table;
+    }
     &--link {
       @extend #{$prj-ns}-text-detail;
+      display: inline-block;
+      vertical-align: middle;
       color: $color-font--link;
       text-decoration: none;
     }

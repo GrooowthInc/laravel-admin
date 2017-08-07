@@ -47,6 +47,10 @@ Route::get('NON0013', function () {
   return view('NON0013');
 })->name('faq');
 
+Route::get('NON0014', function () {
+  return view('NON0014');
+})->name('sitemap');
+
 Route::get('modules', function () {
   return view('modules');
 })->name('modules');

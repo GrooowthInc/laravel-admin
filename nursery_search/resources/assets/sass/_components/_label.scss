@@ -3,17 +3,24 @@
   display: inline-block;
   padding: $siteGutter-md /2;
   text-align: center;
-  color: $color-font--navy;
-  border: 1px solid $color-border-main;
-  background-color: $color-bg;
+  color: $color-font--exlight;
+  line-height: $lh-sm;
+  background-color: $color-bg-label;
   position: relative;
   .column &{
     width: 100%;
   }
   &--disabled {
     @extend #{$prj-ns}-label;
-    color: $color-font--light;
-    border: 1px solid $color-border--light;
-    background-color: $color-bg--exlight;
+    color: $color-font;
+    background-color: $color-bg--dark;
+  }
+  &--certification {
+    @extend #{$prj-ns}-label;
+    background-color: $color-bg-label-certification;
+  }
+  &--unauthenticate {
+    @extend #{$prj-ns}-label;
+    background-color: $color-bg-label-unauthenticate;
   }
 }
