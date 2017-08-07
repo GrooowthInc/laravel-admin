@@ -1,9 +1,48 @@
 // List
 #{$prj-ns}-list {
-  margin: $siteGutter-lg 0;
-  position: relative;
-  &--negative {
-    @extend #{$prj-ns}-list;
-    margin: -$siteGutter;
+  &__item {
+    display: block;
+    margin: 0 0 $siteGutter-md*2;
+    width: 100%;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &-heading {
+    &__text {
+      display: block;
+      padding-left: $siteGutter-lg;
+      margin: $siteGutter-lg 0;
+      color: $color-font;
+      text-decoration: none;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 9px;
+        height: 16px;
+        background: url('/images/img_sign.svg') 50% 50% no-repeat;
+        background-size: contain;
+      }
+      &:hover {
+       text-decoration: none; 
+      }
+    }
+  }
+  &-category {
+    &__item {
+    }
+  }
+  &-child {
+    padding-left: $siteGutter-lg;
+    &__item {
+    }
+    &__link {
+      @extend #{$prj-ns}-list-heading__text;
+    }
   }
 }

@@ -46,3 +46,9 @@ Breadcrumbs::register('sitemap', function ($breadcrumbs, $title) {
   $breadcrumbs->parent('home');
   $breadcrumbs->push($title, route('sitemap'));
 });
+
+// トップ > エラーページ NON0015
+Breadcrumbs::register('error', function ($breadcrumbs, $title) {
+  $breadcrumbs->parent('home');
+  $breadcrumbs->push($title, route('error'));
+});

@@ -51,6 +51,10 @@ Route::get('NON0014', function () {
   return view('NON0014');
 })->name('sitemap');
 
+Route::get('NON0015', function () {
+  return view('NON0015');
+})->name('error');
+
 Route::get('modules', function () {
   return view('modules');
 })->name('modules');
