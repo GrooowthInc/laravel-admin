@@ -20,6 +20,7 @@
 
   </head>
   <body>
+    <div class="bns-overlay" data-bns-dropmenu="overlay"></div>
     @include('_partial.header')
 
     <main id="dashboard" class="bns-main" data-bns-nav="main">

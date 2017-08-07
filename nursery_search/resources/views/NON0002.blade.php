@@ -55,7 +55,7 @@
             <a href="#" class="bns-btn--primary">検索</a>
           </div>
           <div class="column">
-            <a href="#" class="bns-btn--primary">条件で絞り込む</a>
+            <a href="#" class="bns-btn--third-no-arrow">検索条件の追加</a>
           </div>
         </div>
       </div><!-- /.ui grid -->

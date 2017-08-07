@@ -58,6 +58,12 @@
     @extend #{$prj-ns}-btn;
     color: $color-font--button;
     background-color: $color-button-third;
+    &-no-arrow {
+      @extend #{$prj-ns}-btn--third;
+      &::after {
+        content: none;
+      }
+    }
   }
   // 横が角丸ボタン
   &-radius {

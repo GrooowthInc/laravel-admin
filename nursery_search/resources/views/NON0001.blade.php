@@ -22,16 +22,16 @@
     <div class="bns-block-active ui grid">
       <div class="doubling four column row">
         <div class="column">
-          <button class="bns-btn--primary">東京都</button>
+          <button class="bns-btn--primary"  data-bns-dropmenu="target">東京都</button>
         </div>
         <div class="column">
-          <button class="bns-btn--primary">神奈川県</button>
+          <button class="bns-btn--primary"  data-bns-dropmenu="target">神奈川県</button>
         </div>
         <div class="column">
-          <button class="bns-btn--primary">千葉県</button>
+          <button class="bns-btn--primary"  data-bns-dropmenu="target">千葉県</button>
         </div>
         <div class="column">
-          <button class="bns-btn--primary">埼玉県</button>
+          <button class="bns-btn--primary"  data-bns-dropmenu="target">埼玉県</button>
         </div>
       </div>
     </div><!-- /.ui grid -->

@@ -1,5 +1,3 @@
-<div class="bns-overlay" data-bns-dropmenu="overlay"></div>
-
 <header class="bns-header" data-bns-nav="content">
   <div class="bns-header__lead">@yield('catchtext')</div>
   <nav class="bns-header-nav" data-bns-nav="target">
@@ -13,7 +11,7 @@
           <i class="bns-header-icon--badge">20</i>
         </div>
         <div class="bns-header__btn">
-          <a href="javascript: void(0);" class="bns-header-icon--menu" data-bns-dropmenu="target">
+          <a href="javascript: void(0);" class="bns-header-icon--menu">
             <img src="/images/btn_header02.svg" alt="メニュー" />
           </a>
         </div>
