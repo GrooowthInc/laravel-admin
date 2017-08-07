@@ -66,10 +66,12 @@
   &--right {
     display: block;
     text-align: right;
+    float: right;
   }
   &--left {
     display: block;
     text-align: left;
+    float: left;
   }
   &--center {
     display: block;

@@ -13,32 +13,48 @@
 @section('contents')
 <article class="bns-article">
   <section class="bns-section">
-    <h2 class="bns-title-level2">東京都のエリアから保育園をさがす</h2>
-    <p class="bns-text">東京都の保育園事情は、ダミーコピーです。ダミーコピーです。ダミーコピーです。ダミーコピーです。ダミーコピーです。</p>
+    <h2 class="bns-title-level2">東京都の沿線から保育園をさがす</h2>
+    <p class="bns-text">東京都の沿線別保育園事情は、ダミーコピーです。ダミーコピーです。ダミーコピーです。ダミーコピーです。ダミーコピーです。</p>
 
     <h3 class="bns-title-level3">東京都・沿線を選択</h3>
 
     <div class="bns-form-select">
+      <h4 class="bns-title-level4">JR</h4>
       <div class="bns-layout--negative" data-bns-checkbox="container">
         <label class="bns-form-select__label">
           <input type="checkbox" name="checkbox01" class="bns-form-select__check" data-bns-checkbox="check">
-          <span class="bns-form-select__text">千代田区</span>
+          <span class="bns-form-select__text">JR山手線（14件）</span>
         </label>
         <label class="bns-form-select__label">
           <input type="checkbox" name="checkbox02" class="bns-form-select__check" data-bns-checkbox="check">
-          <span class="bns-form-select__text">荒川区</span>
+          <span class="bns-form-select__text">JR京浜東北線（11件）</span>
         </label>
         <label class="bns-form-select__label">
           <input type="checkbox" name="checkbox03" class="bns-form-select__check" data-bns-checkbox="check">
-          <span class="bns-form-select__text">足立区</span>
+          <span class="bns-form-select__text">JR東海道本線（3件）</span>
         </label>
         <label class="bns-form-select__label">
           <input type="checkbox" name="checkbox04" class="bns-form-select__check" data-bns-checkbox="check">
-          <span class="bns-form-select__text">板橋区</span>
+          <span class="bns-form-select__text">JR常磐線（2件）</span>
+        </label>
+      </div><!-- /.bns-layout--negative -->
+      <h4 class="bns-title-level4">東京メトロ</h4>
+      <div class="bns-layout--negative" data-bns-checkbox="container">
+        <label class="bns-form-select__label">
+          <input type="checkbox" name="checkbox01" class="bns-form-select__check" data-bns-checkbox="check">
+          <span class="bns-form-select__text">東京メトロ銀座線（14件）</span>
         </label>
         <label class="bns-form-select__label">
-          <input type="checkbox" name="checkbox05" class="bns-form-select__check" data-bns-checkbox="check">
-          <span class="bns-form-select__text">文京区</span>
+          <input type="checkbox" name="checkbox02" class="bns-form-select__check" data-bns-checkbox="check">
+          <span class="bns-form-select__text">東京メトロ丸ノ内線（11件）</span>
+        </label>
+        <label class="bns-form-select__label">
+          <input type="checkbox" name="checkbox03" class="bns-form-select__check" data-bns-checkbox="check">
+          <span class="bns-form-select__text">東京メトロ日比谷線（3件）</span>
+        </label>
+        <label class="bns-form-select__label">
+          <input type="checkbox" name="checkbox04" class="bns-form-select__check" data-bns-checkbox="check">
+          <span class="bns-form-select__text">東京メトロ東西線（2件）</span>
         </label>
       </div><!-- /.bns-layout--negative -->
       <div class="bns-layout">
@@ -49,16 +65,12 @@
           </label>
         </p>
       </div><!-- /.bns-layout -->
-      <div class="ui grid">
-        <div class="doubling four column row">
-          <div class="column">
-            <a href="#" class="bns-btn--primary">検索</a>
-          </div>
-          <div class="column">
-            <a href="#" class="bns-btn--primary">条件で絞り込む</a>
-          </div>
+
+      <div class="ui two column centered grid">
+        <div class="column">
+          <a href="#" class="bns-btn--primary">検索</a>
         </div>
-      </div><!-- /.ui grid -->
+      </div><!-- /.ui .column -->
     </div><!-- /.bns-form-select -->
   </section>
   <section class="bns-section">

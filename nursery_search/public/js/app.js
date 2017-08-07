@@ -10944,9 +10944,10 @@ module.exports = function bind(fn, thisArg) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Dropmenu__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_HeightLine__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_MapUrlScheme__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Nav__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Slick__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_TextOverflow__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Modal__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Nav__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Slick__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_TextOverflow__ = __webpack_require__(41);
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -10964,11 +10965,12 @@ window.Vue = __webpack_require__(4);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', __webpack_require__(45));
+Vue.component('example', __webpack_require__(46));
 
 var app = new Vue({
   el: '#dashboard'
 });
+
 
 
 
@@ -10985,7 +10987,7 @@ $(function () {
   // NON0002 チェックボックスの一括解除
   new __WEBPACK_IMPORTED_MODULE_1__components_AllCheck__["a" /* default */]();
   // 園生活におすすめ広告カルーセル
-  new __WEBPACK_IMPORTED_MODULE_6__components_Slick__["a" /* Carousel */]({
+  new __WEBPACK_IMPORTED_MODULE_7__components_Slick__["a" /* Carousel */]({
     target: '[data-bns-slick="target-recommend"]',
     setting: {
       slidesToShow: 2,
@@ -10994,7 +10996,7 @@ $(function () {
     }
   });
   // 施設詳細カルーセル
-  new __WEBPACK_IMPORTED_MODULE_6__components_Slick__["a" /* Carousel */]({
+  new __WEBPACK_IMPORTED_MODULE_7__components_Slick__["a" /* Carousel */]({
     target: '[data-bns-slick="target"]',
     setting: {
       dots: true,
@@ -11009,10 +11011,12 @@ $(function () {
   });
   // GoogleMapに誘導するスキーム
   new __WEBPACK_IMPORTED_MODULE_4__components_MapUrlScheme__["a" /* default */]();
+  // モーダル
+  new __WEBPACK_IMPORTED_MODULE_5__components_Modal__["a" /* ModalDefault */]();
   // グロナビ追従
-  new __WEBPACK_IMPORTED_MODULE_5__components_Nav__["a" /* default */]();
+  new __WEBPACK_IMPORTED_MODULE_6__components_Nav__["a" /* default */]();
   // 三点リーダ―
-  new __WEBPACK_IMPORTED_MODULE_7__components_TextOverflow__["a" /* default */]();
+  new __WEBPACK_IMPORTED_MODULE_8__components_TextOverflow__["a" /* default */]();
 });
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
@@ -11897,7 +11901,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(43);
+window._ = __webpack_require__(44);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -11908,7 +11912,7 @@ window._ = __webpack_require__(43);
 try {
   window.$ = window.jQuery = __webpack_require__(0);
 
-  __webpack_require__(41);
+  __webpack_require__(42);
 } catch (e) {}
 
 /**
@@ -12178,7 +12182,7 @@ var Dropmenu = function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_heightline__ = __webpack_require__(42);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_heightline__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_heightline___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_heightline__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -12310,6 +12314,125 @@ var MapUrlScheme = function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalDefault; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/**
+ * Modal
+ * @export
+ * @class Modal
+ */
+
+var Modal = function () {
+
+  /**
+   * Creates an instance of Modal.
+   * @constructor
+   */
+  function Modal(opts) {
+    _classCallCheck(this, Modal);
+
+    var defaults = {
+      open: '[data-bns-modal="open"]',
+      close: '[data-bns-modal="close"]',
+      overlay: '[data-bns-modal="overlay"]',
+      active: 'is-active',
+      fixed: 'is-fixed',
+      event: '.Modal'
+    };
+    this.conf = Object.assign({}, defaults, opts);
+    this._init();
+  }
+
+  /**
+   * _init
+   * @private
+   */
+
+
+  _createClass(Modal, [{
+    key: '_init',
+    value: function _init() {
+      this._defaultModal();
+    }
+  }, {
+    key: '_defaultModal',
+    value: function _defaultModal() {
+      return null;
+    }
+  }]);
+
+  return Modal;
+}();
+
+// 通常モーダル
+
+
+/* unused harmony default export */ var _unused_webpack_default_export = (Modal);
+var ModalDefault = function (_Modal) {
+  _inherits(ModalDefault, _Modal);
+
+  function ModalDefault(opts) {
+    _classCallCheck(this, ModalDefault);
+
+    var _this = _possibleConstructorReturn(this, (ModalDefault.__proto__ || Object.getPrototypeOf(ModalDefault)).call(this));
+
+    _this.conf = Object.assign({}, opts);
+    _this._init();
+    return _this;
+  }
+  /**
+   * _init
+   * @private
+   */
+
+
+  _createClass(ModalDefault, [{
+    key: '_defaultModal',
+    value: function _defaultModal() {
+      var _conf = this.conf,
+          open = _conf.open,
+          close = _conf.close,
+          overlay = _conf.overlay,
+          active = _conf.active,
+          fixed = _conf.fixed,
+          event = _conf.event;
+
+      var self = this;
+
+      $(document).on('click' + event, open, function (e) {
+        e.preventDefault();
+        var attrHref = $(e.currentTarget).attr('href');
+        $(attrHref).modal('show');
+        $(overlay).addClass(active);
+        $('body').addClass(fixed);
+      });
+
+      $(document).on('click' + event, close, overlay, function (e) {
+        e.preventDefault();
+        // const attrHref = '#' + $(e).parents('.modal').attr('id');
+        $('.modal').modal('hide');
+        $(overlay).removeClass(active);
+        $('body').removeClass(fixed);
+      });
+    }
+  }]);
+
+  return ModalDefault;
+}(Modal);
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 39 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* WEBPACK VAR INJECTION */(function($) {var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12383,11 +12506,11 @@ var Nav = function () {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slick_carousel__ = __webpack_require__(44);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slick_carousel__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slick_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_slick_carousel__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Carousel; });
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -12522,7 +12645,7 @@ var Carousel = function (_Slick) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12593,7 +12716,7 @@ var TextOverflow = function () {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/*!
@@ -14977,7 +15100,7 @@ if (typeof jQuery === 'undefined') {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/*!--------------------------------------------------------------------------*
@@ -15082,7 +15205,7 @@ if (typeof jQuery === 'undefined') {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -32171,10 +32294,10 @@ if (typeof jQuery === 'undefined') {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10), __webpack_require__(48)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10), __webpack_require__(49)(module)))
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -35075,14 +35198,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(46)(
+var Component = __webpack_require__(47)(
   /* script */
   __webpack_require__(31),
   /* template */
-  __webpack_require__(47),
+  __webpack_require__(48),
   /* scopeId */
   null,
   /* cssModules */
@@ -35109,7 +35232,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports) {
 
 module.exports = function normalizeComponent (
@@ -35162,7 +35285,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -35191,7 +35314,7 @@ if (false) {
 }
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -35219,7 +35342,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
@@ -35227,4 +35350,4 @@ module.exports = __webpack_require__(12);
 
 
 /***/ })
-],[49]);
+],[50]);

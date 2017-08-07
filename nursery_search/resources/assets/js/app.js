@@ -26,6 +26,7 @@ import AllCheck from './components/AllCheck';
 import Dropmenu from './components/Dropmenu';
 import HeightLine from './components/HeightLine';
 import MapUrlScheme from './components/MapUrlScheme';
+import {Modal, ModalDefault} from './components/Modal';
 import Nav from './components/Nav';
 import { Slick, Carousel } from './components/Slick';
 import TextOverflow from './components/TextOverflow';
@@ -60,6 +61,8 @@ $(function(){
   });
   // GoogleMapに誘導するスキーム
   new MapUrlScheme();
+  // モーダル
+  new ModalDefault();
   // グロナビ追従
   new Nav();
   // 三点リーダ―

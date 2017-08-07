@@ -1,0 +1,40 @@
+// Modal
+#{$prj-ns}-modal-overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(51, 51, 51, 0.3);
+  z-index: $z-alert-base*2 - 1;
+  &.is-active {
+    display: block;
+  }
+}
+
+#{$prj-ns}-modal {
+  &.ui.modal {
+    margin: auto;
+    min-height: 70vh;
+    max-height: 95vh;
+    height: auto;
+    font-size: inherit;
+    overflow-x: hidden;
+    z-index: $z-alert-base*2;
+  }
+  &__inner {
+    padding: $siteGutter;
+  }
+  &__heading {
+    display: flex;
+    justify-content: center;
+    background-color: $color-bg--light;
+  }
+  &__title {
+    padding: $siteGutter $siteGutter-md;
+    background-color: $color-bg--dark;
+  }
+  &-footer {
+    border-top: 1px solid $color-border;
+  }
+}
