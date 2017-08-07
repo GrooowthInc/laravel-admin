@@ -154,11 +154,13 @@
     &__icon {
       display: table-cell;
       vertical-align: middle;
-      width: 44px;
-      height: auto;
-      img {
-        @include image-responsive;
-        border-radius: $rds-base;
+      width: 21px;
+      height: 24px;
+      background: url('/images/ico_tag.svg') 50% 50% no-repeat;
+      background-size: contain;
+      &.is-active {
+        background: url('/images/ico_tag-active.svg') 50% 50% no-repeat;
+        background-size: contain;
       }
     }
     &__school {

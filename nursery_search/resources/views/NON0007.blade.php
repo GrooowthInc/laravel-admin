@@ -35,9 +35,7 @@
     <div class="bns-block-catgory">
       <div class="bns-block-category__heading">
         <div class="bns-block-category__school">あげは幼稚園</div>
-        <a href="#" class="bns-block-category__icon">
-          <img src="https://dummyimage.com/20x20/000/808080.png&text=dummy" alt="" />
-        </a>
+        <a href="#" class="bns-block-category__icon"></a>
       </div>
       <div class="bns-block-category__item">
         <div class="ui grid">
