@@ -307,6 +307,33 @@
         </li>
       </ul>
     </div><!-- /.bns-accordion -->
+
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>ページネーション</h2>
+    <div class="bns-pagenation">
+      <ul class="bns-pagenation-list">
+        <li class="bns-pagenation-list__item">
+          <a href="#" class="bns-pagenation-list__prev"></a>
+        </li>
+        <li class="bns-pagenation-list__item">
+          <a href="#" class="bns-pagenation-list__link">1</a>
+        </li>
+        <li class="bns-pagenation-list__item">
+          <a href="#" class="bns-pagenation-list__link is-current">2</a>
+        </li>
+        <li class="bns-pagenation-list__item">
+          <span class="bns-pagenation-list__link">…</span>
+        </li>
+        <li class="bns-pagenation-list__item">
+          <a href="#" class="bns-pagenation-list__link">4</a>
+        </li>
+        <li class="bns-pagenation-list__item">
+          <a href="#" class="bns-pagenation-list__link">5</a>
+        </li>
+        <li class="bns-pagenation-list__item">
+          <a href="#" class="bns-pagenation-list__next"></a>
+        </li>
+      </ul>
+    </div><!-- /.bns-pagenation -->
   </section>
 </article>
 

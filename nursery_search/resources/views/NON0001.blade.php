@@ -18,7 +18,7 @@
     </div>
   </div>
   <section class="bns-section">
-    <h2 class="bns-title-area"><span class="bns-title-area__text"><i class="bns-title-icon"><img src="/images/ico_japan.svg" alt="" /></i>エリアを選んでください</span></h2>
+    <h2 class="bns-title-area"><span class="bns-title-area__text"><i class="bns-title-icon"><img src="/images/ico_japan.svg" alt="" /></i>保育園を探す</span></h2>
     <div class="bns-block-active ui grid">
       <div class="doubling four column row">
         <div class="column">

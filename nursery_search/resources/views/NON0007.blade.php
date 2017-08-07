@@ -372,16 +372,6 @@
   </section>
 
   <section class="bns-section">
-    <div class="bns-layout">
-      <h3 class="bns-title-level3">かえで幼稚園周辺の病院</h3>
-      <a href="#" class="bns-text-link">聖路加国際病院</a>
-      <a href="#" class="bns-text-link">カンガルー小児科</a>
-    </div><!-- /.bns-layout -->
-    <div class="bns-layout">
-      <h3 class="bns-title-level3">かえで幼稚園周辺の公共施設</h3>
-      <a href="#" class="bns-text-link">中央区立堀留町区民館</a>
-      <a href="#" class="bns-text-link">日本橋小学校図書館</a>
-    </div><!-- /.bns-layout -->
 
     {!! Breadcrumbs::render('facility-detail',$title ) !!}
 
