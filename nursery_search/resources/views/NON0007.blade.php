@@ -35,28 +35,31 @@
     <div class="bns-block-catgory">
       <div class="bns-block-category__heading">
         <div class="bns-block-category__school">あげは幼稚園</div>
-        <a href="#" class="bns-block-category__icon"></a>
+        <a href="javascript: void(0);" data-bns-seelater="target" class="bns-block-nursery__icon"></a>
       </div>
       <div class="bns-block-category__item">
         <div class="ui grid">
           <div class="doubling four column row">
             <div class="column">
-              <i class="bns-label">認可</i>
+              <i class="bns-label--primary">許可</i>
             </div>
             <div class="column">
-              <i class="bns-label--disabled">認可</i>
+              &nbsp;
             </div>
             <div class="column">
-              <i class="bns-label">hoge</i>
+              <i class="bns-label">7:00～OK（朝延長あり）</i>
             </div>
             <div class="column">
-              <i class="bns-label">hogehoge</i>
+              <i class="bns-label">18:00～OK（夜延長あり）</i>
             </div>
             <div class="column">
-              <i class="bns-label">hoge</i>
+              <i class="bns-label">アレルギー対応</i>
             </div>
             <div class="column">
-              <i class="bns-label">hogehoge</i>
+              <i class="bns-label">5才まで</i>
+            </div>
+            <div class="column">
+              &nbsp;
             </div>
           </div>
         </div><!-- /.ui grid -->

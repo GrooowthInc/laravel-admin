@@ -39411,21 +39411,31 @@ table {
 
 .bns-label,
 .bns-label--disabled,
-.bns-label--certification,
-.bns-label--unauthenticate {
-  display: inline-block;
+.bns-label--primary,
+.bns-label--secondary,
+.bns-label--third {
+  font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 7.5px;
-  text-align: center;
   color: #fff;
   line-height: 1;
-  background-color: #4881f0;
+  background-color: #ffbf47;
   position: relative;
 }
 
 .column .bns-label,
 .column .bns-label--disabled,
-.column .bns-label--certification,
-.column .bns-label--unauthenticate {
+.column .bns-label--primary,
+.column .bns-label--secondary,
+.column .bns-label--third {
   width: 100%;
 }
 
@@ -39434,11 +39444,15 @@ table {
   background-color: #dcdcdc;
 }
 
-.bns-label--certification {
+.bns-label--primary {
+  background-color: #4881f0;
+}
+
+.bns-label--secondary {
   background-color: #3c9854;
 }
 
-.bns-label--unauthenticate {
+.bns-label--third {
   background-color: #f37a06;
 }
 
@@ -39968,7 +39982,7 @@ table {
   top: 0;
   bottom: 0;
   left: 0;
-  background-color: #4881f0;
+  background-color: #ffbf47;
 }
 
 .bns-table__title {

@@ -121,16 +121,16 @@
           <i class="bns-label--disabled">認可</i>
         </div>
         <div class="column">
-          <i class="bns-label">hoge</i>
+          <i class="bns-label--primary">hoge</i>
         </div>
         <div class="column">
           <i class="bns-label--disabled">hogehoge</i>
         </div>
         <div class="column">
-          <i class="bns-label--certification">hoge</i>
+          <i class="bns-label--secondary">hoge</i>
         </div>
         <div class="column">
-          <i class="bns-label--unauthenticate">hogehoge</i>
+          <i class="bns-label--third">hogehoge</i>
         </div>
       </div>
     </div><!-- /.ui grid -->

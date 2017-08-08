@@ -1,8 +1,10 @@
 // Label
 #{$prj-ns}-label {
-  display: inline-block;
+  @include fz($fz-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: $siteGutter-md /2;
-  text-align: center;
   color: $color-font--exlight;
   line-height: $lh-sm;
   background-color: $color-bg-label;
@@ -15,12 +17,16 @@
     color: $color-font;
     background-color: $color-bg--dark;
   }
-  &--certification {
+  &--primary {
     @extend #{$prj-ns}-label;
-    background-color: $color-bg-label-certification;
+    background-color: $color-bg-label--primary;
   }
-  &--unauthenticate {
+  &--secondary {
     @extend #{$prj-ns}-label;
-    background-color: $color-bg-label-unauthenticate;
+    background-color: $color-bg-label--secondary;
+  }
+  &--third {
+    @extend #{$prj-ns}-label;
+    background-color: $color-bg-label--third;
   }
 }
