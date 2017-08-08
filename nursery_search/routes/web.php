@@ -78,3 +78,7 @@ Route::get('modules', function () {
 Route::get('filelist', function () {
   return view('filelist');
 })->name('filelist');
+
+Route::get('/{any}', function () {
+    return view('app');
+})->where('any', '.*');
