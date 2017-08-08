@@ -27,6 +27,15 @@
       transform: rotate(-90deg);
     }
   }
+  // 現在地から探すの大きいアイコン
+  &-here {
+    @extend #{$prj-ns}-icon;
+    width: 13px;
+    height: 19px;
+    background: url('/images/ico_map.svg') 50% 50% no-repeat;
+    background-size: contain;
+  }
+  // 小さいアイコン
   &-pin {
     @extend #{$prj-ns}-icon;
     width: 13px;
@@ -46,6 +55,27 @@
     width: 15px;
     height: 15px;
     background: url('/images/ico_phone.svg') 50% 50% no-repeat;
+    background-size: contain;
+  }
+  &-loupe {
+    @extend #{$prj-ns}-icon;
+    width: 30px;
+    height: 30px;
+    background: url('/images/ico_japan.svg') 50% 50% no-repeat;
+    background-size: contain;
+  }
+  &-train {
+    @extend #{$prj-ns}-icon;
+    width: 30px;
+    height: 30px;
+    background: url('/images/ico_japan.svg') 50% 50% no-repeat;
+    background-size: contain;
+  }
+  &-point {
+    @extend #{$prj-ns}-icon;
+    width: 30px;
+    height: 30px;
+    background: url('/images/ico_point.svg') 50% 50% no-repeat;
     background-size: contain;
   }
 }

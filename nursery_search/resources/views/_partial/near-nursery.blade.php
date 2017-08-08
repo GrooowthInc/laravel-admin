@@ -2,7 +2,7 @@
   <div class="bns-block-nursery">
     <div class="bns-block-nursery__heading">
       <a href="#" class="bns-block-nursery__school">あげは幼稚園</a>
-      <a href="javascript: void(0);" class="bns-block-nursery__icon"></a>
+      <a href="javascript: void(0);" class="bns-block-nursery__icon" data-bns-seelater="target"></a>
     </div>
     <div class="bns-block-nursery__body">
       <a href="#" class="bns-block-nursery__image">
@@ -19,7 +19,7 @@
   <div class="bns-block-nursery">
     <div class="bns-block-nursery__heading">
       <a href="#" class="bns-block-nursery__school">わかば幼稚園</a>
-      <a href="javascript: void(0);" class="bns-block-nursery__icon"></a>
+      <a href="javascript: void(0);" class="bns-block-nursery__icon" data-bns-seelater="target"></a>
     </div>
     <div class="bns-block-nursery__body">
       <a href="#" class="bns-block-nursery__image">
@@ -34,7 +34,7 @@
   <div class="bns-block-nursery">
     <div class="bns-block-nursery__heading">
       <a href="#" class="bns-block-nursery__school">あああ幼稚園</a>
-      <a href="javascript: void(0);" class="bns-block-nursery__icon"></a>
+      <a href="javascript: void(0);" class="bns-block-nursery__icon" data-bns-seelater="target"></a>
     </div>
     <div class="bns-block-nursery__body">
       <a href="#" class="bns-block-nursery__image">

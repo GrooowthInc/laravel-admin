@@ -69,9 +69,12 @@
     max-width: 300px;
     &__text {
       @include fz($fz-lg);
-      display: table;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding: $siteGutter;
       margin: auto;
+      width: 100%;
       font-weight: bold;
       color: $color-font--navy;
       background-color: $color-bg-active;

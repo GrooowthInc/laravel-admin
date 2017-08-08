@@ -29,6 +29,7 @@ import MapUrlScheme from './components/MapUrlScheme';
 import {Modal, ModalDefault} from './components/Modal';
 import Nav from './components/Nav';
 import { Slick, Carousel } from './components/Slick';
+import SeeLater from './components/SeeLater';
 import TextOverflow from './components/TextOverflow';
 
 $(function(){
@@ -65,6 +66,8 @@ $(function(){
   new ModalDefault();
   // グロナビ追従
   new Nav();
+  // あとで見る
+  new SeeLater();
   // 三点リーダ―
   new TextOverflow();
 

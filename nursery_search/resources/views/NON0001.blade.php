@@ -18,7 +18,7 @@
     </div>
   </div>
   <section class="bns-section">
-    <h2 class="bns-title-area"><span class="bns-title-area__text"><i class="bns-title-icon"><img src="/images/ico_japan.svg" alt="" /></i>保育園を探す</span></h2>
+    <h2 class="bns-title-area"><span class="bns-title-area__text"><i class="bns-icon-loupe"></i>保育園を探す</span></h2>
     <div class="bns-block-active ui grid">
       <div class="doubling four column row">
         <div class="column">
@@ -51,7 +51,7 @@
     </div><!-- /.ui grid -->
 
     <div class="bns-layout">
-      <button class="bns-btn-radius--secondary">初めての保育園の探しかた</button>
+      <button class="bns-btn-radius--secondary"><i class="bns-icon-point"></i>初めての保育園の探しかた</button>
     </div>
 
     <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>最近見た保育園</h2>
