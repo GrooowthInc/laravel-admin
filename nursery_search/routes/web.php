@@ -33,7 +33,7 @@ Route::get('NON0005', function () {
 
 Route::get('NON0006', function () {
   return view('NON0006');
-})->name('NON0006');
+})->name('search-result');
 
 Route::get('NON0007', function () {
   return view('NON0007');

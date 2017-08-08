@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: $siteGutter-md $siteGutter-sm;
+  padding: $siteGutter $siteGutter-sm;
   width: 100%;
   min-height: 50px;
   border-radius: $rds-base;
@@ -65,6 +65,50 @@
       @extend #{$prj-ns}-btn--third;
       &::after {
         content: none;
+      }
+    }
+  }
+  // iconが上に乗っかってるボタン
+  &-icon {
+    @extend #{$prj-ns}-btn;
+    flex-flow: column wrap;
+    &__area {
+      display: block;
+    }
+    &__text {
+      display: block;
+    }
+    &--default {
+      @extend #{$prj-ns}-btn-icon;
+      color: $color-font--navy;
+      background-color: $color-button--exlight;
+      border: 1px solid $color-border;
+      &::after {
+        content: none;
+      }
+      &.is-active {
+        background-color: $color-button-third;
+      }
+    }
+    &--primary {
+      @extend #{$prj-ns}-btn-icon;
+      color: $color-font--button;
+      background-color: $color-theme-main;
+    }
+    &--secondary {
+      @extend #{$prj-ns}-btn-icon;
+      color: $color-font--button;
+      background-color: $color-button-secondary;
+    }
+    &--third {
+      @extend #{$prj-ns}-btn-icon;
+      color: $color-font--button;
+      background-color: $color-button-third;
+      &-no-arrow {
+        @extend #{$prj-ns}-btn--third;
+        &::after {
+          content: none;
+        }
       }
     }
   }

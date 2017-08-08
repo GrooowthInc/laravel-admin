@@ -66,65 +66,114 @@ table tr:nth-child(even) td {
     <tr>
       <td>modules</td>
       <td>モジュールリスト</td>
-      <td><a href="./modules" target="_blank">modules</a></td>
+      <td><a href="{{ url('/modules') }}" target="_blank">modules</a></td>
       <!-- <td>4中</td> -->
       <td>モジュール</td>
     </tr>
     <tr>
       <td>NON0001</td>
       <td>トップページ</td>
-      <td><a href="/" target="_blank">NON0001</a></td>
+      <td><a href="{{ url('/') }}" target="_blank">NON0001</a></td>
       <!-- <td>4中</td> -->
       <td>トップページ</td>
     </tr>
     <tr>
       <td>NON0002</td>
       <td>保育園検索</td>
-      <td><a href="./NON0002" target="_blank">NON0002</a></td>
+      <td><a href="{{ url('/NON0002') }}" target="_blank">NON0002</a></td>
       <!-- <td>4中</td> -->
       <td>市区町村選択</td>
     </tr>
     <tr>
       <td>NON0003</td>
       <td>保育園検索</td>
-      <td><a href="./NON0003" target="_blank">NON0003</a></td>
+      <td><a href="{{ url('/NON0003') }}" target="_blank">NON0003</a></td>
       <!-- <td>4中</td> -->
       <td>沿線選択</td>
     </tr>
     <tr>
       <td>NON0004</td>
       <td>保育園検索</td>
-      <td><a href="./NON0004" target="_blank">NON0004</a></td>
+      <td><a href="{{ url('/NON0004') }}" target="_blank">NON0004</a></td>
       <!-- <td>4中</td> -->
       <td>駅名選択</td>
     </tr>
     <tr>
       <td>NON0005</td>
       <td>保育園検索</td>
-      <td><a href="./NON0005" target="_blank">NON0005</a></td>
+      <td><a href="{{ url('/NON0005') }}" target="_blank">NON0005</a></td>
       <!-- <td>4中</td> -->
       <td>地図選択</td>
     </tr>
     <tr>
       <td>NON0006</td>
       <td>保育園検索</td>
-      <td><a href="./NON0006" target="_blank">NON0006</a></td>
+      <td><a href="{{ url('/NON0006') }}" target="_blank">NON0006</a></td>
       <!-- <td>4中</td> -->
-      <td>地図選択</td>
+      <td>保育園検索結果一覧</td>
     </tr>
     <tr>
       <td>NON0007</td>
       <td>保育園検索</td>
-      <td><a href="./NON0007" target="_blank">NON0007</a></td>
+      <td><a href="{{ url('/NON0007') }}" target="_blank">NON0007</a></td>
       <!-- <td>4中</td> -->
       <td>施設詳細</td>
     </tr>
     <tr>
       <td>NON0008</td>
       <td>保育園検索</td>
-      <td><a href="./NON0008" target="_blank">NON0008</a></td>
+      <td><a href="{{ url('/NON0008') }}" target="_blank">NON0008</a></td>
       <!-- <td>4中</td> -->
       <td>ご利用規約</td>
+    </tr>
+    <tr>
+      <td>NON0009</td>
+      <td>保育園検索</td>
+      <td><a href="{{ url('/NON0009') }}" target="_blank">NON0009</a></td>
+      <!-- <td>4中</td> -->
+      <td>ご利用規約</td>
+    </tr>
+    <tr>
+      <td>NON0010</td>
+      <td>保育園検索</td>
+      <td><a href="{{ url('/NON0010') }}" target="_blank">NON0010</a></td>
+      <!-- <td>4中</td> -->
+      <td>ご利用規約</td>
+    </tr>
+    <tr>
+      <td>NON0011</td>
+      <td>保育園検索</td>
+      <td><a href="{{ url('/NON0011') }}" target="_blank">NON0011</a></td>
+      <!-- <td>4中</td> -->
+      <td>ご利用規約</td>
+    </tr>
+    <tr>
+      <td>NON0012</td>
+      <td>保育園検索</td>
+      <td><a href="{{ url('/NON0012') }}" target="_blank">NON0012</a></td>
+      <!-- <td>4中</td> -->
+      <td>ご利用規約</td>
+    </tr>
+    <tr>
+      <td>NON0013</td>
+      <td>保育園検索</td>
+      <td><a href="{{ url('/NON0013') }}" target="_blank">NON0013</a></td>
+      <!-- <td>4中</td> -->
+      <td>ご利用規約</td>
+    </tr>
+    <tr>
+      <td>NON0014</td>
+      <td>保育園検索</td>
+      <td><a href="{{ url('/NON0014') }}" target="_blank">NON0014</a></td>
+      <!-- <td>4中</td> -->
+      <td>ご利用規約</td>
+    </tr>
+    <tr>
+      <td>NON0015</td>
+      <td>エラーページ</td>
+      <td><a href="{{ url('/NON0015') }}" target="_blank">NON0015</a></td>
+      <!-- <td>4中</td> -->
+      <td>エラーページ</td>
     </tr>
   </tbody>
 </table>

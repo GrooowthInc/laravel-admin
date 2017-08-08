@@ -23,6 +23,12 @@ Breadcrumbs::register('wayside', function ($breadcrumbs, $title) {
   $breadcrumbs->push($title, route('wayside'));
 });
 
+// トップ > 検索結果一覧 NON0006
+Breadcrumbs::register('search-result', function ($breadcrumbs, $title) {
+  $breadcrumbs->parent('home');
+  $breadcrumbs->push($title, route('search-result'));
+});
+
 // トップ > 施設詳細 NON0007
 Breadcrumbs::register('facility-detail', function ($breadcrumbs, $title) {
   $breadcrumbs->parent('home');

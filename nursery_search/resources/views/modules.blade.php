@@ -64,6 +64,22 @@
         <div class="column">
           <a href="#" class="bns-btn is-disabled">disabled</a>
         </div>
+        <div class="column">
+          <button class="bns-btn-icon--primary">
+            <span class="bns-btn-icon__area">
+              <i class="bns-icon-loupe--search"></i>
+            </span>
+            <span class="bns-btn-icon__text">primary</span>
+          </button>
+        </div>
+        <div class="column">
+          <a href="#" class="bns-btn-icon--primary">
+            <span class="bns-btn-icon__area">
+              <i class="bns-icon-loupe--search"></i>
+            </span>
+            <span class="bns-btn-icon__text">primary</span>
+          </a>
+        </div>
       </div>
     </div><!-- /.ui grid -->
 
@@ -143,7 +159,7 @@
     <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>テーブル</h2>
     <table class="bns-table">
       <tbody>
-        <tr>
+        <tr class="bns-table__heading--no-border">
           <td class="bns-table__heading" colspan="4">見出し付きテーブル</td>
         </tr>
         <tr>
@@ -162,7 +178,7 @@
     </table><!-- /.bns-table -->
     <table class="bns-table">
       <tbody>
-        <tr>
+        <tr class="bns-table__heading--no-border">
           <td class="bns-table__heading" colspan="2">見出し付きテーブル</td>
         </tr>
         <tr>

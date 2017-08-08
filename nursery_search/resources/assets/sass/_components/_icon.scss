@@ -63,18 +63,23 @@
     height: 30px;
     background: url('/images/ico_japan.svg') 50% 50% no-repeat;
     background-size: contain;
+    &--search {
+      @extend #{$prj-ns}-icon-loupe;
+      background: url('/images/ico_search.svg') 50% 50% no-repeat;
+      background-size: contain;
+    }
   }
   &-train {
     @extend #{$prj-ns}-icon;
     width: 30px;
     height: 30px;
-    background: url('/images/ico_japan.svg') 50% 50% no-repeat;
+    background: url('/images/ico_train.svg') 50% 50% no-repeat;
     background-size: contain;
   }
   &-point {
     @extend #{$prj-ns}-icon;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background: url('/images/ico_point.svg') 50% 50% no-repeat;
     background-size: contain;
   }

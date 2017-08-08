@@ -34,10 +34,20 @@
           <div class="ui grid">
             <div class="doubling eight column row">
               <div class="column">
-                <a href="#" class="bns-btn--primary">市区町村から探す</a>
+                <a href="#" class="bns-btn-icon--primary">
+                  <span class="bns-btn-icon__area">
+                    <i class="bns-icon-loupe--search"></i>
+                  </span>
+                  <span class="bns-btn-icon__text">市区町村から探す</span>
+                </a>
               </div>
               <div class="column">
-                <a href="#" class="bns-btn--primary">沿線・駅から探す</a>
+                <a href="#" class="bns-btn-icon--primary">
+                  <span class="bns-btn-icon__area">
+                    <i class="bns-icon-train"></i>
+                  </span>
+                  <span class="bns-btn-icon__text">沿線・駅から探す</span>
+                </a>
               </div>
             </div>
           </div><!-- /.ui grid -->
