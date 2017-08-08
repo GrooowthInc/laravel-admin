@@ -35,14 +35,26 @@ const app = new Vue({
   el: '#dashboard'
 });
 
+import Accordion from './components/Accordion';
+import AllCheck from './components/AllCheck';
 import Dropmenu from './components/Dropmenu';
 import HeightLine from './components/HeightLine';
+import MapUrlScheme from './components/MapUrlScheme';
+import Modal, { ModalDefault } from './components/Modal';
 import Nav from './components/Nav';
+import SeeLater from './components/SeeLater';
 import Slick, { Carousel } from './components/Slick';
 import TextOverflow from './components/TextOverflow';
 
+
+
+
 $(function(){
-  // NON0001 園生活におすすめ広告カルーセル
+  // FAQのアコーディオン
+  new Accordion();
+  // NON0002 チェックボックスの一括解除
+  new AllCheck();
+  // 園生活におすすめ広告カルーセル
   new Carousel({
     target: '[data-bns-slick="target-recommend"]',
     setting: {
@@ -51,7 +63,6 @@ $(function(){
       arrows: true
     }
   });
-
   // 施設詳細カルーセル
   new Carousel({
     target: '[data-bns-slick="target"]',
@@ -60,15 +71,22 @@ $(function(){
       arrows: true
     }
   });
-
   // ヘッダーのハンバーガーメニュー
   new Dropmenu();
-
+  // 広告カルーセルの要素の高さ揃える
   new HeightLine({
     target: '[data-bns-height="carousel"]'
   });
-
+  // GoogleMapに誘導するスキーム
+  new MapUrlScheme();
+  // モーダル
+  new ModalDefault();
+  // グロナビ追従
   new Nav();
+  // あとで見る
+  new SeeLater();
+  // 三点リーダ―
   new TextOverflow();
+
 
 });
