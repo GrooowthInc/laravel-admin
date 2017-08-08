@@ -151,7 +151,7 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      z-index: $z-menu-base*3;
+      z-index: $z-menu-base -1;
     }
     .slick-next,
     .slick-prev {

@@ -26,6 +26,10 @@
       @extend #{$prj-ns}-icon-carret;
       transform: rotate(-90deg);
     }
+    &__bottom {
+      @extend #{$prj-ns}-icon-carret;
+      transform: rotate(90deg);
+    }
   }
   // 現在地から探すの大きいアイコン
   &-here {
