@@ -43,6 +43,14 @@ Route::get('NON0008', function () {
   return view('NON0008');
 })->name('agreement');
 
+Route::get('NON0009', function () {
+  return view('NON0009');
+})->name('nursery-select-point');
+
+Route::get('NON0010', function () {
+  return view('NON0010');
+})->name('service');
+
 Route::get('NON0011', function () {
   return view('NON0011');
 })->name('seelater');
