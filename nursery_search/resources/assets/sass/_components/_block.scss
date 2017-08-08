@@ -2,8 +2,6 @@
 #{$prj-ns}-block {
   &-active {
     background-color: $color-bg-active;
-    // padding-top: $siteGutter-md*2;
-    // margin-bottom: $siteGutter;
     &:first-of-type {
       padding-top: $siteGutter-md*2;
     }
@@ -113,17 +111,19 @@
     border: 2px solid $color-border;
     background-color: $color-bg--light;
     &__heading {
-      @include fz($fz-lg);
-      padding: $siteGutter;
+      @include fz($fz-xl);
+      padding: $siteGutter $siteGutter-md*2;
       margin-bottom: $siteGutter;
       color: $color-font;
-      text-align: center;
       border-bottom: 2px solid $color-border-sub;
       background-color: $color-bg--exlight;
+      i {
+        margin: 0 $siteGutter;
+      }
     }
     &-list {
       width: 100%;
-      overflow: hidden;
+      // overflow: hidden;
       &__item {
         display: inline-block;
         vertical-align: middle;
@@ -141,6 +141,41 @@
         margin-top: $siteGutter;
         color: $color-font--dark;
       }
+    }
+    .slick-arrow,
+    .slick-next,
+    .slick-prev {
+      margin: auto;
+      width: 22px;
+      height: 44px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: $z-menu-base*3;
+    }
+    .slick-next,
+    .slick-prev {
+      &::before {
+        content: "";
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 22px;
+        height: 44px;
+      }
+    }
+    .slick-next {
+      right: -10px;
+      background: url('/images/btn_pink-next.svg') 50% 50% no-repeat;
+      background-size: contain;
+    }
+    .slick-prev {
+      left: -10px;
+      background: url('/images/btn_pink-prev.svg') 50% 50% no-repeat;
+      background-size: contain;
     }
   }
   // 施設詳細ページ大分類カテゴリ

@@ -78,4 +78,11 @@
     background: url('/images/ico_point.svg') 50% 50% no-repeat;
     background-size: contain;
   }
+  &-pen {
+    @extend #{$prj-ns}-icon;
+    width: 30px;
+    height: 30px;
+    background: url('/images/ico_pen.svg') 50% 50% no-repeat;
+    background-size: contain;
+  }
 }

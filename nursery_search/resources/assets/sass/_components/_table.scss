@@ -6,10 +6,32 @@
   color: $color-font--dark;
   border-collapse: collapse;
   &__heading {
+    background-color: $color-bg--exlight !important;
+    font-weight: bold;
+    position: relative;
+    &::before {
+      content: '';
+      margin: auto;
+      width: 4px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $color-bg-label;
+    }
+  }
+  &__title {
     background-color: $color-bg--dark !important;
+    &-sub {
+      background-color: $color-bg-active--dark !important;
+    }
   }
   tr {
     border: 1px solid $color-border;
+    &#{$prj-ns}-table__heading--no-border {
+      border: 0;
+    }
     &:nth-child(odd) {
       td {
         &:nth-child(odd) {
@@ -32,6 +54,7 @@
     }
   }
   th {
+    vertical-align: middle;
     padding: $siteGutter;
     font-weight: normal;
     text-align: left;
@@ -44,6 +67,7 @@
     }
   }
   td {
+    vertical-align: middle;
     padding: $siteGutter;
     border-left: 1px solid $color-border;
     &:first-child {

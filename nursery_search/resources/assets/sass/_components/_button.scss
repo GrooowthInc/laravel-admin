@@ -1,8 +1,11 @@
 // Button
 #{$prj-ns}-btn {
-  display: inline-block;
-  padding: $siteGutter-lg $siteGutter-sm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $siteGutter-md $siteGutter-sm;
   width: 100%;
+  min-height: 50px;
   border-radius: $rds-base;
   text-align: center;
   text-decoration: none;

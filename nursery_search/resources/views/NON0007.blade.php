@@ -126,9 +126,9 @@
           <table class="bns-table--with-heading">
             <tbody>
               <tr>
-                <th>受け入れ開始年齢</th>
+                <th class="bns-table__title-sub">受け入れ<br>開始年齢</th>
                 <th>生後8週～</th>
-                <th>定員合計</th>
+                <th class="bns-table__title-sub">定員合計</th>
                 <th>93名</th>
               </tr>
               <tr>
@@ -154,7 +154,7 @@
 
           <table class="bns-table">
             <tbody>
-              <tr>
+              <tr class="bns-table__heading--no-border">
                 <td class="bns-table__heading" colspan="4">常勤職員数</td>
               </tr>
               <tr>
@@ -180,7 +180,7 @@
 
           <table class="bns-table">
             <tbody>
-              <tr>
+              <tr class="bns-table__heading--no-border">
                 <td class="bns-table__heading" colspan="4">非常勤職員数</td>
               </tr>
               <tr>
@@ -286,7 +286,7 @@
           <table class="bns-table">
             <tbody>
               <tr>
-                <td class="bns-table__heading" colspan="2">乳児</td>
+                <td class="bns-table__title" colspan="2">乳児</td>
               </tr>
               <tr>
                 <td class="bns-table-cell--sm bns-table__head">00時</td>
@@ -309,7 +309,7 @@
           <table class="bns-table">
             <tbody>
               <tr>
-                <td class="bns-table__heading" colspan="2">乳児</td>
+                <td class="bns-table__title" colspan="2">乳児</td>
               </tr>
               <tr>
                 <td class="bns-table-cell--sm bns-table__head">00時</td>
