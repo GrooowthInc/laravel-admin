@@ -43,6 +43,14 @@ Route::get('NON0008', function () {
   return view('NON0008');
 })->name('agreement');
 
+Route::get('NON0011', function () {
+  return view('NON0011');
+})->name('seelater');
+
+Route::get('NON0012', function () {
+  return view('NON0012');
+})->name('recommendnews');
+
 Route::get('NON0013', function () {
   return view('NON0013');
 })->name('faq');

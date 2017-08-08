@@ -29,8 +29,10 @@
     </a>
   </div>
 </div><!-- /.bns-layout--negative -->
-<div class="bns-layout">
-  <p class="bns-text--right">
-    <a href="#" class="bns-text-link--area">記事一覧へ<i class="bns-icon-carret--sm"></i></a>
-  </p>
-</div><!-- /.bns-layout -->
+@if(!Request::is('NON0012'))
+  <div class="bns-layout">
+    <p class="bns-text--right">
+      <a href="#" class="bns-text-link--area">記事一覧へ<i class="bns-icon-carret--sm"></i></a>
+    </p>
+  </div><!-- /.bns-layout -->
+@endif

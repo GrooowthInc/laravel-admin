@@ -35,6 +35,18 @@ Breadcrumbs::register('agreement', function ($breadcrumbs, $title) {
   $breadcrumbs->push($title, route('agreement'));
 });
 
+// トップ > あとで見る一覧 NON0011
+Breadcrumbs::register('seelater', function ($breadcrumbs, $title) {
+  $breadcrumbs->parent('home');
+  $breadcrumbs->push($title, route('seelater'));
+});
+
+// トップ > おすすめ記事一覧 NON0012
+Breadcrumbs::register('recommendnews', function ($breadcrumbs, $title) {
+  $breadcrumbs->parent('home');
+  $breadcrumbs->push($title, route('recommendnews'));
+});
+
 // トップ > FAQ NON0013
 Breadcrumbs::register('faq', function ($breadcrumbs, $title) {
   $breadcrumbs->parent('home');
