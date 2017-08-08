@@ -39,8 +39,19 @@ mix.webpackConfig({
   }
 })
 
-mix.js('resources/assets/js/app.js', 'public/js')
-  .extract(['vue'])
+mix.ts('resources/assets/js/app.ts', 'public/js')
+  .extract(
+    [
+    'axios',
+    'jquery',
+    'lodash',
+    'moment',
+    'vue',
+    'vue-class-component',
+    'vue-router'
+    ],
+    'public/js/vendor.js'  // windows特有の問題に対応（https://github.com/JeffreyWay/laravel-mix/issues/1091）
+  )
   .sass('resources/assets/sass/app.scss', 'public/css')
 
 mix.copy('resources/assets/semantic/dist/themes/', 'public/themes/', false)

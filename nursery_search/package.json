@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "node node_modules/.bin/cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --verbose",
-    "watch": "node node_modules/.bin/cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "node node_modules/.bin/cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "node node_modules/.bin/cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --verbose",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "build:semanticui": "gulp --gulpfile resources/assets/semantic/gulpfile.js build",
     "deploy:staging": "cd deploy && php ../vendor/deployer/deployer/bin/dep deploy staging -vvv",
     "rollback:staging": "cd deploy && php ../vendor/deployer/deployer/bin/dep rollback staging -vvv",
@@ -15,11 +15,17 @@
     "deploy:clean": "rm -rfv .tmp"
   },
   "devDependencies": {
-    "axios": "^0.15.2",
-    "jquery": "^3.1.0",
-    "laravel-mix": "^0.8.0",
-    "lodash": "^4.16.2",
-    "vue": "^2.0.1"
+    "@types/jquery": "3.2.11",
+    "axios": "0.16.2",
+    "cross-env": "5.0.3",
+    "jquery": "3.2.1",
+    "laravel-mix": "1.4.2",
+    "lodash": "4.17.4",
+    "ts-loader": "2.3.2",
+    "typescript": "2.4.2",
+    "vue": "2.4.2",
+    "vue-class-component": "5.0.2",
+    "vue-router": "2.7.0"
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
