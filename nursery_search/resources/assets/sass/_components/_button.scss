@@ -44,6 +44,7 @@
       content: none;
     }
     &.is-active {
+      color: $color-font--exlight;
       background-color: $color-button-third;
     }
   }
@@ -59,8 +60,12 @@
   }
   &--third {
     @extend #{$prj-ns}-btn;
-    color: $color-font--button;
+    color: $color-font--exlight;
     background-color: $color-button-third;
+    &::after {
+      background: url('/images/img_sign-exlight.svg') 50% 50% no-repeat;
+      background-size: contain;
+    }
     &-no-arrow {
       @extend #{$prj-ns}-btn--third;
       &::after {
@@ -102,7 +107,7 @@
     }
     &--third {
       @extend #{$prj-ns}-btn-icon;
-      color: $color-font--button;
+      color: $color-font--exlight;
       background-color: $color-button-third;
       &-no-arrow {
         @extend #{$prj-ns}-btn--third;
@@ -128,7 +133,7 @@
     }
     &--third {
       @extend #{$prj-ns}-btn-radius;
-      color: $color-font--button;
+      color: $color-font--exlight;
       background-color: $color-button-third;
     }
     &[disabled],

@@ -110,7 +110,7 @@
     &__check {
       display: none;
       &:checked + #{$prj-ns}-form-button {
-        background-color: $color-button-third;
+        background-color: $color-button-form;
       }
     }
     &__text {
@@ -126,7 +126,53 @@
       border: 1px solid $color-border;
       position: relative;
       .is-active &{
-        background-color: $color-button-third;
+        color: $color-font--exlight;
+        background-color: $color-button-form;
+      }
+    }
+    &--primary {
+      @extend #{$prj-ns}-form-button;
+      &__check {
+        display: none;
+        &:checked + #{$prj-ns}-form-button {
+          background-color: $color-button-form--primary;
+        }
+      }
+      &__text {
+        @extend #{$prj-ns}-form-button__text;
+        .is-active &{
+          background-color: $color-button-form--primary;
+        }
+      }
+    }
+    &--secondary {
+      @extend #{$prj-ns}-form-button;
+      &__check {
+        display: none;
+        &:checked + #{$prj-ns}-form-button {
+          background-color: $color-button-form--secondary;
+        }
+      }
+      &__text {
+        @extend #{$prj-ns}-form-button__text;
+        .is-active &{
+          background-color: $color-button-form--secondary;
+        }
+      }
+    }
+    &--third {
+      @extend #{$prj-ns}-form-button;
+      &__check {
+        display: none;
+        &:checked + #{$prj-ns}-form-button {
+          background-color: $color-button-form--third;
+        }
+      }
+      &__text {
+        @extend #{$prj-ns}-form-button__text;
+        .is-active &{
+          background-color: $color-button-form--third;
+        }
       }
     }
   }

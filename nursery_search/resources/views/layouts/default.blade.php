@@ -37,26 +37,26 @@
         <div class="bns-modal__heading">
           <p class="bns-text--lg">更に条件を絞り込む</p>
         </div>
-        <div class="bns-modal__body">
+        <div class="bns-modal__body" data-bns-checkbox="container">
           <div class="bns-modal__title">種別</div>
           <div class="ui grid bns-layout--default">
             <div class="three column row">
               <div class="column">
-                <label class="bns-form-button">
-                  <input type="checkbox" name="checkbox01" class="bns-form-button__check" data-bns-checkbox="check">
-                  <span class="bns-form-button__text">許可</span>
+                <label class="bns-form-button--primary">
+                  <input type="checkbox" name="checkbox01" class="bns-form-button--primary__check" data-bns-checkbox="check">
+                  <span class="bns-form-button--primary__text">許可</span>
                 </label>
               </div>
               <div class="column">
-                <label class="bns-form-button">
-                  <input type="checkbox" name="checkbox02" class="bns-form-button__check" data-bns-checkbox="check">
-                  <span class="bns-form-button__text">認証</span>
+                <label class="bns-form-button--secondary">
+                  <input type="checkbox" name="checkbox02" class="bns-form-button--secondary__check" data-bns-checkbox="check">
+                  <span class="bns-form-button--secondary__text">認証</span>
                 </label>
               </div>
               <div class="column">
-                <label class="bns-form-button">
-                  <input type="checkbox" name="checkbox03" class="bns-form-button__check" data-bns-checkbox="check">
-                  <span class="bns-form-button__text">無認可</span>
+                <label class="bns-form-button--third">
+                  <input type="checkbox" name="checkbox03" class="bns-form-button--third__check" data-bns-checkbox="check">
+                  <span class="bns-form-button--third__text">認可外</span>
                 </label>
               </div>
             </div>
@@ -122,7 +122,7 @@
           </div><!-- /.bns-layout-column--2to1 -->
         </div>
         <div class="bns-modal-footer">
-          <div class="bns-layout--default">
+          <div class="bns-layout--default-no-margin">
             <p class="bns-text--left">
               <a href="javascript: void(0);" class="bns-text-link--area" data-bns-modal="close"><i class="bns-icon-carret"></i>戻る</a>
             </p>
@@ -147,26 +147,26 @@
         <div class="bns-modal__heading">
           <p class="bns-text--lg">更に条件を絞り込む</p>
         </div>
-        <div class="bns-modal__body">
+        <div class="bns-modal__body" data-bns-checkbox="container">
           <div class="bns-modal__title">種別</div>
           <div class="ui grid bns-layout--default">
             <div class="three column row">
               <div class="column">
-                <label class="bns-form-button">
-                  <input type="checkbox" name="checkbox01" class="bns-form-button__check" data-bns-checkbox="check">
-                  <span class="bns-form-button__text">許可</span>
+                <label class="bns-form-button--primary">
+                  <input type="checkbox" name="checkbox01" class="bns-form-button--primary__check" data-bns-checkbox="check">
+                  <span class="bns-form-button--primary__text">許可</span>
                 </label>
               </div>
               <div class="column">
-                <label class="bns-form-button">
-                  <input type="checkbox" name="checkbox02" class="bns-form-button__check" data-bns-checkbox="check">
-                  <span class="bns-form-button__text">認証</span>
+                <label class="bns-form-button--secondary">
+                  <input type="checkbox" name="checkbox02" class="bns-form-button--secondary__check" data-bns-checkbox="check">
+                  <span class="bns-form-button--secondary__text">認証</span>
                 </label>
               </div>
               <div class="column">
-                <label class="bns-form-button">
-                  <input type="checkbox" name="checkbox03" class="bns-form-button__check" data-bns-checkbox="check">
-                  <span class="bns-form-button__text">無認可</span>
+                <label class="bns-form-button--third">
+                  <input type="checkbox" name="checkbox03" class="bns-form-button--third__check" data-bns-checkbox="check">
+                  <span class="bns-form-button--third__text">認可外</span>
                 </label>
               </div>
             </div>
@@ -232,7 +232,7 @@
           </div><!-- /.bns-layout-column--2to1 -->
         </div>
         <div class="bns-modal-footer">
-          <div class="bns-layout--default">
+          <div class="bns-layout--default-no-margin">
             <p class="bns-text--left">
               <a href="javascript: void(0);" class="bns-text-link--area" data-bns-modal="close"><i class="bns-icon-carret"></i>戻る</a>
             </p>

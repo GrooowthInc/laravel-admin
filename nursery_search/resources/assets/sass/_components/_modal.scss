@@ -6,7 +6,7 @@
   height: 100vh;
   overflow: hidden;
   background-color: rgba(51, 51, 51, 0.3);
-  z-index: $z-alert-base*2;
+  z-index: $z-alert-base*2 - 1;
   &.is-active {
     display: block;
   }
@@ -16,7 +16,7 @@
   &.ui.modal {
     margin: auto;
     min-height: 70vh;
-    max-height: 95vh;
+    max-height: 80vh;
     height: auto;
     font-size: inherit;
     overflow-x: hidden;

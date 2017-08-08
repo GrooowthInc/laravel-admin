@@ -38496,7 +38496,7 @@ table {
   position: absolute;
   top: 0;
   bottom: 0;
-  z-index: 3000 -1;
+  z-index: 2999;
 }
 
 .bns-block-ad .slick-next::before,
@@ -38776,7 +38776,8 @@ table {
 }
 
 .bns-btn--default.is-active {
-  background-color: #cde645;
+  color: #fff;
+  background-color: #4881f0;
 }
 
 .bns-btn--primary {
@@ -38792,8 +38793,15 @@ table {
 .bns-btn--third,
 .bns-btn--third-no-arrow,
 .bns-btn-icon--third-no-arrow {
-  color: #555;
-  background-color: #cde645;
+  color: #fff;
+  background-color: #4881f0;
+}
+
+.bns-btn--third::after,
+.bns-btn--third-no-arrow::after,
+.bns-btn-icon--third-no-arrow::after {
+  background: url("/images/img_sign-exlight.svg") 50% 50% no-repeat;
+  background-size: contain;
 }
 
 .bns-btn--third-no-arrow::after {
@@ -38830,7 +38838,7 @@ table {
 }
 
 .bns-btn-icon--default.is-active {
-  background-color: #cde645;
+  background-color: #4881f0;
 }
 
 .bns-btn-icon--primary {
@@ -38844,8 +38852,8 @@ table {
 }
 
 .bns-btn-icon--third {
-  color: #555;
-  background-color: #cde645;
+  color: #fff;
+  background-color: #4881f0;
 }
 
 .bns-btn-icon--third-no-arrow::after {
@@ -38870,8 +38878,8 @@ table {
 }
 
 .bns-btn-radius--third {
-  color: #555;
-  background-color: #cde645;
+  color: #fff;
+  background-color: #4881f0;
 }
 
 .bns-btn-radius[disabled],
@@ -38915,7 +38923,7 @@ table {
   height: 44px;
   position: absolute;
   top: 50%;
-  z-index: 3000 -1;
+  z-index: 2999;
 }
 
 .bns-carousel .slick-next::before,
@@ -38948,7 +38956,7 @@ table {
   position: absolute;
   top: auto;
   bottom: 10px;
-  z-index: 3000 -1;
+  z-index: 2999;
 }
 
 .bns-carousel .slick-dots li {
@@ -39169,7 +39177,10 @@ table {
   height: 18px;
 }
 
-.bns-form-button {
+.bns-form-button,
+.bns-form-button--primary,
+.bns-form-button--secondary,
+.bns-form-button--third {
   display: block;
 }
 
@@ -39177,11 +39188,17 @@ table {
   display: none;
 }
 
-.bns-form-button__check:checked + .bns-form-button {
-  background-color: #cde645;
+.bns-form-button__check:checked + .bns-form-button,
+.bns-form-button__check:checked + .bns-form-button--primary,
+.bns-form-button__check:checked + .bns-form-button--secondary,
+.bns-form-button__check:checked + .bns-form-button--third {
+  background-color: #ffbf47;
 }
 
-.bns-form-button__text {
+.bns-form-button__text,
+.bns-form-button--primary__text,
+.bns-form-button--secondary__text,
+.bns-form-button--third__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39201,8 +39218,57 @@ table {
   position: relative;
 }
 
-.is-active .bns-form-button__text {
-  background-color: #cde645;
+.is-active .bns-form-button__text,
+.is-active .bns-form-button--primary__text,
+.is-active .bns-form-button--secondary__text,
+.is-active .bns-form-button--third__text {
+  color: #fff;
+  background-color: #ffbf47;
+}
+
+.bns-form-button--primary__check {
+  display: none;
+}
+
+.bns-form-button--primary__check:checked + .bns-form-button,
+.bns-form-button--primary__check:checked + .bns-form-button--primary,
+.bns-form-button--primary__check:checked + .bns-form-button--secondary,
+.bns-form-button--primary__check:checked + .bns-form-button--third {
+  background-color: #4881f0;
+}
+
+.is-active .bns-form-button--primary__text {
+  background-color: #4881f0;
+}
+
+.bns-form-button--secondary__check {
+  display: none;
+}
+
+.bns-form-button--secondary__check:checked + .bns-form-button,
+.bns-form-button--secondary__check:checked + .bns-form-button--primary,
+.bns-form-button--secondary__check:checked + .bns-form-button--secondary,
+.bns-form-button--secondary__check:checked + .bns-form-button--third {
+  background-color: #3c9854;
+}
+
+.is-active .bns-form-button--secondary__text {
+  background-color: #3c9854;
+}
+
+.bns-form-button--third__check {
+  display: none;
+}
+
+.bns-form-button--third__check:checked + .bns-form-button,
+.bns-form-button--third__check:checked + .bns-form-button--primary,
+.bns-form-button--third__check:checked + .bns-form-button--secondary,
+.bns-form-button--third__check:checked + .bns-form-button--third {
+  background-color: #f37a06;
+}
+
+.is-active .bns-form-button--third__text {
+  background-color: #f37a06;
 }
 
 .bns-icon,
@@ -39378,14 +39444,16 @@ table {
 
 .bns-layout,
 .bns-layout--negative,
-.bns-layout--default {
+.bns-layout--default,
+.bns-layout--default-no-margin {
   margin: 20px 0;
   position: relative;
 }
 
 .bns-layout::after,
 .bns-layout--negative::after,
-.bns-layout--default::after {
+.bns-layout--default::after,
+.bns-layout--default-no-margin::after {
   content: '';
   clear: both;
   display: table;
@@ -39396,8 +39464,13 @@ table {
   margin: -10px;
 }
 
-.bns-layout--default {
+.bns-layout--default,
+.bns-layout--default-no-margin {
   padding: 10px !important;
+}
+
+.bns-layout--default-no-margin {
+  margin: 0;
 }
 
 .bns-layout-column--2to1 {
@@ -39488,7 +39561,7 @@ table {
 .bns-modal.ui.modal {
   margin: auto;
   min-height: 70vh;
-  max-height: 95vh;
+  max-height: 80vh;
   height: auto;
   font-size: inherit;
   overflow-x: hidden;
