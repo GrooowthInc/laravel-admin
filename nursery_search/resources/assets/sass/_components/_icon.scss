@@ -50,6 +50,17 @@
     background: url('/images/ico_map.svg') 50% 50% no-repeat;
     background-size: contain;
   }
+  &-list {
+    @extend #{$prj-ns}-icon;
+    width: 25px;
+    height: 25px;
+    background: url('/images/ico_list.svg') 50% 50% no-repeat;
+    background-size: contain;
+    .is-disabled &{
+      background: url('/images/ico_list-exlight.svg') 50% 50% no-repeat;
+      background-size: contain;
+    }
+  }
   &-external {
     @extend #{$prj-ns}-icon;
     width: 15px;

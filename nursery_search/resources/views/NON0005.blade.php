@@ -18,7 +18,7 @@
         <a href="{{ url('/NON0005') }}" class="bns-btn--primary"><i class="bns-icon-here"></i>地図で見る</a>
       </div>
       <div class="column">
-        <button class="bns-btn--primary">一覧で見る</button>
+        <button class="bns-btn--primary"><i class="bns-icon-list"></i>一覧で見る</button>
       </div>
     </div>
   </div><!-- /.ui grid -->
