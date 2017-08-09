@@ -14,8 +14,10 @@
     position: relative;
     text-decoration: none;
     &.is-active {
-      #{$prj-ns}-icon-carret__top {
-        transform: rotate(90deg);
+      #{$prj-ns}-icon-carret__bottom {
+        background: url('/images/img_sign-dark.svg') 50% 50% no-repeat;
+        background-size: contain;
+        transform: rotate(-90deg);
       }
     }
   }

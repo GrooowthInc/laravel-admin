@@ -305,7 +305,7 @@
       <ul class="bns-accordion-list">
         <li class="bns-accordion-list__item">
           <a href="javascript: void(0);" class="bns-accordion__title" data-bns-accordion="trigger">
-            <i class="bns-icon-carret__top"></i>
+            <i class="bns-icon-carret__bottom"></i>
             <span class="bns-accordion__text">1日の流れはどのような感じですか？</span>
           </a>
           <div class="bns-accordion__body" data-bns-accordion="content">
@@ -314,7 +314,7 @@
         </li>
         <li class="bns-accordion-list__item">
           <a href="javascript: void(0);" class="bns-accordion__title" data-bns-accordion="trigger">
-            <i class="bns-icon-carret__top"></i>
+            <i class="bns-icon-carret__bottom"></i>
             <span class="bns-accordion__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolor architecto, hic velit?</span>
           </a>
           <div class="bns-accordion__body" data-bns-accordion="content">

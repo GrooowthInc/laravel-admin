@@ -38249,9 +38249,11 @@ table {
   text-decoration: none;
 }
 
-.bns-accordion__title.is-active .bns-icon-carret__top {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+.bns-accordion__title.is-active .bns-icon-carret__bottom {
+  background: url("/images/img_sign-dark.svg") 50% 50% no-repeat;
+  background-size: contain;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .bns-accordion__text {
