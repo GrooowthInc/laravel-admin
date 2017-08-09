@@ -27,7 +27,7 @@
   </div>
 </div><!-- bns-header-fixed -->
 
-<div id="map" data-search-map></div>
+<div id="map" data-search-map data-search-map-lat="35.686847" data-search-map-lng="139.781360" data-search-map-zoom="15"></div>
 
 <div class="bns-footer-fixed">
   {!! Breadcrumbs::render('search-map',$title ) !!}

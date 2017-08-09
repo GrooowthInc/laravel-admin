@@ -35,9 +35,15 @@ export default class SeachMap {
   _init() {
     const { selector, attrLat, attrLng, attrZoom, initMap, maxZoom, minZoom } = this.conf;
     
+    initMap.lat = Number($(selector).attr(attrLat)); // 緯度
+    initMap.lng = Number($(selector).attr(attrLng)); // 軽度
+    initMap.zoom = Number($(selector).attr(attrZoom)); // ズーム値
+
     let SearchMap = new google.maps.Map($(selector).get(0), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 8
+      zoom: initMap.zoom,
+      maxZoom: maxZoom,
+      minZoom: minZoom,
+      center: new google.maps.LatLng(initMap.lat, initMap.lng),
     });
     
     // $(document).on(`click${event}`, target, (e)=>{

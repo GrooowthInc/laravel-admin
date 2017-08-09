@@ -70,7 +70,7 @@ table tr:nth-child(even) td {
         <td>modules</td>
         <td>モジュールリスト</td>
         <td><a href="{{ url('/modules') }}" target="_blank">modules</a></td>
-        <td>8/9</td>
+        <td>8/9<br>17:45</td>
         <td>90%</td>
         <td>-</td>
         <td>モジュール</td>
@@ -115,8 +115,8 @@ table tr:nth-child(even) td {
         <td>NON0005</td>
         <td>保育園検索</td>
         <td><a href="{{ url('/NON0005') }}" target="_blank">NON0005</a></td>
-        <td>8/9</td>
-        <td>0%</td>
+        <td>8/9<br>17:45</td>
+        <td>30%</td>
         <td>-</td>
         <td>地図選択</td>
       </tr>
@@ -124,8 +124,8 @@ table tr:nth-child(even) td {
         <td>NON0006</td>
         <td>保育園検索</td>
         <td><a href="{{ url('/NON0006') }}" target="_blank">NON0006</a></td>
-        <td>8/9</td>
-        <td>80%</td>
+        <td>8/9<br>17:45</td>
+        <td>90%</td>
         <td>-</td>
         <td>保育園検索結果一覧</td>
       </tr>
@@ -231,7 +231,7 @@ table tr:nth-child(even) td {
         <td>default</td>
         <td>レイアウト デフォルト</td>
         <td><a href="{{ url('/layouts/default') }}" target="_blank">default</a></td>
-        <td>8/9</td>
+        <td>8/9<br>17:45</td>
         <td>100%</td>
         <td>-</td>
         <td>デフォルト</td>
