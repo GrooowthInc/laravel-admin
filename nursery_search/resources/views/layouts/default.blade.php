@@ -26,15 +26,21 @@
       @include('_partial.header')
     @endif
 
+    @if(!Request::is('NON0005'))
     <main id="dashboard" class="bns-main" data-bns-nav="main">
       @yield('contents')
-      
-      @if(!Request::is('NON0005'))
-        @include('_partial.banner-area')
-      @endif
-
+      @include('_partial.banner-area')
       @yield('breadcrumbs')
     </main>
+    @endif
+
+    @if(Request::is('NON0005'))
+    <main id="dashboard" class="bns-main--map">
+      @yield('contents')
+      @yield('breadcrumbs')
+    </main>
+    @endif
+
 
     <!-- ▼ modal ▼ -->
     @if(Request::is('NON0002'))

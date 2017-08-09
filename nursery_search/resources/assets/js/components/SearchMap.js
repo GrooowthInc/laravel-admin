@@ -13,12 +13,19 @@ export default class SeachMap {
    */
   constructor(opts) {
     const defaults = {
-      target: '[data-bns-seelater="target"]',
-      active: 'is-active',
+      selector: '[data-search-map]',
+      attrLat: 'data-search-map-lat',
+      attrLng: 'data-search-map-lng',
+      attrZoom: 'data-search-map-zoom',
+      initMap: {},
+      maxZoom: 18,
+      minZoom: 9,
       event: '.SearchMap'
     };
     this.conf = Object.assign({}, defaults, opts);
-    this._init();
+    if ($(this.conf.selector).get(0)) {
+      this._init();
+    }
   }
 
   /**
@@ -26,12 +33,16 @@ export default class SeachMap {
    * @private
    */
   _init() {
-    const { target, active, event } = this.conf;
-    const self = this;
+    const { selector, attrLat, attrLng, attrZoom, initMap, maxZoom, minZoom } = this.conf;
     
-    $(document).on(`click${event}`, target, (e)=>{
-      e.preventDefault();
-      $(e.currentTarget).toggleClass(active);
+    let SearchMap = new google.maps.Map($(selector).get(0), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 8
     });
+    
+    // $(document).on(`click${event}`, target, (e)=>{
+    //   e.preventDefault();
+    //   $(e.currentTarget).toggleClass(active);
+    // });
   }
 }
