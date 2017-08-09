@@ -23,7 +23,16 @@
     </div>
   </div><!-- /.ui grid -->
   <div class="bns-layout">
-    <a href="#modal-search" class="bns-btn--third-no-arrow" data-bns-modal="open">検索条件の追加</a>
+    <a href="#modal-search" class="bns-btn--third-no-arrow" data-bns-modal="open-tooltips" data-bns-tooltip="trigger" data-tooltip="Add users to your feed" data-position="bottom center">検索条件の追加</a>
+    <div class="ui flowing popup bottom center bns-tooltip" data-bns-tooltip="content">
+      <div class="ui divided center aligned grid">
+        <div class="column">
+          <h4 class="ui header">Basic Plan</h4>
+          <p><b>2</b> projects, $10 a month</p>
+          <div class="ui button">Choose</div>
+        </div>
+      </div><!-- /.bns-tooltip -->
+    </div>
   </div>
 </div><!-- bns-header-fixed -->
 

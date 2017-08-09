@@ -55,7 +55,7 @@
             <a href="#" class="bns-btn--primary">検索</a>
           </div>
           <div class="column">
-            <a href="#modal-search" class="bns-btn--third-no-arrow" data-bns-modal="open">検索条件の追加</a>
+            <a href="#modal-search" class="bns-btn--third-no-arrow" data-bns-modal="open-tooltip">検索条件の追加</a>
           </div>
         </div>
       </div><!-- /.ui grid -->

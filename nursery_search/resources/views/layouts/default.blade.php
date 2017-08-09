@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
   </head>
-  <body>
+  <body id="bns">
     <div class="bns-overlay" data-bns-dropmenu="overlay"></div>
     <div class="bns-modal-overlay" data-bns-modal="overlay" data-bns-modal="close"></div>
     @if(!Request::is('NON0005'))
@@ -40,7 +40,6 @@
       @yield('breadcrumbs')
     </main>
     @endif
-
 
     <!-- ▼ modal ▼ -->
     @if(Request::is('NON0002'))

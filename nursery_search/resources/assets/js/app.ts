@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import $ from 'jquery';
+// require('../semantic/dist/semantic.js');
 
 declare function require(x: string): any;
 
@@ -40,7 +41,7 @@ import AllCheck from './components/AllCheck';
 import Dropmenu from './components/Dropmenu';
 import HeightLine from './components/HeightLine';
 import MapUrlScheme from './components/MapUrlScheme';
-import Modal, { ModalDefault } from './components/Modal';
+import Modal, { ModalDefault, ModalTooltip } from './components/Modal';
 import Nav from './components/Nav';
 import SearchMap from './components/SearchMap';
 import SeeLater from './components/SeeLater';
@@ -82,6 +83,8 @@ $(function(){
   new MapUrlScheme();
   // モーダル
   new ModalDefault();
+  // 初回だけツールチップが出てくるモーダル
+  new ModalTooltip();
   // グロナビ追従
   new Nav();
   // GoogleMap
@@ -90,6 +93,5 @@ $(function(){
   new SeeLater();
   // 三点リーダ―
   new TextOverflow();
-
 
 });

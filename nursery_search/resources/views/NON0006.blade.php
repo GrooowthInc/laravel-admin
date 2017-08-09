@@ -27,7 +27,7 @@
       </div>
     </div><!-- /.ui grid -->
     <div class="bns-layout">
-      <a href="#modal-search" class="bns-btn--third-no-arrow" data-bns-modal="open">検索条件の追加</a>
+      <a href="#modal-search" class="bns-btn--third-no-arrow" data-bns-modal="open-tooltip">検索条件の追加</a>
     </div>
     @include('_partial.near-nursery')
 
