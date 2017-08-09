@@ -96,9 +96,3 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-
-# Build files
-nursery_search/public/fonts/vendor/
-nursery_search/public/css/
-nursery_search/public/js/
-nursery_search/public/mix-manifest.json
