@@ -1,0 +1,10 @@
+// Map
+#map {
+  display: block;
+  margin: -$siteGutter;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  background-color: $color-bg--dark;
+}

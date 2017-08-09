@@ -29,7 +29,7 @@ Route::get('NON0004', function () {
 
 Route::get('NON0005', function () {
   return view('NON0005');
-})->name('NON0005');
+})->name('search-map');
 
 Route::get('NON0006', function () {
   return view('NON0006');

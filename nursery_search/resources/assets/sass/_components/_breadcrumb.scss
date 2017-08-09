@@ -7,6 +7,12 @@
   border: 1px dotted $color-border;
   border-right-width: 0;
   border-left-width: 0;
+  #{$prj-ns}-footer-fixed &{
+    margin: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: $color-bg--exlight;
+  }
   &-list {
     @include flatten;
     display: table;

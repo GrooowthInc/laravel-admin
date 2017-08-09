@@ -42,6 +42,7 @@ import HeightLine from './components/HeightLine';
 import MapUrlScheme from './components/MapUrlScheme';
 import Modal, { ModalDefault } from './components/Modal';
 import Nav from './components/Nav';
+import SearchMap from './components/SearchMap';
 import SeeLater from './components/SeeLater';
 import Slick, { Carousel } from './components/Slick';
 import TextOverflow from './components/TextOverflow';
@@ -83,6 +84,8 @@ $(function(){
   new ModalDefault();
   // グロナビ追従
   new Nav();
+  // GoogleMap
+  new SearchMap();
   // あとで見る
   new SeeLater();
   // 三点リーダ―

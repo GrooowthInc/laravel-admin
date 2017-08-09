@@ -38602,6 +38602,13 @@ table {
   border-left-width: 0;
 }
 
+.bns-footer-fixed .bns-breadcrumb {
+  margin: 0;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  background-color: #fff;
+}
+
 .bns-breadcrumb-list {
   padding: 0;
   margin: 0;
@@ -39608,6 +39615,16 @@ table {
   margin: 50px auto 0;
 }
 
+#map {
+  display: block;
+  margin: -10px;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  background-color: #dcdcdc;
+}
+
 .bns-modal-overlay {
   display: none;
   position: fixed;
@@ -40504,6 +40521,20 @@ table {
   background-color: #afe4ff;
 }
 
+.bns-header-fixed {
+  padding: 10px;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.25);
+  z-index: 3000;
+}
+
 .bns-header-nav__global {
   display: none;
   width: 100%;
@@ -40611,6 +40642,15 @@ table {
   font-size: 1.4rem;
   margin: 5px 0 0;
   color: #333;
+}
+
+.bns-footer-fixed {
+  margin: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 /*!

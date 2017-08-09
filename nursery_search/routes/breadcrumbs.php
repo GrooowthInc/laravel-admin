@@ -23,6 +23,12 @@ Breadcrumbs::register('wayside', function ($breadcrumbs, $title) {
   $breadcrumbs->push($title, route('wayside'));
 });
 
+// トップ > 地図検索 NON0005
+Breadcrumbs::register('search-map', function ($breadcrumbs, $title) {
+  $breadcrumbs->parent('home');
+  $breadcrumbs->push($title, route('search-map'));
+});
+
 // トップ > 検索結果一覧 NON0006
 Breadcrumbs::register('search-result', function ($breadcrumbs, $title) {
   $breadcrumbs->parent('home');

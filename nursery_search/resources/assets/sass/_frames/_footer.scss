@@ -14,3 +14,13 @@
     color: $color-font--dark;
   }
 }
+
+// Footer Map NON0005
+#{$prj-ns}-footer-fixed {
+  margin: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
