@@ -493,7 +493,7 @@
     <script src="{{ mix('js/app.js')}}"></script>
 
     @if(Request::is('NON0005'))
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoiCtV1U4l_E7Ni3vCaowkZHgToieX_Co&callback=initMap" async defer></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoiCtV1U4l_E7Ni3vCaowkZHgToieX_Co" async defer></script>
     @endif
     <script>@yield('scripts')</script>
   </body>
