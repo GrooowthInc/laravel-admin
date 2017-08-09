@@ -29,10 +29,14 @@
   }
   &[disabled],
   &.is-disabled {
-    color: $color-font--dark;
+    color: $color-font--exlight;
     background-color: $color-button-disable;
     pointer-events: none;
     outline: none;
+    &::after {
+      background: url('/images/img_sign-exlight.svg') 50% 50% no-repeat;
+      background-size: contain;
+    }
   }
   // 矢印無しボタン
   &--default {

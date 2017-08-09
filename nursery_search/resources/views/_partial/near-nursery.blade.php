@@ -9,9 +9,9 @@
         <img src="https://dummyimage.com/100x100/000/808080.png&text=dummy" alt="" />
       </a>
       <div class="bns-block-nursery__status">
-        <i class="bns-label">認可</i>
-        <i class="bns-label--certification">認証</i>
-        <i class="bns-label--unauthenticate">無認可</i>
+        <i class="bns-label--primary">認可</i>
+        <i class="bns-label--secondary">認証</i>
+        <i class="bns-label--third">無認可</i>
         <p>保育園の種類：認可<br>保育園の種類：認可<br>保育園の種類：認可<p>
       </div>
     </div>

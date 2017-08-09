@@ -15,6 +15,20 @@
   <section class="bns-section">
     <h2 class="bns-title-level2">東京都杉並区【認証保育園】保育園一覧</h2>
     <p class="bns-text--sm">検索条件:&nbsp;東京都・杉並区・認証保育園（5件）</p>
+
+    <div class="ui grid">
+      <div class="doubling four column row">
+        <div class="column">
+          <a href="{{ url('/NON0005') }}" class="bns-btn--primary"><i class="bns-icon-here"></i>地図で見る</a>
+        </div>
+        <div class="column">
+          <button class="bns-btn--primary">一覧で見る</button>
+        </div>
+      </div>
+    </div><!-- /.ui grid -->
+    <div class="bns-layout">
+      <a href="#modal-search" class="bns-btn--third-no-arrow" data-bns-modal="open">検索条件の追加</a>
+    </div>
     @include('_partial.near-nursery')
 
     <div class="bns-layout">

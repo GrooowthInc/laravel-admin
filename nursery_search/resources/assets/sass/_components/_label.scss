@@ -1,12 +1,12 @@
 // Label
 #{$prj-ns}-label {
   @include fz($fz-sm);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  vertical-align: middle;
   padding: $siteGutter-md /2;
   color: $color-font--exlight;
   line-height: $lh-sm;
+  text-align: center;
   background-color: $color-bg-label;
   position: relative;
   .column &{

@@ -38761,10 +38761,46 @@ table {
 .is-disabled.bns-btn-radius--primary,
 .is-disabled.bns-btn-radius--secondary,
 .is-disabled.bns-btn-radius--third {
-  color: #333;
+  color: #fff;
   background-color: #dcdcdc;
   pointer-events: none;
   outline: none;
+}
+
+.bns-btn[disabled]::after,
+[disabled].bns-btn--default::after,
+[disabled].bns-btn--primary::after,
+[disabled].bns-btn--secondary::after,
+[disabled].bns-btn--third::after,
+[disabled].bns-btn--third-no-arrow::after,
+[disabled].bns-btn-icon--third-no-arrow::after,
+[disabled].bns-btn-icon::after,
+[disabled].bns-btn-icon--default::after,
+[disabled].bns-btn-icon--primary::after,
+[disabled].bns-btn-icon--secondary::after,
+[disabled].bns-btn-icon--third::after,
+[disabled].bns-btn-radius::after,
+[disabled].bns-btn-radius--primary::after,
+[disabled].bns-btn-radius--secondary::after,
+[disabled].bns-btn-radius--third::after,
+.bns-btn.is-disabled::after,
+.is-disabled.bns-btn--default::after,
+.is-disabled.bns-btn--primary::after,
+.is-disabled.bns-btn--secondary::after,
+.is-disabled.bns-btn--third::after,
+.is-disabled.bns-btn--third-no-arrow::after,
+.is-disabled.bns-btn-icon--third-no-arrow::after,
+.is-disabled.bns-btn-icon::after,
+.is-disabled.bns-btn-icon--default::after,
+.is-disabled.bns-btn-icon--primary::after,
+.is-disabled.bns-btn-icon--secondary::after,
+.is-disabled.bns-btn-icon--third::after,
+.is-disabled.bns-btn-radius::after,
+.is-disabled.bns-btn-radius--primary::after,
+.is-disabled.bns-btn-radius--secondary::after,
+.is-disabled.bns-btn-radius--third::after {
+  background: url("/images/img_sign-exlight.svg") 50% 50% no-repeat;
+  background-size: contain;
 }
 
 .bns-btn--default {
@@ -39290,7 +39326,7 @@ table {
 .bns-icon-pen {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 5px;
+  margin: 0 5px;
   width: 16px;
   height: 16px;
 }
@@ -39310,7 +39346,25 @@ table {
 .bns-icon-train:first-child,
 .bns-icon-point:first-child,
 .bns-icon-pen:first-child {
-  margin-left: 0;
+  margin: 0 0 5px 0;
+}
+
+.bns-icon:last-child,
+.bns-icon-carret:last-child,
+.bns-icon-carret--sm:last-child,
+.bns-icon-carret--lg:last-child,
+.bns-icon-carret__top:last-child,
+.bns-icon-carret__bottom:last-child,
+.bns-icon-here:last-child,
+.bns-icon-pin:last-child,
+.bns-icon-external:last-child,
+.bns-icon-tel:last-child,
+.bns-icon-loupe:last-child,
+.bns-icon-loupe--search:last-child,
+.bns-icon-train:last-child,
+.bns-icon-point:last-child,
+.bns-icon-pen:last-child {
+  margin: 0 5px 0 0;
 }
 
 .bns-icon-carret,
@@ -39343,8 +39397,8 @@ table {
 }
 
 .bns-icon-here {
-  width: 13px;
-  height: 19px;
+  width: 20px;
+  height: 30px;
   background: url("/images/ico_map.svg") 50% 50% no-repeat;
   background-size: contain;
 }
@@ -39417,18 +39471,12 @@ table {
 .bns-label--secondary,
 .bns-label--third {
   font-size: 1.4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: inline-block;
+  vertical-align: middle;
   padding: 7.5px;
   color: #fff;
   line-height: 1;
+  text-align: center;
   background-color: #ffbf47;
   position: relative;
 }
