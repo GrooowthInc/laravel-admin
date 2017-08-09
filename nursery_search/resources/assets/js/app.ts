@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import Component from 'vue-class-component';
 import $ from 'jquery';
 
 declare function require(x: string): any;
@@ -13,6 +14,15 @@ declare function require(x: string): any;
 require('./bootstrap');
 
 Vue.use(VueRouter);
+
+// Register the router hooks with thier names
+Component.registerHooks(
+  [
+    'beforeRouteEnter',
+    'beforeRouteUpdate',
+    'beforeRouteLeave'
+  ]
+);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
