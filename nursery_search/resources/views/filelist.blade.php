@@ -81,7 +81,7 @@ table tr:nth-child(even) td {
         <td><a href="{{ url('/') }}" target="_blank">NON0001</a></td>
         <td>8/9</td>
         <td>90%</td>
-        <td>-</td>
+        <td>8/10 16:16</td>
         <td>トップページ</td>
       </tr>
       <tr>
@@ -171,7 +171,7 @@ table tr:nth-child(even) td {
         <td><a href="{{ url('/NON0011') }}" target="_blank">NON0011</a></td>
         <td>8/9</td>
         <td>100%</td>
-        <td>-</td>
+        <td>8/10 16:16</td>
         <td>あとで見る一覧</td>
       </tr>
       <tr>
@@ -233,7 +233,7 @@ table tr:nth-child(even) td {
         <td><a href="{{ url('/layouts/default') }}" target="_blank">default</a></td>
         <td>8/9<br>17:45</td>
         <td>100%</td>
-        <td>-</td>
+        <td>8/10 16:16</td>
         <td>デフォルト</td>
       </tr>
     </tbody>
@@ -259,7 +259,7 @@ table tr:nth-child(even) td {
         <td><a href="{{ url('/partial/ad-carousel') }}" target="_blank">ad-carousel</a></td>
         <td>8/9</td>
         <td>100%</td>
-        <td>-</td>
+        <td>8/10 16:16</td>
         <td>広告カルーセル</td>
       </tr>
       <tr>
@@ -268,7 +268,7 @@ table tr:nth-child(even) td {
         <td><a href="{{ url('/partial/banner-area') }}" target="_blank">banner-area</a></td>
         <td>8/9</td>
         <td>100%</td>
-        <td>-</td>
+        <td>8/10 16:16</td>
         <td>広告バナー</td>
       </tr>
       <tr>
@@ -295,7 +295,7 @@ table tr:nth-child(even) td {
         <td><a href="{{ url('/partial/footer') }}" target="_blank">footer</a></td>
         <td>8/9</td>
         <td>100%</td>
-        <td>-</td>
+        <td>8/10 16:16</td>
         <td>フッター</td>
       </tr>
       <tr>
@@ -304,7 +304,7 @@ table tr:nth-child(even) td {
         <td><a href="{{ url('/partial/header') }}" target="_blank">header</a></td>
         <td>8/9</td>
         <td>100%</td>
-        <td>-</td>
+        <td>8/10 16:16</td>
         <td>ヘッダー</td>
       </tr>
       <tr>
@@ -313,7 +313,7 @@ table tr:nth-child(even) td {
         <td><a href="{{ url('/partial/near-nursery') }}" target="_blank">near-nursery</a></td>
         <td>8/9</td>
         <td>100%</td>
-        <td>-</td>
+        <td>8/10 16:16</td>
         <td>近隣の保育園</td>
       </tr>
       <tr>
@@ -322,7 +322,7 @@ table tr:nth-child(even) td {
         <td><a href="{{ url('/partial/recently-see-nursery') }}" target="_blank">recently-see-nursery</a></td>
         <td>8/9</td>
         <td>100%</td>
-        <td>-</td>
+        <td>8/10 16:16</td>
         <td>最近見た保育園</td>
       </tr>
       <tr>
@@ -331,7 +331,7 @@ table tr:nth-child(even) td {
         <td><a href="{{ url('/partial/recommend-news') }}" target="_blank">recommend-news</a></td>
         <td>8/9</td>
         <td>100%</td>
-        <td>-</td>
+        <td>8/10 16:16</td>
         <td>おすすめ記事</td>
       </tr>
       <tr>
@@ -340,7 +340,7 @@ table tr:nth-child(even) td {
         <td><a href="{{ url('/partial/see-later') }}" target="_blank">see-later</a></td>
         <td>8/9</td>
         <td>100%</td>
-        <td>-</td>
+        <td>8/10 16:16</td>
         <td>あとで見る</td>
       </tr>
     </tbody>
