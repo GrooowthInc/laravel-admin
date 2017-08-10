@@ -121,9 +121,9 @@
       width: 100%;
       min-height: 54px;
       border-radius: $rds-base;
-      color: $color-font--navy;
+      color: $color-font--light;
       background-color: $color-button--exlight;
-      border: 1px solid $color-border;
+      border: 1px solid $color-button-form;
       position: relative;
       .is-active &{
         color: $color-font--exlight;
@@ -141,6 +141,7 @@
       &__text {
         @extend #{$prj-ns}-form-button__text;
         .is-active &{
+          border: 1px solid $color-button-form--primary;
           background-color: $color-button-form--primary;
         }
       }
@@ -156,6 +157,7 @@
       &__text {
         @extend #{$prj-ns}-form-button__text;
         .is-active &{
+          border: 1px solid $color-button-form--secondary;
           background-color: $color-button-form--secondary;
         }
       }
@@ -171,6 +173,7 @@
       &__text {
         @extend #{$prj-ns}-form-button__text;
         .is-active &{
+          border: 1px solid $color-button-form--third;
           background-color: $color-button-form--third;
         }
       }
