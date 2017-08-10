@@ -20,7 +20,7 @@ export default class SeachMap {
       initMap: {},
       maxZoom: 18,
       minZoom: 9,
-      event: '.SearchMap'
+      event: '.map'
     };
     this.conf = Object.assign({}, defaults, opts);
     if ($(this.conf.selector).get(0)) {
@@ -40,31 +40,12 @@ export default class SeachMap {
     initMap.zoom = Number($(selector).attr(attrZoom)); // ズーム値
 
     // mapの表示
-    let SearchMap = new google.maps.Map($(selector).get(0), {
+    let map = new google.maps.Map($(selector).get(0), {
       zoom: initMap.zoom,
       maxZoom: maxZoom,
       minZoom: minZoom,
       center: new google.maps.LatLng(initMap.lat, initMap.lng),
     });
-
-    // 住所から緯度経度探す
-    // let geocoder = new google.maps.Geocoder();
-    // geocoder.geocode({
-    //   address: '東京都中央区日本橋人形町3-7-5' // モニカ人形町保育園
-    // }, function(results, status) {
-    //   if (status === google.maps.GeocoderStatus.OK) {
-    //     SearchMap = new google.maps.Map($(selector).get(0), {
-    //       center: results[0].geometry.location,
-    //       zoom: 18
-    //     });
-    //     marker = new google.maps.Marker({
-    //       position: results[0].geometry.location,
-    //       map: SearchMap
-    //     });
-    //   } else {
-    //     alert(status);
-    //   }
-    // });
     this._renderMap(map);
   }
 
@@ -81,40 +62,39 @@ export default class SeachMap {
       {"name": 'ダミー保育園', "type": "disapproval", "lat": 35.688299, "lng": 139.783158}
     ];
 
-    // $.each(data, function(index, facilityList) {
-    //   let iconImg = '/images/ico_mapMarkBlue.png';
-    //   if(facilityList.type === "permission") {
-    //     iconImg = '/images/ico_mapMarkBlue.png';
-    //   }
-    //   if(facilityList.type === "authentication") {
-    //     iconImg = '/images/ico_mapMarkGreen.png';
-    //   }
-    //   if(facilityList.type === "disapproval") {
-    //     iconImg = '/images/ico_mapMarkOrange.png';
-    //   }
-    //   // marker立てる
-    //   let marker = new google.maps.Marker({
-    //     map: SearchMap,
-    //     position: {lat: Number(facilityList.lat), lng: Number(facilityList.lng)},
-    //     title: facilityList.name,
-    //     icon: {
-    //       url: iconImg,
-    //       scaledSize: new google.maps.Size(60, 78)
-    //     }
-    //   });
-    //   // ウィンドウ出す
-    //   let infoWindow = new google.maps.InfoWindow({
-    //     content: `<div class="sample">${facilityList.name}</div>`
-    //   });
-    //   marker.addListener('click', function() {
-    //     infoWindow.open(SearchMap, marker);
-    //   });
-    //   // マップ押下でも閉じる
-    //   google.maps.event.addListener(map, 'click', ()=> {
-    //     infowindow.close();
-    //   });
-    // });
+    $.each(data, function(index, facilityList) {
+      let iconImg = '/images/ico_mapMarkBlue.png';
+      if(facilityList.type === "permission") {
+        iconImg = '/images/ico_mapMarkBlue.png';
+      }
+      if(facilityList.type === "authentication") {
+        iconImg = '/images/ico_mapMarkGreen.png';
+      }
+      if(facilityList.type === "disapproval") {
+        iconImg = '/images/ico_mapMarkOrange.png';
+      }
+      // marker立てる
+      let marker = new google.maps.Marker({
+        map: map,
+        position: {lat: Number(facilityList.lat), lng: Number(facilityList.lng)},
+        title: facilityList.name,
+        icon: {
+          url: iconImg,
+          scaledSize: new google.maps.Size(60, 78)
+        }
+      });
+      // ウィンドウ出す
+      let infoWindow = new google.maps.InfoWindow({
+        content: `<div class="sample">${facilityList.name}</div>`
+      });
+      marker.addListener('click', function() {
+        infoWindow.open(map, marker);
+      });
+      // マップ押下でも閉じる
+      google.maps.event.addListener(map, 'click', ()=> {
+        infowindow.close();
+      });
+    });
 
-    
   } // _renderMap
 }

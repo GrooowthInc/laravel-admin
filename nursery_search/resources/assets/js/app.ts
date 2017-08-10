@@ -57,6 +57,7 @@ import HeightLine from './HeightLine';
 import MapUrlScheme from './MapUrlScheme';
 import Modal, { ModalDefault, ModalTooltip } from './Modal';
 import Nav from './Nav';
+import SearchLocation from './SearchLocation';
 import SearchMap from './SearchMap';
 import SeeLater from './SeeLater';
 import Slick, { Carousel } from './Slick';
@@ -101,6 +102,8 @@ $(function(){
   new ModalTooltip();
   // グロナビ追従
   new Nav();
+  // GoogleMap 現在地から探す
+  new SearchLocation();
   // GoogleMap
   new SearchMap();
   // あとで見る
