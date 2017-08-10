@@ -59,7 +59,16 @@ export default class SeachMap {
       {"name": 'さくら保育園', "type": "disapproval", "lat": 35.684653, "lng": 139.784849},
       {"name": '中央区立堀留町保育園', "type": "permission", "lat": 35.687595, "lng": 139.778977},
       {"name": 'まちのてらこや保育園・学童ひろば', "type": "authentication", "lat": 35.687787, "lng": 139.782869},
-      {"name": 'ダミー保育園', "type": "disapproval", "lat": 35.688299, "lng": 139.783158}
+      {"name": 'ダミー保育園', "type": "disapproval", "lat": 35.688299, "lng": 139.783158},
+      {"name": 'とちょう保育園', "type": "disapproval", "lat": 35.689305, "lng": 139.692996},
+      {"name": '新宿成子坂愛育園', "type": "authentication", "lat": 35.694393, "lng": 139.691526},
+      {"name": 'ルーチェ保育園', "type": "permission", "lat": 35.695613, "lng": 139.696848},
+      {"name": "たいよう保育園", "type": "permission", "lat": 35.694742, "lng": 139.705989},
+      {"name": 'ベネッセ保育園', "type": "authentication", "lat": 35.691936, "lng": 139.693901},
+      {"name": 'アスク神楽坂駅前保育園', "type": "disapproval", "lat": 35.702294, "lng": 139.734452},
+      {"name": 'ソラスト神楽坂', "type": "permission", "lat": 35.707878, "lng": 139.734270},
+      {"name": 'メリーポピンズ保育園', "type": "authentication", "lat": 35.704908, "lng": 139.728616},
+      {"name": 'キッズスクエア', "type": "disapproval", "lat": 35.703630, "lng": 139.753300}
     ];
 
     $.each(data, function(index, facilityList) {
