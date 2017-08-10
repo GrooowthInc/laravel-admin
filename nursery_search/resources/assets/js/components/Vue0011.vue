@@ -54,6 +54,8 @@ import VueHeader from "./_partial/VueHeader.vue";
 import SeeLater from "./_partial/SeeLater.vue";
 import VueFooter from "./_partial/VueFooter.vue";
 
+import HeadTagUtility from '../classes/util/HeadTagUtility';
+
 @Component
 (
   {
@@ -68,7 +70,11 @@ export default class Vue0011 extends Vue {
 
   public created(): void {
     console.log('Vue0011.created!!');
-    document.title = 'あとで見る一覧|保育園 - 保活ナビ';
+    HeadTagUtility.setInfo(
+      'あとで見る一覧|保育園 - 保活ナビ',
+      'キーワードが入りますよ',
+      'ディスクリプションが入りますよ'
+    );
   }
 
   public mounted(): void {

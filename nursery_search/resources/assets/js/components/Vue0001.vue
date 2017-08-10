@@ -80,12 +80,14 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
 
-import VueHeader from "./_partial/VueHeader.vue";
-import RecentlySeeNursery from "./_partial/RecentlySeeNursery.vue";
-import AdCarousel from "./_partial/AdCarousel.vue";
-import RecommendNews from "./_partial/RecommendNews.vue";
-import BannerArea from "./_partial/BannerArea.vue";
-import VueFooter from "./_partial/VueFooter.vue";
+import VueHeader from './_partial/VueHeader.vue';
+import RecentlySeeNursery from './_partial/RecentlySeeNursery.vue';
+import AdCarousel from './_partial/AdCarousel.vue';
+import RecommendNews from './_partial/RecommendNews.vue';
+import BannerArea from './_partial/BannerArea.vue';
+import VueFooter from './_partial/VueFooter.vue';
+
+import HeadTagUtility from '../classes/util/HeadTagUtility';
 
 @Component
 (
@@ -104,7 +106,11 @@ export default class Vue0001 extends Vue {
 
   public created(): void {
     console.log('Vue0001.created!!');
-    document.title = '近くの保育園探しなら - 保活ナビ';
+    HeadTagUtility.setInfo(
+      '近くの保育園探しなら - 保活ナビ',
+      'キーワードが入りますよ',
+      'ディスクリプションが入りますよ'
+    );
   }
 
   public mounted(): void {
