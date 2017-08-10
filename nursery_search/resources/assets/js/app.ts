@@ -31,19 +31,23 @@ Component.registerHooks(
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-// Vue.component('example', require('./components/Example.vue'));
-
+import Example from './components/Example.vue';
+import Vue0001 from './components/Vue0001.vue';
+import Vue0011 from './components/Vue0011.vue';
+// import Example from './components/Example';
 const router = new VueRouter({
     mode: 'history',
     routes: [
-      { path: '/ex', component: require('./components/Example.vue') },
+      { path: '/ex', component: Example },
       { path: '/cp', component: require('./components/Copy.vue') },
+      { path: '/0001', component: Vue0001 },
+      { path: '/0011', component: Vue0011 },
     ]
 });
 
 const app = new Vue({
   router,
-  el: '#dashboard'
+  el: '#app'
 });
 
 import Accordion from './components/Accordion';
