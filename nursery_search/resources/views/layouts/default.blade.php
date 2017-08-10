@@ -21,7 +21,74 @@
   </head>
   <body id="bns">
     <div class="bns-overlay" data-bns-dropmenu="overlay"></div>
+    <div class="bns-header-overlay" data-bns-dropmenu="overlay-nav"></div>
     <div class="bns-modal-overlay" data-bns-modal="overlay" data-bns-modal="close"></div>
+
+    <!-- ▼ 共通GN ▼ -->
+    <aside class="bns-header-nav__global" data-bns-dropmenu="content-nav">
+      <ul class="bns-header-nav__list">
+        <li class="bns-header-nav__item">
+          <span class="bns-header-nav__heading">保育園を探す</span>
+        </li>
+        <li class="bns-header-nav__item">
+          <ul class="bns-header-nav-child">
+            <li class="bns-header-nav-child__item">
+              <a href="#" class="bns-header-nav-child__link">東京都</a>
+            </li>
+            <li class="bns-header-nav-child__item">
+              <a href="#" class="bns-header-nav-child__link">千葉県</a>
+            </li>
+            <li class="bns-header-nav-child__item">
+              <a href="#" class="bns-header-nav-child__link">神奈川県</a>
+            </li>
+            <li class="bns-header-nav-child__item">
+              <a href="#" class="bns-header-nav-child__link">埼玉県</a>
+            </li>
+            <li class="bns-header-nav-child__item">
+              <a href="#" class="bns-header-nav-child__link">現在地から探す</a>
+            </li>
+          </ul><!-- /.bns-header-nav-child -->
+        </li>
+        <li class="bns-header-nav__item">
+          <span class="bns-header-nav__heading">保育園の情報を見る</span>
+        </li>
+        <li class="bns-header-nav__item">
+          <ul class="bns-header-nav-child">
+            <li class="bns-header-nav-child__item">
+              <a href="{{ url('/NON0011') }}" class="bns-header-nav-child__link">あとで見る一覧</a>
+            </li>
+            <li class="bns-header-nav-child__item">
+              <a href="{{ url('/NON0012') }}" class="bns-header-nav-child__link">おすすめ一覧</a>
+            </li>
+            </li>
+          </ul><!-- /.bns-header-nav-child -->
+        </li>
+        <li class="bns-header-nav__item">
+          <span class="bns-header-nav__heading">保育園を探す</span>
+        </li>
+        <li class="bns-header-nav__item">
+          <ul class="bns-header-nav-child">
+            <li class="bns-header-nav-child__item">
+              <a href="" class="bns-header-nav-child__link">初めての保育園の探し方</a>
+            </li>
+            <li class="bns-header-nav-child__item">
+              <a href="" class="bns-header-nav-child__link">保活ナビについて</a>
+            </li>
+            <li class="bns-header-nav-child__item">
+              <a href="{{ url('/NON0013') }}" class="bns-header-nav-child__link">よくあるご質問</a>
+            </li>
+            <li class="bns-header-nav-child__item">
+              <a href="{{ url('/NON0008') }}" class="bns-header-nav-child__link">ご利用規約</a>
+            </li>
+            <li class="bns-header-nav-child__item">
+              <a href="{{ url('/NON0014') }}" class="bns-header-nav-child__link">サイトマップ</a>
+            </li>
+          </ul><!-- /.bns-header-nav-child -->
+        </li>
+      </ul>
+    </aside><!-- bns-header-nav__global -->
+    <!-- ▲ 共通GN ▲ -->
+
     @if(!Request::is('NON0005'))
       @include('_partial.header')
     @endif
@@ -41,8 +108,8 @@
     </main>
     @endif
 
-    <!-- ▼ modal ▼ -->
     @if(Request::is('NON0002'))
+    <!-- ▼ modal ▼ -->
       <aside class="ui modal bns-modal" id="modal-search" data-bns-modal="content">
         <div class="bns-modal__heading">
           <p class="bns-text--lg">更に条件を絞り込む</p>
@@ -150,9 +217,11 @@
           </div><!-- /.ui.grid -->
         </div><!-- /.bns-modal-footer -->
       </aside><!-- /.bns-modal -->
+    <!-- ▲ modal ▲ -->
     @endif
 
     @if(Request::is('NON0004'))
+      <!-- ▼ modal ▼ -->
       <aside class="ui modal bns-modal" id="modal-search" data-bns-modal="content">
         <div class="bns-modal__heading">
           <p class="bns-text--lg">更に条件を絞り込む</p>
@@ -260,9 +329,11 @@
           </div><!-- /.ui.grid -->
         </div><!-- /.bns-modal-footer -->
       </aside><!-- /.bns-modal -->
+      <!-- ▲ modal ▲ -->
     @endif
 
     @if(Request::is('NON0005'))
+      <!-- ▼ modal ▼ -->
       <aside class="ui modal bns-modal" id="modal-search" data-bns-modal="content">
         <div class="bns-modal__heading">
           <p class="bns-text--lg">更に条件を絞り込む</p>
@@ -370,9 +441,11 @@
           </div><!-- /.ui.grid -->
         </div><!-- /.bns-modal-footer -->
       </aside><!-- /.bns-modal -->
+      <!-- ▲ modal ▲ -->
     @endif
 
     @if(Request::is('NON0006'))
+      <!-- ▼ modal ▼ -->
       <aside class="ui modal bns-modal" id="modal-search" data-bns-modal="content">
         <div class="bns-modal__heading">
           <p class="bns-text--lg">更に条件を絞り込む</p>
@@ -480,8 +553,9 @@
           </div><!-- /.ui.grid -->
         </div><!-- /.bns-modal-footer -->
       </aside><!-- /.bns-modal -->
+      <!-- ▲ modal ▲ -->
     @endif
-    <!-- ▲ modal ▲ -->
+    
 
     @if(!Request::is('NON0005'))
       @include('_partial.footer')

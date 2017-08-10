@@ -18,6 +18,7 @@ export default class Dropmenu {
       content: '[data-bns-dropmenu="content"]',
       contentNav: '[data-bns-dropmenu="content-nav"]',
       overlay: '[data-bns-dropmenu="overlay"]',
+      overlayNav: '[data-bns-dropmenu="overlay-nav"]',
       close: '[data-bns-dropmenu="close"]',      
       active: 'is-active',
       event: '.Dropmenu'
@@ -31,7 +32,7 @@ export default class Dropmenu {
    * @private
    */
   _init() {
-    const { target, targetNav, content, contentNav, overlay, close, active, event } = this.conf;
+    const { target, targetNav, content, contentNav, overlay, overlayNav, close, active, event } = this.conf;
     const self = this;
     
     $(document).on(`click${event}`, target, (e)=>{
@@ -52,15 +53,17 @@ export default class Dropmenu {
     $(document).on(`click${event}`, targetNav, (e)=>{
       e.preventDefault();
       $(e.currentTarget).toggleClass(active);
-      $(overlay).toggleClass(active);
-      $(contentNav).slideToggle('500');
+      $(overlayNav).toggleClass(active);
+      $(contentNav).toggleClass(active);
+      // $(contentNav).slideToggle('500');
       return false;
     });
-    $(document).on(`click${event}`, overlay, close, (e)=>{
+    $(document).on(`click${event}`, overlayNav, close, (e)=>{
       e.preventDefault();
       $(targetNav).removeClass(active);
-      $(overlay).removeClass(active);
-      $(contentNav).slideUp('500');
+      $(overlayNav).removeClass(active);
+      $(contentNav).removeClass(active);
+      // $(contentNav).slideUp('500');
       return false;
     });
   }

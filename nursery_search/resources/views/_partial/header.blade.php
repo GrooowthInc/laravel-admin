@@ -18,58 +18,6 @@
       </div>
     </div>
 
-    <aside class="bns-header-nav__global" data-bns-dropmenu="content-nav">
-      <ul class="bns-header-nav__list">
-        <li class="bns-header-nav__item">
-          <a href="{{ url('/') }}" class="bns-header-nav__link">保育園を探す</a>
-        </li>
-        <li class="bns-header-nav__item">
-          <a href="javascript: void(0);" class="bns-header-nav-child__heading" data-bns-accordion="trigger">現在地からさがす<i class="bns-icon-carret__bottom"></i></a>
-          <div class="bns-header-nav__item-inner" data-bns-accordion="content">
-            <ul class="bns-header-nav-child">
-              <li class="bns-header-nav-child__item">
-                <a href="#" class="bns-header-nav__link">東京都</a>
-              </li>
-              <li class="bns-header-nav-child__item">
-                <a href="#" class="bns-header-nav__link">神奈川県</a>
-              </li>
-              <li class="bns-header-nav-child__item">
-                <a href="#" class="bns-header-nav__link">千葉県</a>
-              </li>
-              <li class="bns-header-nav-child__item">
-                <a href="#" class="bns-header-nav__link">埼玉県</a>
-              </li>
-            </ul><!-- /.bns-header-nav-child -->
-          </div><!-- /.bns-header-nav__item-inner -->
-        </li>
-        <li class="bns-header-nav__item">
-          <a href="{{ url('/NON0011') }}" class="bns-header-nav__link">あとで見る一覧</a>
-        </li>
-        <li class="bns-header-nav__item">
-          <a href="{{ url('/NON0012') }}" class="bns-header-nav__link">おすすめ記事一覧</a>
-        </li>
-        <li class="bns-header-nav__item">
-          <a href="#" class="bns-header-nav__link">初めての保育園の探し方</a>
-        </li>
-        <li class="bns-header-nav__item">
-          <ul class="bns-header-nav-child">
-            <li class="bns-header-nav-child__item">
-              <a href="#" class="bns-header-nav__link">保活ナビについて</a>
-            </li>
-            <li class="bns-header-nav-child__item">
-              <a href="{{ url('/NON0013') }}" class="bns-header-nav__link">よくあるご質問</a>
-            </li>
-            <li class="bns-header-nav-child__item">
-              <a href="{{ url('/NON0008') }}" class="bns-header-nav__link">ご利用規約</a>
-            </li>
-            <li class="bns-header-nav-child__item">
-              <a href="/NON0014" class="bns-header-nav__link">サイトマップ</a>
-            </li>
-          </ul><!-- /.bns-header-nav-child -->
-        </li>
-      </ul>
-    </aside><!-- bns-header-nav__global -->
-
     @if(Request::is('/'))
       <aside class="bns-dropmenu" data-bns-dropmenu="content">
         <div class="bns-dropmenu__heading">
