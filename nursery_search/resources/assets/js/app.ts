@@ -50,17 +50,17 @@ const app = new Vue({
   el: '#app'
 });
 
-import Accordion from './components/Accordion';
-import AllCheck from './components/AllCheck';
-import Dropmenu from './components/Dropmenu';
-import HeightLine from './components/HeightLine';
-import MapUrlScheme from './components/MapUrlScheme';
-import Modal, { ModalDefault, ModalTooltip } from './components/Modal';
-import Nav from './components/Nav';
-import SearchMap from './components/SearchMap';
-import SeeLater from './components/SeeLater';
-import Slick, { Carousel } from './components/Slick';
-import TextOverflow from './components/TextOverflow';
+import Accordion from './Accordion';
+import AllCheck from './AllCheck';
+import Dropmenu from './Dropmenu';
+import HeightLine from './HeightLine';
+import MapUrlScheme from './MapUrlScheme';
+import Modal, { ModalDefault, ModalTooltip } from './Modal';
+import Nav from './Nav';
+import SearchMap from './SearchMap';
+import SeeLater from './SeeLater';
+import Slick, { Carousel } from './Slick';
+import TextOverflow from './TextOverflow';
 
 
 

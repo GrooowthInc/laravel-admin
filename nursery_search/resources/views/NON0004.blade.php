@@ -55,7 +55,15 @@
             <a href="#" class="bns-btn--primary">検索</a>
           </div>
           <div class="column">
-            <a href="#modal-search" class="bns-btn--third-no-arrow" data-bns-modal="open-tooltip">検索条件の追加</a>
+            <a href="#modal-search" class="bns-btn--third-no-arrow" data-bns-tooltip="trigger" >検索条件の追加</a>
+            <div class="ui flowing popup bottom center bns-tooltip--bottom" data-bns-tooltip="content">
+              <a href="javascript: void(0);" class="bns-tooltip-btn" data-bns-tooltip="close"></a>
+              <div class="ui divided center aligned grid">
+                <div class="column">
+                  <p class="bns-text">許可・許可外等の種別や<br>開園時間等で絞込検索できます</p>
+                </div>
+              </div><!-- /.bns-tooltip -->
+            </div>
           </div>
         </div>
       </div><!-- /.ui grid -->
