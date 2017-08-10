@@ -1,6 +1,6 @@
 <template>
   <div>
-    <VueHeader></VueHeader>
+    <VueHeader catchtext="あとで見る一覧"></VueHeader>
     <main id="dashboard" class="bns-main" data-bns-nav="main">
       <article class="bns-article">
         <section class="bns-section">

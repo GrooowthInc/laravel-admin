@@ -1,6 +1,6 @@
 <template>
   <header class="bns-header" data-bns-nav="content">
-    <div class="bns-header__lead">TODO: @yield('catchtext')</div>
+    <div class="bns-header__lead">{{ catchtext }}</div>
     <nav class="bns-header-nav" data-bns-nav="target">
       <div class="bns-header-nav__inner">
         <h1 class="bns-header-logo">保活ナビ</h1>
@@ -61,9 +61,13 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import { Prop } from 'vue-property-decorator'
 
 @Component
 export default class VueHeader extends Vue {
+
+  @Prop({ default: '' })
+  public catchtext: string;
 
   public searchEnabled = false;
 

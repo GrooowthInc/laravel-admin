@@ -1,6 +1,6 @@
 <template>
   <div>
-    <VueHeader></VueHeader>
+    <VueHeader catchtext="保育園探しから申し込みまでサポート"></VueHeader>
     <main id="dashboard" class="bns-main" data-bns-nav="main">
       <article class="bns-article">
         <div class="bns-section">
