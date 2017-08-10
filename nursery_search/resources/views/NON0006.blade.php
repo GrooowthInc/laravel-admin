@@ -28,7 +28,7 @@
     </div><!-- /.ui grid -->
     <div class="bns-layout">
       <a href="#modal-search" class="bns-btn--third-no-arrow" data-bns-tooltip="trigger" >検索条件の追加</a>
-      <div class="ui flowing popup bottom center bns-tooltip--top" data-bns-tooltip="content">
+      <div class="ui flowing popup bottom center bns-tooltip--bottom" data-bns-tooltip="content">
         <a href="javascript: void(0);" class="bns-tooltip-btn" data-bns-tooltip="close"></a>
         <div class="ui divided center aligned grid">
           <div class="column">

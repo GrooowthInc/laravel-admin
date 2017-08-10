@@ -24,6 +24,7 @@
   &--top {
     #bns &{
       @extend #{$prj-ns}-tooltip;
+      top: -100% !important;
     }
   }
   &--bottom {
