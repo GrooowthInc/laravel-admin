@@ -88,7 +88,7 @@ table tr:nth-child(even) td {
         <td>NON0002</td>
         <td>保育園検索</td>
         <td><a href="{{ url('/NON0002') }}" target="_blank">NON0002</a></td>
-        <td>8/10<br>20:00</td>
+        <td>8/10<br>22:45</td>
         <td>90%</td>
         <td>-</td>
         <td>市区町村選択</td>
@@ -106,7 +106,7 @@ table tr:nth-child(even) td {
         <td>NON0004</td>
         <td>保育園検索</td>
         <td><a href="{{ url('/NON0004') }}" target="_blank">NON0004</a></td>
-        <td>8/10<br>20:00</td>
+        <td>8/10<br>22:45</td>
         <td>90%</td>
         <td>-</td>
         <td>駅名選択</td>
@@ -116,7 +116,7 @@ table tr:nth-child(even) td {
         <td>保育園検索</td>
         <td><a href="{{ url('/NON0005') }}" target="_blank">NON0005</a></td>
         <td>8/10<br><b>進行中</b></td>
-        <td>50%</td>
+        <td>60%</td>
         <td>-</td>
         <td>地図選択</td>
       </tr>
@@ -124,7 +124,7 @@ table tr:nth-child(even) td {
         <td>NON0006</td>
         <td>保育園検索</td>
         <td><a href="{{ url('/NON0006') }}" target="_blank">NON0006</a></td>
-        <td>8/9<br>20:00</td>
+        <td>8/10<br>22:45</td>
         <td>90%</td>
         <td>-</td>
         <td>保育園検索結果一覧</td>
@@ -133,7 +133,7 @@ table tr:nth-child(even) td {
         <td>NON0007</td>
         <td>保育園検索</td>
         <td><a href="{{ url('/NON0007') }}" target="_blank">NON0007</a></td>
-        <td>8/9</td>
+        <td>8/10<br>22:45</td>
         <td>90%</td>
         <td>-</td>
         <td>施設詳細</td>
