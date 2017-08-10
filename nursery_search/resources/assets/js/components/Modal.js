@@ -95,17 +95,38 @@ export class ModalTooltip extends Modal {
       // cookie追加
       Cookies.set('access', 'on', { expires: period });
 
-      $(document).on(`click${event}`, openTooltip, (e)=>{
+      // 1回目のクリックでツールチップ表示
+      let num = 0;
+      $(document).on(`click${event}`, tooltipTrigger, (e)=>{
+        e.preventDefault();
+        let click = $(e.currentTarget).data('click');
+        if(!click){
+          $(e.currentTarget).data('click', true);
+          $(tooltipContent).fadeIn('100');
+        }
+        return false;
+      });
+
+      $(document).on(`click${event}`, tooltipCloseBtn, (e)=>{
+        e.preventDefault();
+        $(tooltipContent).fadeOut('100');
+      });
+
+      // 2回目のクリックでモーダル表示
+      $(document).on(`click${event}`, tooltipTrigger, (e)=>{
         e.preventDefault();
         const attrHref = $(e.currentTarget).attr('href');
-        $(attrHref).modal('show');
-        $(overlay).addClass(active);
-        $('body').addClass(fixed);
+        $(e.currentTarget).data('click', ++num);
+        let click = $(e.currentTarget).data('click');
+        if(click > 2){
+          $(attrHref).modal('show');
+          $(overlay).addClass(active);
+          $('body').addClass(fixed);
+        }
       });
 
       $(document).on(`click${event}`, closeTooltip, overlay, (e)=>{
         e.preventDefault();
-        // const attrHref = '#' + $(e).parents('.modal').attr('id');
         $('.modal').modal('hide');
         $(overlay).removeClass(active);
         $('body').removeClass(fixed);
@@ -116,11 +137,6 @@ export class ModalTooltip extends Modal {
     } else {
       $(document).on(`click${event}`, tooltipTrigger, (e)=>{
         e.preventDefault();
-        $(tooltipContent).fadeIn('100');
-      });
-
-      $(document).on(`click${event}`, openTooltip, (e)=>{
-        e.preventDefault();
         const attrHref = $(e.currentTarget).attr('href');
         $(attrHref).modal('show');
         $(overlay).addClass(active);
@@ -129,7 +145,6 @@ export class ModalTooltip extends Modal {
 
       $(document).on(`click${event}`, closeTooltip, overlay, (e)=>{
         e.preventDefault();
-        // const attrHref = '#' + $(e).parents('.modal').attr('id');
         $('.modal').modal('hide');
         $(overlay).removeClass(active);
         $('body').removeClass(fixed);

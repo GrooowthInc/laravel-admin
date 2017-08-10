@@ -28,7 +28,7 @@
     <aside class="bns-header-nav__global" data-bns-dropmenu="content-nav">
       <ul class="bns-header-nav__list">
         <li class="bns-header-nav__item">
-          <span class="bns-header-nav__heading">保育園を探す</span>
+          <span class="bns-header-nav__heading">保育園を探す（エリア選択）</span>
         </li>
         <li class="bns-header-nav__item">
           <ul class="bns-header-nav-child">
@@ -58,13 +58,13 @@
               <a href="{{ url('/NON0011') }}" class="bns-header-nav-child__link">あとで見る一覧</a>
             </li>
             <li class="bns-header-nav-child__item">
-              <a href="{{ url('/NON0012') }}" class="bns-header-nav-child__link">おすすめ一覧</a>
+              <a href="{{ url('/NON0012') }}" class="bns-header-nav-child__link">読みもの一覧</a>
             </li>
             </li>
           </ul><!-- /.bns-header-nav-child -->
         </li>
         <li class="bns-header-nav__item">
-          <span class="bns-header-nav__heading">保育園を探す</span>
+          <span class="bns-header-nav__heading">その他</span>
         </li>
         <li class="bns-header-nav__item">
           <ul class="bns-header-nav-child">

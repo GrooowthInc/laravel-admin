@@ -79,7 +79,7 @@ table tr:nth-child(even) td {
         <td>NON0001</td>
         <td>トップページ</td>
         <td><a href="{{ url('/') }}" target="_blank">NON0001</a></td>
-        <td>8/9</td>
+        <td>8/10<br>12:55</td>
         <td>90%</td>
         <td>-</td>
         <td>トップページ</td>
@@ -115,8 +115,8 @@ table tr:nth-child(even) td {
         <td>NON0005</td>
         <td>保育園検索</td>
         <td><a href="{{ url('/NON0005') }}" target="_blank">NON0005</a></td>
-        <td>8/9<br><b>進行中</b></td>
-        <td>30%</td>
+        <td>8/10<br><b>進行中</b></td>
+        <td>50%</td>
         <td>-</td>
         <td>地図選択</td>
       </tr>

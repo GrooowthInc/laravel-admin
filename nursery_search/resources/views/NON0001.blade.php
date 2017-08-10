@@ -37,7 +37,7 @@
     </div><!-- /.ui grid -->
     <div class="bns-block-active ui grid centered">
       <div class="fifteen wide column">
-        <button class="bns-btn--primary">現在地からさがす</button>
+        <button class="bns-btn--primary"><i class="bns-icon-here"></i>現在地からさがす</button>
       </div>
     </div><!-- /.ui grid -->
     <div class="bns-block-active ui grid centered">
