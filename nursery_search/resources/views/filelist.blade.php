@@ -277,7 +277,7 @@ table tr:nth-child(even) td {
         <td><a href="{{ url('/partial/breadcrumbs') }}" target="_blank">breadcrumbs</a></td>
         <td>8/9</td>
         <td>100%</td>
-        <td>-</td>
+        <td>8/11 17:00</td>
         <td>ぱんくず</td>
       </tr>
       <tr>
