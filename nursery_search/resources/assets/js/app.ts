@@ -31,18 +31,10 @@ Component.registerHooks(
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import Example from './components/Example.vue';
-import Vue0001 from './components/Vue0001.vue';
-import Vue0011 from './components/Vue0011.vue';
-// import Example from './components/Example';
+import RouteData from './classes/data/RouteData';
 const router = new VueRouter({
     mode: 'history',
-    routes: [
-      { path: '/ex', component: Example },
-      { path: '/cp', component: require('./components/Copy.vue') },
-      { path: '/0001', component: Vue0001 },
-      { path: '/0011', component: Vue0011 },
-    ]
+    routes: RouteData.getForVueRouter()  
 });
 
 const app = new Vue({

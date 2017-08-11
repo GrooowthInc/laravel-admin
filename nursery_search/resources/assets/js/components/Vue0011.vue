@@ -38,7 +38,7 @@
         </section>
 
         <section class="bns-section">
-          {!! Breadcrumbs::render('seelater',$title ) !!}
+          <BreadCrumbs></BreadCrumbs>
         </section><!-- /.bns-section -->
       </article>
     </main>
@@ -52,6 +52,7 @@ import Component from 'vue-class-component';
 
 import VueHeader from "./_partial/VueHeader.vue";
 import SeeLater from "./_partial/SeeLater.vue";
+import BreadCrumbs from "./_partial/BreadCrumbs.vue";
 import VueFooter from "./_partial/VueFooter.vue";
 
 import HeadTagUtility from '../classes/util/HeadTagUtility';
@@ -62,6 +63,7 @@ import HeadTagUtility from '../classes/util/HeadTagUtility';
     components: {
       VueHeader: VueHeader,
       SeeLater: SeeLater,
+      BreadCrumbs: BreadCrumbs,
       VueFooter: VueFooter
     }
   }

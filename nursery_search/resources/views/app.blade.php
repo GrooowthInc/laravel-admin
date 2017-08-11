@@ -57,7 +57,7 @@
           <li class="bns-header-nav__item">
             <ul class="bns-header-nav-child">
               <li class="bns-header-nav-child__item">
-                <router-link to="/0011" class="bns-header-nav-child__link">あとで見る一覧</router-link>
+                <router-link :to="{ name: 'seeLater'}" class="bns-header-nav-child__link">あとで見る一覧</router-link>
               </li>
               <li class="bns-header-nav-child__item">
                 <a href="{{ url('/NON0012') }}" class="bns-header-nav-child__link">おすすめ一覧</a>
