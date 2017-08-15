@@ -15,10 +15,10 @@
   <div class="ui grid">
     <div class="doubling four column row">
       <div class="column">
-        <a href="{{ url('/NON0005') }}" class="bns-btn--primary"><i class="bns-icon-here"></i>地図で見る</a>
+        <button class="bns-btn--primary is-disabled" is-disabled><i class="bns-icon-here"></i>地図で見る</button>
       </div>
       <div class="column">
-        <button class="bns-btn--primary"><i class="bns-icon-list"></i>一覧で見る</button>
+        <a href="{{ url('/NON0006') }}" class="bns-btn--primary"><i class="bns-icon-list"></i>一覧で見る</a>
       </div>
     </div>
   </div><!-- /.ui grid -->

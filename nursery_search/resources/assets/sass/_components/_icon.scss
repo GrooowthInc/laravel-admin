@@ -41,6 +41,10 @@
     height: 30px;
     background: url('/images/ico_map.svg') 50% 50% no-repeat;
     background-size: contain;
+    .is-disabled &{
+      background: url('/images/ico_map-exlight.svg') 50% 50% no-repeat;
+      background-size: contain;
+    }
   }
   // 小さいアイコン
   &-pin {
