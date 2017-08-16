@@ -11,7 +11,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
     <meta property="og:image" content="{{ url('images/img_mv.png') }}" />
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <title>保活ナビ｜@yield('title')</title>
 
@@ -561,9 +561,9 @@
       @include('_partial.footer')
     @endif
 
-    <script src="{{ mix('js/manifest.js')}}"></script>
-    <script src="{{ mix('js/vendor.js')}}"></script> 
-    <script src="{{ mix('js/app.js')}}"></script>
+    <script src="{{ asset('js/manifest.js')}}"></script>
+    <script src="{{ asset('js/vendor.js')}}"></script>
+    <script src="{{ asset('js/app.js')}}"></script>
 
     @if(Request::is('NON0005'))
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoiCtV1U4l_E7Ni3vCaowkZHgToieX_Co" async defer></script>

@@ -75,12 +75,12 @@
     <!-- ▲広告カルーセル▲ -->
     
     <!-- ▼最近見た保育園▼ -->
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>最近見た保育園</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="{{asset('/images/ico_school.svg')}}" alt="" /></i>最近見た保育園</h2>
     @include('_partial.recently-see-nursery')
     <!-- ▲最近見た保育園▲ -->
     
     <!-- ▼おすすめ記事▼ -->
-    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_news.svg" alt="" /></i>おすすめ記事</h2>
+    <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="{{asset('/images/ico_news.svg')}}" alt="" /></i>おすすめ記事</h2>
     @include('_partial.recommend-news')
     <!-- ▲おすすめ記事▲ -->
 
