@@ -28,7 +28,7 @@ const path = require('path')
 // mix.webpackConfig({}); <-- Override webpack.config.js, without editing the file directly.
 // mix.then(function () {}) <-- Will be triggered each time Webpack finishes building.
 
-mix.setResourceRoot('/hokatsu/');
+mix.setResourceRoot('/nursery/');
 
 mix.webpackConfig({
   resolve: {
