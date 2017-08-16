@@ -8,10 +8,10 @@
     "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "build:semanticui": "gulp --gulpfile resources/assets/semantic/gulpfile.js build",
-    "deploy:staging": "cd deploy && php ../vendor/deployer/deployer/bin/dep deploy staging -vvv",
-    "rollback:staging": "cd deploy && php ../vendor/deployer/deployer/bin/dep rollback staging -vvv",
-    "deploy:production": "cd deploy && php ../vendor/deployer/deployer/bin/dep deploy production -vvv",
-    "rollback:production": "cd deploy && php ../vendor/deployer/deployer/bin/dep rollback production -vvv",
+    "deploy:staging": "php ./vendor/deployer/deployer/bin/dep deploy staging -vvv",
+    "rollback:staging": "php ./vendor/deployer/deployer/bin/dep rollback staging -vvv",
+    "deploy:production": "php ./vendor/deployer/deployer/bin/dep deploy production -vvv",
+    "rollback:production": "php ./vendor/deployer/deployer/bin/dep rollback production -vvv",
     "deploy:clean": "rm -rfv .tmp"
   },
   "devDependencies": {

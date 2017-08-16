@@ -2,10 +2,12 @@
 namespace Deployer;
 
 require 'recipe/laravel.php';
+require 'vendor/deployer/recipes/npm.php';
 
 // Configuration
 
 set('repository', 'http://deploy:gri.140901@gitlab.grooowth.co.jp/benesse/nursery_search.git');
+set('branch', 'develop');
 set('git_tty', true); // [Optional] Allocate tty for git on first deployment
 add('shared_files', []);
 add('shared_dirs', []);
@@ -29,18 +31,22 @@ task('change_cwd', function () {
 after('deploy:update_code', 'change_cwd');
 
 task('update_env', function(){
-   run('mv .env.{{stage}} .env');
+   run('mv {{release_path}}/.env.{{stage}} {{release_path}}/.env');
 });
 after('change_cwd', 'update_env');
 
-
-desc('Restart PHP-FPM service');
-task('php-fpm:restart', function () {
-    // The user must have rights for restart service
-    // /etc/sudoers: username ALL=NOPASSWD:/bin/systemctl restart php-fpm.service
-    run('sudo systemctl restart php-fpm.service');
+task('npm:install2', function () {
+  run('source ~/.bash_profile; cd {{release_path}}; npm install');
 });
-after('deploy:symlink', 'php-fpm:restart');
+after('deploy:update_code', 'npm:install2');
+
+task('assets:generate', function(){
+  cd('{{release_path}}');
+  run('source ~/.bash_profile;npm run production');
+});
+after('npm:install2','assets:generate');
+
+
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
