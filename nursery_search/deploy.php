@@ -19,7 +19,7 @@ add('writable_dirs', []);
 host('nursery.benesse.demo.grooowth.co.jp')
     ->stage('staging')
     ->user('deploy')
-    ->identityFile('~/.ssh/gxp.deploy/id_rsa')
+    ->identityFile('/root/.ssh/gri.common.key')
     ->set('deploy_path', '/home/deploy/nursery.benesse.demo.grooowth.co.jp');
     
 // Tasks
