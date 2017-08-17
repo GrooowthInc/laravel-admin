@@ -14,7 +14,7 @@
 <article class="bns-article">
   <div class="bns-section">
     <div class="bns-info">
-      ニュースのコピーですLorem ipsum dolor sit amet, consectetur adipisicing elit.
+      ニュースです。BrowserSyncしない
     </div>
   </div>
   <section class="bns-section">
