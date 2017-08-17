@@ -4,7 +4,7 @@
     <main id="dashboard" class="bns-main" data-bns-nav="main">
       <article class="bns-article">
         <section class="bns-section">
-          <h2 class="bns-title-level2">おさがしのページは見つかりません</h2>
+          <h2 class="bns-title-level2">おさがしのページは見つかりません？？</h2>
           <p>検索条件をご確認いただき、再度お探しください。</p>
         </section>
 

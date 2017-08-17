@@ -4,7 +4,7 @@
     <main id="dashboard" class="bns-main" data-bns-nav="main">
       <article class="bns-article">
         <section class="bns-section">
-          <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>あとで見る一覧</h2>
+          <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="images/ico_school.svg" alt="" /></i>あとで見る一覧</h2>
           
           <SeeLater></SeeLater>
 

@@ -33,8 +33,9 @@ Component.registerHooks(
 
 import RouteData from './classes/data/RouteData';
 const router = new VueRouter({
-    mode: 'history',
-    routes: RouteData.getForVueRouter()  
+  base: '/nursery/',
+  mode: 'history',
+  routes: RouteData.getForVueRouter()  
 });
 
 const app = new Vue({

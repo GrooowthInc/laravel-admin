@@ -45,14 +45,14 @@
             <button class="bns-btn-radius--secondary"><i class="bns-icon-point"></i>初めての保育園の探しかた</button>
           </div>
 
-          <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_school.svg" alt="" /></i>最近見た保育園</h2>
+          <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="images/ico_school.svg" alt="" /></i>最近見た保育園</h2>
           <RecentlySeeNursery></RecentlySeeNursery>
 
           <!-- ▼広告カルーセル▼ -->
           <AdCarousel></AdCarousel>
           <!-- ▲広告カルーセル▲ -->
 
-          <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="/images/ico_news.svg" alt="" /></i>おすすめ記事</h2>
+          <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="images/ico_news.svg" alt="" /></i>おすすめ記事</h2>
           <RecommendNews></RecommendNews>
 
           <div class="bns-layout">

@@ -7,13 +7,13 @@
         <div class="bns-header-func">
           <div class="bns-header__btn">
             <a href="javascript: void(0);" class="bns-header-icon--look">
-              <img src="/images/btn_header01.svg" alt="後で見る" />
+              <img src="images/btn_header01.svg" alt="後で見る" />
             </a>
             <i class="bns-header-icon--badge">20</i>
           </div>
           <div class="bns-header__btn">
             <a href="javascript: void(0);" class="bns-header-icon--menu" data-bns-dropmenu="target-nav">
-              <img src="/images/btn_header02.svg" alt="メニュー" />
+              <img src="images/btn_header02.svg" alt="メニュー" />
             </a>
           </div>
         </div>
