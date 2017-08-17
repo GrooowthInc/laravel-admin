@@ -13,7 +13,7 @@
   }
   &-carret {
     @extend #{$prj-ns}-icon;
-    background: url('/images/img_sign.svg') 50% 50% no-repeat;
+    background: url('../../images/img_sign.svg') 50% 50% no-repeat;
     background-size: contain;
     &--sm {
       @extend #{$prj-ns}-icon-carret;
@@ -39,10 +39,10 @@
     @extend #{$prj-ns}-icon;
     width: 20px;
     height: 30px;
-    background: url('/images/ico_map.svg') 50% 50% no-repeat;
+    background: url('../../images/ico_map.svg') 50% 50% no-repeat;
     background-size: contain;
     .is-disabled &{
-      background: url('/images/ico_map-exlight.svg') 50% 50% no-repeat;
+      background: url('../../images/ico_map-exlight.svg') 50% 50% no-repeat;
       background-size: contain;
     }
   }
@@ -51,17 +51,17 @@
     @extend #{$prj-ns}-icon;
     width: 13px;
     height: 19px;
-    background: url('/images/ico_map.svg') 50% 50% no-repeat;
+    background: url('../../images/ico_map.svg') 50% 50% no-repeat;
     background-size: contain;
   }
   &-list {
     @extend #{$prj-ns}-icon;
     width: 25px;
     height: 25px;
-    background: url('/images/ico_list.svg') 50% 50% no-repeat;
+    background: url('../../images/ico_list.svg') 50% 50% no-repeat;
     background-size: contain;
     .is-disabled &{
-      background: url('/images/ico_list-exlight.svg') 50% 50% no-repeat;
+      background: url('../../images/ico_list-exlight.svg') 50% 50% no-repeat;
       background-size: contain;
     }
   }
@@ -69,25 +69,25 @@
     @extend #{$prj-ns}-icon;
     width: 15px;
     height: 15px;
-    background: url('/images/ico_external.svg') 50% 50% no-repeat;
+    background: url('../../images/ico_external.svg') 50% 50% no-repeat;
     background-size: contain;
   }
   &-tel {
     @extend #{$prj-ns}-icon;
     width: 15px;
     height: 15px;
-    background: url('/images/ico_phone.svg') 50% 50% no-repeat;
+    background: url('../../images/ico_phone.svg') 50% 50% no-repeat;
     background-size: contain;
   }
   &-loupe {
     @extend #{$prj-ns}-icon;
     width: 30px;
     height: 30px;
-    background: url('/images/ico_japan.svg') 50% 50% no-repeat;
+    background: url('../../images/ico_japan.svg') 50% 50% no-repeat;
     background-size: contain;
     &--search {
       @extend #{$prj-ns}-icon-loupe;
-      background: url('/images/ico_search.svg') 50% 50% no-repeat;
+      background: url('../../images/ico_search.svg') 50% 50% no-repeat;
       background-size: contain;
     }
   }
@@ -95,21 +95,21 @@
     @extend #{$prj-ns}-icon;
     width: 30px;
     height: 30px;
-    background: url('/images/ico_train.svg') 50% 50% no-repeat;
+    background: url('../../images/ico_train.svg') 50% 50% no-repeat;
     background-size: contain;
   }
   &-point {
     @extend #{$prj-ns}-icon;
     width: 40px;
     height: 40px;
-    background: url('/images/ico_point.svg') 50% 50% no-repeat;
+    background: url('../../images/ico_point.svg') 50% 50% no-repeat;
     background-size: contain;
   }
   &-pen {
     @extend #{$prj-ns}-icon;
     width: 30px;
     height: 30px;
-    background: url('/images/ico_pen.svg') 50% 50% no-repeat;
+    background: url('../../images/ico_pen.svg') 50% 50% no-repeat;
     background-size: contain;
   }
 }

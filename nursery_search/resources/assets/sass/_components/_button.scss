@@ -21,7 +21,7 @@
     right: 5px;
     width: 20px;
     height: 20px;
-    background: url('/images/img_sign.svg') 50% 50% no-repeat;
+    background: url('../../images/img_sign.svg') 50% 50% no-repeat;
     background-size: contain;
   }
   &:hover {
@@ -34,7 +34,7 @@
     pointer-events: none;
     outline: none;
     &::after {
-      background: url('/images/img_sign-exlight.svg') 50% 50% no-repeat;
+      background: url('../../images/img_sign-exlight.svg') 50% 50% no-repeat;
       background-size: contain;
     }
   }
@@ -67,7 +67,7 @@
     color: $color-font--exlight;
     background-color: $color-button-third;
     &::after {
-      background: url('/images/img_sign-exlight.svg') 50% 50% no-repeat;
+      background: url('../../images/img_sign-exlight.svg') 50% 50% no-repeat;
       background-size: contain;
     }
     &-no-arrow {

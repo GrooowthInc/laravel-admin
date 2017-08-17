@@ -15,7 +15,7 @@
     text-decoration: none;
     &.is-active {
       #{$prj-ns}-icon-carret__bottom {
-        background: url('/images/img_sign-dark.svg') 50% 50% no-repeat;
+        background: url('../../images/img_sign-dark.svg') 50% 50% no-repeat;
         background-size: contain;
         transform: rotate(-90deg);
       }
@@ -34,13 +34,13 @@
       left: 5px;
       width: 12px;
       height: 15px;
-      background: url('/images/ico_q.svg') 50% 50% no-repeat;
+      background: url('../../images/ico_q.svg') 50% 50% no-repeat;
       background-size: contain;
     }
     .is-active &{
       border-bottom: 1px dotted $color-border;
       &::before {
-        background: url('/images/ico_q-active.svg') 50% 50% no-repeat;
+        background: url('../../images/ico_q-active.svg') 50% 50% no-repeat;
         background-size: contain;
       }
     }
@@ -58,7 +58,7 @@
       left: 25px;
       width: 12px;
       height: 15px;
-      background: url('/images/ico_a.svg') 50% 50% no-repeat;
+      background: url('../../images/ico_a.svg') 50% 50% no-repeat;
       background-size: contain;
     }
   }
