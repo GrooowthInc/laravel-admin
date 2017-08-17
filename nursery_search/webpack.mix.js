@@ -42,7 +42,7 @@ const path = require('path')
 //   postCss: [] // Post-CSS options: https://github.com/postcss/postcss/blob/master/docs/plugins.md
 // });
 
-mix.setResourceRoot('nursery');
+mix.setResourceRoot('/nursery/');
 
 mix.webpackConfig({
   resolve: {
