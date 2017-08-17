@@ -1,4 +1,4 @@
-const { mix } = require('laravel-mix')
+const {mix} = require('laravel-mix')
 const path = require('path')
 /*
  |--------------------------------------------------------------------------
@@ -45,36 +45,40 @@ const path = require('path')
 mix.setResourceRoot('/nursery/');
 
 mix.webpackConfig({
-  resolve: {
-    modules: [
-      path.resolve(__dirname, 'resources/assets/semantic/dist'),
-      path.resolve(__dirname, 'node_modules')
-    ]
-  }
+    resolve: {
+        modules: [
+            path.resolve(__dirname, 'resources/assets/semantic/dist'),
+            path.resolve(__dirname, 'node_modules')
+        ]
+    }
 })
 
 mix.ts('resources/assets/js/app.ts', 'public/js')
-  .extract(
-    [
-    'axios',
-    'jquery',
-    'lodash',
-    'moment',
-    'vue',
-    'vue-class-component',
-    'vue-router'
-    ],
-    'public/js/vendor.js'  // windows特有の問題に対応（https://github.com/JeffreyWay/laravel-mix/issues/1091）
-  )
-  .sass('resources/assets/sass/app.scss', 'public/css')
+    .extract(
+        [
+            'axios',
+            'jquery',
+            'lodash',
+            'moment',
+            'vue',
+            'vue-class-component',
+            'vue-router'
+        ],
+        'public/js/vendor.js'  // windows特有の問題に対応（https://github.com/JeffreyWay/laravel-mix/issues/1091）
+    )
+    .sass('resources/assets/sass/app.scss', 'public/css')
 
 mix.copy('resources/assets/semantic/dist/themes/', 'public/themes/', false)
 mix.copy('node_modules/font-awesome/fonts', 'public/fonts/fontawesome', false)
 mix.copy('resources/assets/images', 'public/images', false)
-if (mix.config.inProduction) {
-  // mix.version();
+if (!mix.inProduction()) {
+    mix.sourceMaps()
+        .browserSync({
+            // host: '172.29.0.3',
+            // プロキシ先（laradockのbackend-network）
+            proxy: '172.29.0.4/nursery/',
+            open: false,
+            logLevel: "debug"
+        })
 }
 
-if (mix.inDevelopment) {
-  mix.sourceMaps()
-}
