@@ -11,7 +11,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
     <meta property="og:image" content="{{ url('images/img_mv.png') }}" />
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <title>保活ナビ｜@yield('title')</title>
 
@@ -124,9 +124,9 @@
       @endif 
  --}}
     </div>
-    <script src="{{ mix('js/manifest.js')}}"></script>
-    <script src="{{ mix('js/vendor.js')}}"></script> 
-    <script src="{{ mix('js/app.js')}}"></script>
+    <script src="{{ asset('js/manifest.js')}}"></script>
+    <script src="{{ asset('js/vendor.js')}}"></script>
+    <script src="{{ asset('js/app.js')}}"></script>
 
     <!-- TODO: NON0005のbody内に配置 -->
     @if(Request::is('NON0005'))

@@ -12,7 +12,7 @@
 <link href="favicon.ico" rel="icon" type="image/ico" />
 <link href="assets/images/icon.png" rel="apple-touch-icon">
 -->
-<link href="assets/css/app.css" rel="stylesheet" />
+<link href="{{ asset('css/app.css') }}" rel="stylesheet" />
 <style>
 body {
   color: #636b6f;
