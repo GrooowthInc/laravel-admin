@@ -50,6 +50,18 @@ mix.webpackConfig({
             path.resolve(__dirname, 'resources/assets/semantic/dist'),
             path.resolve(__dirname, 'node_modules')
         ]
+    },
+    devServer: {
+        overlay: true,
+        host:'0.0.0.0',
+        proxy: {
+            // プロキシ先（laradockのapache2のbackend-networkとコンテキスト）
+            '*': '172.30.0.6/nursery/'
+        },
+        watchOptions: {
+            aggregateTimeout: 300,
+            poll: true
+        }
     }
 })
 
@@ -73,23 +85,24 @@ mix.copyDirectory('resources/assets/semantic/dist/themes/', 'public/themes/')
 mix.copyDirectory('resources/assets/images', 'public/images')
 
 console.log("APP_URL:" + process.env.APP_URL)
+console.log("NODE_ENV:" + process.env.NODE_ENV)
 
 if (!mix.inProduction()) {
     mix.sourceMaps()
         .browserSync({
             // host: '172.29.0.3',
-            // プロキシ先（laradockのbackend-network）
-            proxy: '172.30.0.4',
-            // proxy: process.env.APP_URL,
+            // プロキシ先（laradockのapache2のbackend-networkとコンテキスト）
+            proxy: '172.30.0.6/nursery/',
             open: false,
             files: [
                 'resources/views/**/*.php',
                 'app/**/*.php',
                 'routes/**/*.php',
                 "public/**/*.*"
-            ],     // 公開フォルダを指定しないとリロードが効きません。注意],
+            ],
             logLevel:
                 "debug"
         })
+} else {
+    mix.version();
 }
-

@@ -115,7 +115,7 @@ export default class Vue0001 extends Vue {
 
   public mounted(): void {
     console.log('Vue0001.mounted!!');
-    document.title = '２Vue0001';
+    document.title = '2Vue0001';
   }
 
   public beforeRouteEnter(to: any, from: any, next: any): void {

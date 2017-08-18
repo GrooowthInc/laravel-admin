@@ -25,6 +25,7 @@ if (!function_exists('mix_context')) {
         }
 
         if (file_exists(public_path($manifestDirectory . '/hot'))) {
+//            return new HtmlString("//localhost:8080/".env('APP_CONTEXT')."{$path}");
             return new HtmlString("//localhost:8080{$path}");
         }
 
