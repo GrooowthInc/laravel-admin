@@ -42,7 +42,6 @@ const path = require('path')
 //   postCss: [] // Post-CSS options: https://github.com/postcss/postcss/blob/master/docs/plugins.md
 // });
 
-mix.setResourceRoot('/nursery/');
 
 mix.webpackConfig({
     resolve: {
@@ -53,15 +52,20 @@ mix.webpackConfig({
     },
     devServer: {
         overlay: true,
-        host:'0.0.0.0',
-        proxy: {
-            // プロキシ先（laradockのapache2のbackend-networkとコンテキスト）
-            '*': '172.30.0.6/nursery/'
-        },
-        watchOptions: {
-            aggregateTimeout: 300,
-            poll: true
-        }
+        host: '0.0.0.0',
+        watchContentBase: true,
+        contentBase:[
+         path.join(__dirname,"public"),
+         path.join(__dirname,"resources")
+        ],
+        // proxy: {
+        // プロキシ先（laradockのapache2のbackend-networkとコンテキスト）
+        // '*': '172.30.0.6'
+        // },
+    },
+    watchOptions: {
+        aggregateTimeout: 300,
+        poll: 1000
     }
 })
 
@@ -89,20 +93,22 @@ console.log("NODE_ENV:" + process.env.NODE_ENV)
 
 if (!mix.inProduction()) {
     mix.sourceMaps()
-        .browserSync({
+        // .browserSync({
             // host: '172.29.0.3',
             // プロキシ先（laradockのapache2のbackend-networkとコンテキスト）
-            proxy: '172.30.0.6/nursery/',
-            open: false,
-            files: [
-                'resources/views/**/*.php',
-                'app/**/*.php',
-                'routes/**/*.php',
-                "public/**/*.*"
-            ],
-            logLevel:
-                "debug"
-        })
+        //     proxy: '172.30.0.6/nursery/',
+        //     open: false,
+        //     files: [
+        //         'resources/views/**/*.php',
+        //         'app/**/*.php',
+        //         'routes/**/*.php',
+        //         "public/**/*.*"
+        //     ],
+        //     reload: false,
+        //     logLevel:
+        //         "debug"
+        // })
 } else {
+    mix.setResourceRoot('/nursery/');
     mix.version();
 }

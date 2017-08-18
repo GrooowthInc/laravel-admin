@@ -5,7 +5,7 @@
       <article class="bns-article">
         <div class="bns-section">
           <div class="bns-info">
-            ニュースのコピーですLorem ipsum dolor sit amet, consectetur adipisicing elit.
+            <b>ニュースのコピーです</b>
           </div>
         </div>
         <section class="bns-section">
@@ -115,7 +115,7 @@ export default class Vue0001 extends Vue {
 
   public mounted(): void {
     console.log('Vue0001.mounted!!');
-    document.title = '2Vue0001';
+    document.title = 'Vue0001';
   }
 
   public beforeRouteEnter(to: any, from: any, next: any): void {
