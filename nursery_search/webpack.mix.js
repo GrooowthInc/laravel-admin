@@ -68,17 +68,28 @@ mix.ts('resources/assets/js/app.ts', 'public/js')
     )
     .sass('resources/assets/sass/app.scss', 'public/css')
 
-mix.copy('resources/assets/semantic/dist/themes/', 'public/themes/', false)
-mix.copy('node_modules/font-awesome/fonts', 'public/fonts/fontawesome', false)
-mix.copy('resources/assets/images', 'public/images', false)
+mix.copyDirectory('resources/assets/semantic/dist/themes/', 'public/themes/')
+// mix.copyDirectory('node_modules/font-awesome/fonts', 'public/fonts/fontawesome')
+mix.copyDirectory('resources/assets/images', 'public/images')
+
+console.log("APP_URL:" + process.env.APP_URL)
+
 if (!mix.inProduction()) {
     mix.sourceMaps()
         .browserSync({
             // host: '172.29.0.3',
             // プロキシ先（laradockのbackend-network）
-            proxy: '172.29.0.4/nursery/',
+            proxy: '172.30.0.4',
+            // proxy: process.env.APP_URL,
             open: false,
-            logLevel: "debug"
+            files: [
+                'resources/views/**/*.php',
+                'app/**/*.php',
+                'routes/**/*.php',
+                "public/**/*.*"
+            ],     // 公開フォルダを指定しないとリロードが効きません。注意],
+            logLevel:
+                "debug"
         })
 }
 

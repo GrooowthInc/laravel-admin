@@ -14,7 +14,7 @@
 <article class="bns-article">
   <div class="bns-section">
     <div class="bns-info">
-      ニュースです。BrowserSyncしない
+      ニュースです。BrowserSyncしないですね。
     </div>
   </div>
   <section class="bns-section">

@@ -179,6 +179,7 @@ return [
 
         DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
         Talevskiigor\ComposerBump\ComposerBumpServiceProvider::class,
+        browner12\helpers\HelperServiceProvider::class,
 
     ],
 
