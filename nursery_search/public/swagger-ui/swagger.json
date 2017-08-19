@@ -4,13 +4,13 @@
         "title": "\u4fdd\u6d3b - API\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8",
         "version": "0.1"
     },
-    "basePath": "/nursery/",
+    "basePath": "/nursery/api/",
     "schemes": [
         "http",
         "https"
     ],
     "paths": {
-        "/api/sample/hoge/{hogeID}": {
+        "/sample/hoge/{hogeID}": {
             "get": {
                 "tags": [
                     "hoge"
@@ -24,6 +24,37 @@
                         "name": "hogeID",
                         "in": "path",
                         "description": "hoge\u306eID",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "404": {
+                        "description": "Parameter error"
+                    },
+                    "403": {
+                        "description": "Auth error"
+                    }
+                }
+            }
+        },
+        "/zip/{officialCode}": {
+            "get": {
+                "tags": [
+                    "zipcode"
+                ],
+                "description": "\u5e02\u533a\u753a\u6751\u9078\u629e",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "officialCode",
+                        "in": "path",
+                        "description": "\u5168\u56fd\u5730\u65b9\u516c\u5171\u56e3\u4f53\u30b3\u30fc\u30c9(JISX0401\u3001X0402)CD\u4ed8\u304d",
                         "required": true,
                         "type": "string"
                     }

@@ -19,4 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['middleware' => 'api'], function() {
     Route::get('sample/hoge/{userId}', 'SampleController@hoge');
+    Route::get('zip/{prefCode}', 'ZipcodeController@getConditionCity');
 });

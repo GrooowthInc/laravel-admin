@@ -6,7 +6,7 @@ class SampleController extends Controller
 {    
     /**
      * @SWG\Get(
-     *     path="/api/sample/hoge/{hogeID}",
+     *     path="/sample/hoge/{hogeID}",
      *     description="hogeを取得する",
      *     produces={"application/json"},
      *     tags={"hoge"},

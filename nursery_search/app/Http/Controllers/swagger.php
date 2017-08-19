@@ -2,7 +2,7 @@
 
 /**
  * @SWG\Swagger(
- *     basePath="/nursery/",
+ *     basePath="/nursery/api/",
  *     schemes={"http", "https"},
  *     @SWG\Info(
  *         version="0.1",
