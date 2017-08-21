@@ -13,7 +13,7 @@
 @section('contents')
 <article class="bns-article">
   <section class="bns-section">
-    <h2 class="bns-title-level2">FAQ</h2>
+    <h2 class="bns-title-level2">ユーザーのかた</h2>
     <div class="bns-accordion">
       <ul class="bns-accordion-list">
         <li class="bns-accordion-list__item">
@@ -52,6 +52,11 @@
             <p class="bns-text">cookie情報を利用しているため、ブラウザを別で立ち上げたり、ｃookie情報（閲覧履歴）を削除すると、消えてしまう場合があります。ご留意ください。</p>
           </div>
         </li>
+      </ul>
+    </div><!-- /.bns-accordion -->
+    <h2 class="bns-title-level2">施設関係者のかた</h2>
+    <div class="bns-accordion">
+      <ul class="bns-accordion-list">
         <li class="bns-accordion-list__item">
           <a href="javascript: void(0);" class="bns-accordion__title" data-bns-accordion="trigger">
             <i class="bns-icon-carret__bottom"></i>
@@ -124,6 +129,11 @@
             <p class="bns-text">お問合せフォームよりご連絡ください。</p>
           </div>
         </li>
+      </ul>
+    </div><!-- /.bns-accordion -->
+    <h2 class="bns-title-level2">掲載情報について</h2>
+    <div class="bns-accordion">
+      <ul class="bns-accordion-list">
         <li class="bns-accordion-list__item">
           <a href="javascript: void(0);" class="bns-accordion__title" data-bns-accordion="trigger">
             <i class="bns-icon-carret__bottom"></i>
@@ -169,6 +179,11 @@
             <p class="bns-text">アンケート回答時点、または調査時点の情報を掲載しております。<br>各ページに、掲載日時の記載がありますのでご確認ください。<br>また、最新の情報については、必ずお客様ご自身で園に問い合わせる等ご確認いただきますよう、お願いいたします。</p>
           </div>
         </li>
+      </ul>
+    </div><!-- /.bns-accordion -->
+    <h2 class="bns-title-level2">その他</h2>
+    <div class="bns-accordion">
+      <ul class="bns-accordion-list">
         <li class="bns-accordion-list__item">
           <a href="javascript: void(0);" class="bns-accordion__title" data-bns-accordion="trigger">
             <i class="bns-icon-carret__bottom"></i>

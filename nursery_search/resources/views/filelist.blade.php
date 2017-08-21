@@ -187,8 +187,8 @@ table tr:nth-child(even) td {
         <td>NON0013</td>
         <td>FAQ</td>
         <td><a href="{{ url('/NON0013') }}" target="_blank">NON0013</a></td>
-        <td>8/9</td>
-        <td>100%</td>
+        <td>8/21 14:05</td>
+        <td>99%</td>
         <td>8/17 18:47</td>
         <td>FAQ</td>
       </tr>
