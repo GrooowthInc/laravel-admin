@@ -2,11 +2,12 @@
 #{$prj-ns}-block {
   &-active {
     background-color: $color-bg-active;
-    &:first-of-type {
-      padding-top: $siteGutter-md*2;
-    }
     &:last-of-type {
       margin-bottom: $siteGutter;
+    }
+    &--top {
+      @extend #{$prj-ns}-block-active;
+      padding-top: $siteGutter-md*2 !important;
     }
     &__outer {
       margin-top: $siteGutter-lg*3;
@@ -23,6 +24,15 @@
         padding-top: 0;
       }
     }
+    &--radius {
+      @extend #{$prj-ns}-block-active;
+      border-radius: $rds-base;
+    }
+  }
+  &-point {
+    @extend #{$prj-ns}-block-active--radius;
+    margin: $siteGutter 0;
+    background-color: $color-bg--secondary;
   }
   // 最近見た保育園一覧
   &-nursery {

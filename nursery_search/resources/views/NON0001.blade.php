@@ -19,7 +19,7 @@
   </div>
   <section class="bns-section">
     <h2 class="bns-title-area"><span class="bns-title-area__text"><i class="bns-icon-loupe"></i>保育園を探す</span></h2>
-    <div class="bns-block-active ui grid">
+    <div class="bns-block-active--top ui grid">
       <div class="doubling four column row">
         <div class="column">
           <button class="bns-btn--primary"  data-bns-dropmenu="target">東京都</button>
@@ -37,7 +37,7 @@
     </div><!-- /.ui grid -->
     <div class="bns-block-active ui grid centered">
       <div class="fifteen wide column">
-        <button class="bns-btn--primary"><i class="bns-icon-here" data-bns-searchlocation="trigger"></i>現在地からさがす</button>
+        <a href="#" class="bns-btn--primary"><i class="bns-icon-here" data-bns-searchlocation="trigger"></i>現在地からさがす</a>
       </div>
     </div><!-- /.ui grid -->
     <div class="bns-block-active ui grid centered">
@@ -51,7 +51,7 @@
     </div><!-- /.ui grid -->
 
     <div class="bns-layout">
-      <button class="bns-btn-radius--secondary"><i class="bns-icon-point"></i>初めての保育園の探しかた</button>
+      <a href="#" class="bns-btn-radius--secondary"><i class="bns-icon-point"></i>初めての保育園の探しかた</a>
     </div>
 
     <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="{{asset('/images/ico_school.svg')}}" alt="" /></i>最近見た保育園</h2>

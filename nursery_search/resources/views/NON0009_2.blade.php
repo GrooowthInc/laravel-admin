@@ -181,7 +181,7 @@
       <div class="bns-block-nursery">
         <div class="bns-block-active__outer">
           <h2 class="bns-title-area"><span class="bns-title-area__text"><i class="bns-icon-loupe"></i>保育園を探す</span></h2>
-          <div class="bns-block-active ui grid">
+          <div class="bns-block-active--top ui grid">
             <div class="doubling four column row">
               <div class="column">
                 <button class="bns-btn--primary"  data-bns-dropmenu="target">東京都</button>

@@ -47,22 +47,41 @@
 #{$prj-ns}-list {
   &--circle {
     padding-left: 1.5em;
-    list-style-type: disc;
+    // list-style-type: disc;
     &__item {
       margin: 0 0 $siteGutter-sm;
+      position: relative;
+      &::before {
+        content: '・';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 10px;
+      }
       &:last-child {
         margin: 0;
       }
     }
   }
   &--numbering {
-    padding-left: 1.5em;
-    list-style-type: decimal;
+    display: block;
     &__item {
+      display: table;
+      vertical-align: top;
       margin: $siteGutter-sm 0;
       &:last-child {
         margin: 0;
       }
+    }
+    &__head {
+      display: table-cell;
+      vertical-align: top;
+      color: $color-font--navy;
+      font-weight: bold;
+    }
+    &__head {
+      display: table-cell;
+      vertical-align: top;
     }
   }
 }
