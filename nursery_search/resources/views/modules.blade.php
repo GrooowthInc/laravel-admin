@@ -23,6 +23,7 @@
     <h2 class="bns-title-level2"><span class="bns-title-text">タイトルレベル2</span> <a href="#" class="bns-title-label">ラベル有り</a></h2>
     <h3 class="bns-title-level3">タイトルレベル3</h3>
     <h3 class="bns-title-level3--emphasis">タイトルレベル3 色付き</h3>
+    <h3 class="bns-title-level3--border">タイトルレベル3 下線付き</h3>
     <h4 class="bns-title-level4">タイトルレベル4</h4>
 
     <h2 class="bns-title-level2"><i class="bns-title-icon"><img src="{{asset('/images/ico_school.svg')}}" alt="" /></i>ボタン</h2>

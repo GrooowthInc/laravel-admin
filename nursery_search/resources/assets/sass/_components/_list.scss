@@ -33,16 +33,36 @@
       }
     }
   }
-  &-category {
-    &__item {
-    }
-  }
   &-child {
     padding-left: $siteGutter-lg;
     &__item {
     }
     &__link {
       @extend #{$prj-ns}-list-heading__text;
+    }
+  }
+}
+
+// List-style
+#{$prj-ns}-list {
+  &--circle {
+    padding-left: 1.5em;
+    list-style-type: disc;
+    &__item {
+      margin: 0 0 $siteGutter-sm;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  &--numbering {
+    padding-left: 1.5em;
+    list-style-type: decimal;
+    &__item {
+      margin: $siteGutter-sm 0;
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 }

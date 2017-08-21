@@ -52,6 +52,16 @@ Breadcrumbs::register('nursery-select-point', function ($breadcrumbs, $title) {
   $breadcrumbs->parent('home');
   $breadcrumbs->push($title, route('nursery-select-point'));
 });
+// トップ > 保育園選びのポイント NON0009_2
+Breadcrumbs::register('nursery-select-point_2', function ($breadcrumbs, $title) {
+  $breadcrumbs->parent('home');
+  $breadcrumbs->push($title, route('nursery-select-point_2'));
+});
+// トップ > 保育園選びのポイント NON0009_3
+Breadcrumbs::register('nursery-select-point_3', function ($breadcrumbs, $title) {
+  $breadcrumbs->parent('home');
+  $breadcrumbs->push($title, route('nursery-select-point_3'));
+});
 
 // トップ > サービス概要 NON0010
 Breadcrumbs::register('service', function ($breadcrumbs, $title) {

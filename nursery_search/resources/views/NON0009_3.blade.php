@@ -16,11 +16,7 @@
     <p class="bns-text-lead">基本をおさえよう！初めての保育園の探しかた</p>
     <div class="bns-title-block">はじめに知っておきたいこと</div>
     <div class="bns-layout">
-      <p class="bns-text--right">
-        <span class="bns-text--sm">監修：普光院亜紀さん（「保育園を考える親の会」代表）</span>
-      </p>
-    </div>
-    <div class="bns-layout">
+      <p class="bns-text--sub">監修：普光院亜紀さん（「保育園を考える親の会」代表）</p>
       <p class="bns-text">
         待機児童数は増え続け、保育園を選べる状況じゃないといわれる時代。<br>
         でも、親としては安心できる場所に我が子を預けたいもの。<br>
@@ -64,29 +60,6 @@
         <a href="#" class="bns-text-link--area">図解でわかる！ 保育施設・サービス基礎知識<i class="bns-icon-carret--sm"></i></a>
       </p>
     </div>
-    <div class="bns-layout--negative">
-      <div class="bns-block-nursery">
-        <div class="bns-block-active__outer">
-          <h2 class="bns-title-area"><span class="bns-title-area__text"><i class="bns-icon-loupe"></i>保育園を探す</span></h2>
-          <div class="bns-block-active ui grid">
-            <div class="doubling four column row">
-              <div class="column">
-                <button class="bns-btn--primary"  data-bns-dropmenu="target">東京都</button>
-              </div>
-              <div class="column">
-                <button class="bns-btn--primary"  data-bns-dropmenu="target">神奈川県</button>
-              </div>
-              <div class="column">
-                <button class="bns-btn--primary"  data-bns-dropmenu="target">千葉県</button>
-              </div>
-              <div class="column">
-                <button class="bns-btn--primary"  data-bns-dropmenu="target">埼玉県</button>
-              </div>
-            </div>
-          </div><!-- /.ui grid -->
-        </div><!-- /.bns-block-active__outer -->
-      </div>
-    </div><!-- /.bns-layout--negative -->
   </section>
 
   <section class="bns-section">

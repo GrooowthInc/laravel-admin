@@ -80,6 +80,10 @@
 }
 
 #{$prj-ns}-text {
+  &-lead {
+    padding-bottom: $siteGutter-md;
+    color: $color-font--navy;
+  }
   &--sm {
     @include fz($fz-xs);
   }

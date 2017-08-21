@@ -8,6 +8,21 @@
     &:last-of-type {
       margin-bottom: $siteGutter;
     }
+    &__outer {
+      margin-top: $siteGutter-lg*3;
+      position: relative;
+      &:first-of-type {
+        margin-top: $siteGutter-lg*2;
+      }
+    }
+    &--light {
+      @extend #{$prj-ns}-block-active;
+      margin-top: $siteGutter-lg;
+      background-color: $color-bg-active--light;
+      &:first-of-type {
+        padding-top: 0;
+      }
+    }
   }
   // 最近見た保育園一覧
   &-nursery {
@@ -181,6 +196,9 @@
   // 施設詳細ページ大分類カテゴリ
   &-category {
     margin: $siteGutter-lg 0;
+    #{$prj-ns}-block-active__outer &{
+      margin: 0;
+    }
     &__heading {
       display: table;
       margin-bottom: $siteGutter;
@@ -208,8 +226,15 @@
     &__item {
       padding: $siteGutter-lg 0;
       border-top: 1px dotted $color-border-main;
+      #{$prj-ns}-block-active__outer &{
+        border-top-width: 0;
+        border-bottom: 1px dotted $color-border-main;
+      }
       &:last-child {
         border-bottom: 1px dotted $color-border-main;
+        #{$prj-ns}-block-active__outer &{
+          border-bottom-width: 0;
+        }
       }
     }
     &__body {

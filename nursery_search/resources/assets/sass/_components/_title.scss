@@ -26,6 +26,15 @@
       @extend #{$prj-ns}-title-level3;
       color: $color-font--navy;
     }
+    &--border {
+      @extend #{$prj-ns}-title-level3;
+      padding-bottom: $siteGutter;
+      margin: $siteGutter-xl 0 $siteGutter;
+      border-bottom: 1px dotted $color-border-main;
+      &:first-child {
+        margin: $siteGutter 0;
+      }
+    }
   }
   &-level4 {
     @include fz($fz-sm);
@@ -98,6 +107,25 @@
         border-width: 0 20px 20px 0;
         border-color: transparent $color-bg--exlight transparent transparent;
       }
+      #{$prj-ns}-title-area--light &{
+        background-color: $color-bg-active--light;
+      }
     }
+    &--light {
+      @extend #{$prj-ns}-title-area;
+    }
+  }
+  // NON0009で使用
+  &-block {
+    @include fz($fz-xl);
+    display: flex;
+    align-items: center;
+    padding: $siteGutter;
+    margin: -$siteGutter;
+    min-height: 70px;
+    color: $color-font--navy;
+    font-weight: bold;
+    background-color: $color-bg-active;
+    border-bottom: 2px solid $color-border--primary;
   }
 }

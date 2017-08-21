@@ -1,0 +1,41 @@
+// Box
+#{$prj-ns}-box {
+  display: block;
+  padding: $siteGutter;
+  margin-bottom: $siteGutter;
+  width: 100%;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &-merit {
+    @extend #{$prj-ns}-box;
+    border: 1px solid $color-border--exlight;  
+    background-color: $color-bg-merit;
+    &__title {
+      @include fz($fz-md);
+      font-weight: bold;
+      color: $color-font--merit;
+    }
+  }
+  &-demerit {
+    @extend #{$prj-ns}-box;
+    border: 1px solid $color-border--exlight;
+    background-color: $color-bg-demerit;
+    &__title {
+      @include fz($fz-md);
+      font-weight: bold;
+      color: $color-font--demerit;
+    }
+  }
+  // その他、紺色線で囲んであるもの
+  &-ex {
+    @extend #{$prj-ns}-box;
+    border: 1px solid $color-border-main;
+    background-color: $color-bg--exlight;
+    &__title {
+      @include fz($fz-md);
+      font-weight: bold;
+      color: $color-font--navy;
+    }
+  }
+}

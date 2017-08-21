@@ -46,6 +46,12 @@ Route::get('NON0008', function () {
 Route::get('NON0009', function () {
   return view('NON0009');
 })->name('nursery-select-point');
+Route::get('NON0009_2', function () {
+  return view('NON0009_2');
+})->name('nursery-select-point_2');
+Route::get('NON0009_3', function () {
+  return view('NON0009_3');
+})->name('nursery-select-point_3');
 
 Route::get('NON0010', function () {
   return view('NON0010');
