@@ -177,7 +177,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        Encore\Admin\Providers\AdminServiceProvider::class,
+//        Encore\Admin\Providers\AdminServiceProvider::class,
+        App\Providers\AdminExServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
 
     ],
