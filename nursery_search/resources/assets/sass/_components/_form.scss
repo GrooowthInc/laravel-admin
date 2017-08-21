@@ -9,7 +9,10 @@
       padding: $siteGutter;
       width: 100%;
       border-radius: $rds-base;
+      -webkit-border-radius: $rds-base;
       border: 2px solid $color-border;
+      box-shadow: 0;
+      -webkit-appearance: none;
       &::placeholder {
         color: $color-font--light;
       }
