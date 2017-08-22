@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "edcb3331aa57d10ba989213fdb6adc15",
+    "content-hash": "89bd295bbe4847c23c212a6f532dade9",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -108,16 +108,16 @@
         },
         {
             "name": "encore/laravel-admin",
-            "version": "v1.4.2",
+            "version": "dev-1.4-gri",
             "source": {
                 "type": "git",
-                "url": "https://github.com/z-song/laravel-admin.git",
-                "reference": "c9e20c1bd5e0ea992057e3a309682630957b254d"
+                "url": "https://github.com/GrooowthInc/laravel-admin.git",
+                "reference": "a7448903900eda8e175e9f2d55105f14142b38b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/z-song/laravel-admin/zipball/c9e20c1bd5e0ea992057e3a309682630957b254d",
-                "reference": "c9e20c1bd5e0ea992057e3a309682630957b254d",
+                "url": "https://api.github.com/repos/GrooowthInc/laravel-admin/zipball/a7448903900eda8e175e9f2d55105f14142b38b8",
+                "reference": "a7448903900eda8e175e9f2d55105f14142b38b8",
                 "shasum": ""
             },
             "require": {
@@ -128,6 +128,7 @@
             "require-dev": {
                 "fzaninotto/faker": "~1.4",
                 "intervention/image": "~2.3",
+                "laravel/browser-kit-testing": "^1.0",
                 "laravel/laravel": "5.4.*",
                 "phpunit/phpunit": "~5.0",
                 "symfony/css-selector": "2.8.*|3.0.*"
@@ -145,7 +146,15 @@
                     "src/helpers.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\Models\\": "tests/models",
+                    "Tests\\Controllers\\": "tests/controllers"
+                },
+                "classmap": [
+                    "tests/TestCase.php"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -164,7 +173,10 @@
                 "grid",
                 "laravel"
             ],
-            "time": "2017-03-15T05:11:49+00:00"
+            "support": {
+                "source": "https://github.com/GrooowthInc/laravel-admin/tree/1.4"
+            },
+            "time": "2017-07-10T08:05:20+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -4468,7 +4480,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "encore/laravel-admin": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -6,7 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
-        "encore/laravel-admin": "1.4.*",
+        "encore/laravel-admin": "dev-1.4-gri",
         "laravel-ja/comja5": "^1.0",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
@@ -54,5 +54,11 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "optimize-autoloader": true
-    }
+    },
+    "repositories": [
+        {
+            "type":"vcs",
+            "url":"https://github.com/GrooowthInc/laravel-admin.git"
+        }
+    ]
 }
