@@ -46,7 +46,7 @@
 // List-style
 #{$prj-ns}-list {
   &--circle {
-    padding-left: 1.5em;
+    padding-left: $siteGutter;
     // list-style-type: disc;
     &__item {
       margin: 0 0 $siteGutter-sm;
@@ -56,7 +56,7 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 10px;
+        left: -15px;
       }
       &:last-child {
         margin: 0;

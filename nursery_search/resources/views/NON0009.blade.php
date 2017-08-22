@@ -28,13 +28,13 @@
       </p>
     </div><!-- bns-layout -->
     <div class="bns-layout">
-      <a href="#" class="bns-btn--secondary">はじめに知っておきたいこと</a>
+      <a href="./NON0009" class="bns-btn--secondary">はじめに知っておきたいこと</a>
     </div>
     <div class="bns-layout">
-      <a href="#" class="bns-btn--secondary">図解でわかる！<br>保育施設・サービス基礎知識</a>
+      <a href="./NON0009_2" class="bns-btn--secondary">図解でわかる！<br>保育施設・サービス基礎知識</a>
     </div>
     <div class="bns-layout">
-      <a href="#" class="bns-btn--secondary">キーワードは早めの行動！<br>保活のポイント</a>
+      <a href="./NON0009_3 " class="bns-btn--secondary">キーワードは早めの行動！<br>保活のポイント</a>
     </div>
 
     <div class="bns-layout--negative">
