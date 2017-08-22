@@ -16,7 +16,7 @@
     <h2 class="bns-title-level2">東京都のエリアから保育園をさがす</h2>
     <p class="bns-text">東京都の保育園事情は、ダミーコピーです。ダミーコピーです。ダミーコピーです。ダミーコピーです。ダミーコピーです。</p>
 
-    <h3 class="bns-title-level3">東京都・市区町村を選択</h3>
+    <h3 class="bns-title-level3--border">東京都</h3>
 
     <div class="bns-form-select">
       <div class="bns-layout--negative" data-bns-checkbox="container">

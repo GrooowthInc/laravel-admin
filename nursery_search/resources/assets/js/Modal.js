@@ -89,7 +89,7 @@ export class ModalTooltip extends Modal {
   _defaultModal() {
     const { openTooltip, closeTooltip, tooltipTrigger, tooltipCloseBtn, tooltipContent, overlay, active, fixed, event } = this.conf;
     const self = this;
-    let period = 365;
+    let period = 1;
 
     if(Cookies.get('access') == undefined) {
       // cookie追加
