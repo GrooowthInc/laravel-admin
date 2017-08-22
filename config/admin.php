@@ -23,6 +23,11 @@ return [
     'prefix'    => 'admin',
 
     /*
+     * application context path.
+     */
+    'context'   => 'laravel-admin',
+
+    /*
      * Laravel-admin install directory.
      */
     'directory' => app_path('Admin'),

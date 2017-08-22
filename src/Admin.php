@@ -184,12 +184,16 @@ class Admin
     public static function url($url)
     {
         $prefix = (string) config('admin.prefix');
+        $context = (string) config('admin.context');
 
         if (empty($prefix) || $prefix == '/') {
-            return '/'.trim($url, '/');
+            return "/$context/" . trim($url, '/');
         }
-
-        return "/$prefix/".trim($url, '/');
+        if (strpos($url, $context) === true) {
+            return "/$prefix/" . trim($url, '/');
+        } else {
+            return "/$context/$prefix/" . trim($url, '/');
+        }
     }
 
     /**
