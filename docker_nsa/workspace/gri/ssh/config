@@ -1,9 +1,0 @@
-Host 54.64.38.112
-   User deploy
-   HostName 54.64.38.112
-   IdentityFile ~/.ssh/gri.common.key
-
-Host 13.113.156.100
-   User deploy
-   HostName 13.113.156.100
-   IdentityFile ~/.ssh/gri.common.key
