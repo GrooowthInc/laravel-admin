@@ -38,6 +38,11 @@ return [
     'title'  => 'Admin',
 
     /*
+     * Use `https`.
+     */
+    'secure' => false,
+
+    /*
      * Laravel-admin auth setting.
      */
     'auth' => [
