@@ -3,7 +3,7 @@
 namespace Encore\Admin;
 
 use Closure;
-use Encore\Admin\Exception\Handle;
+use Encore\Admin\Exception\Handler;
 use Encore\Admin\Grid\Column;
 use Encore\Admin\Grid\Displayers\Actions;
 use Encore\Admin\Grid\Displayers\RowSelector;
@@ -158,14 +158,18 @@ class Grid
      * @var array
      */
     protected $options = [
-        'usePagination'     => true,
-        'useFilter'         => true,
-        'useExporter'       => true,
-        'useActions'        => true,
-        'useRowSelector'    => true,
-        'allowCreate'       => true,
-        'allowBatchDelete'  => true,
+        'usePagination'  => true,
+        'useFilter'      => true,
+        'useExporter'    => true,
+        'useActions'     => true,
+        'useRowSelector' => true,
+        'allowCreate'    => true,
     ];
+
+    /**
+     * @var Tools\Footer
+     */
+    protected $footer;
 
     /**
      * Create a new grid instance.
@@ -211,12 +215,12 @@ class Grid
      */
     protected function setupExporter()
     {
-        if (Input::has(Exporter::$queryName)) {
+        if ($scope = Input::get(Exporter::$queryName)) {
             $this->model()->usePaginate(false);
 
             call_user_func($this->builder, $this);
 
-            (new Exporter($this))->resolve($this->exporter)->export();
+            (new Exporter($this))->resolve($this->exporter)->withScope($scope)->export();
         }
     }
 
@@ -432,7 +436,7 @@ class Grid
 
         $grid = $this;
         $callback = $this->actionsCallback;
-        $column = $this->addColumn('__actions__', trans('admin::lang.action'));
+        $column = $this->addColumn('__actions__', trans('admin.action'));
 
         $column->display(function ($value) use ($grid, $column, $callback) {
             $actions = new Actions($value, $grid, $column, $this);
@@ -469,7 +473,7 @@ class Grid
 
         $grid = $this;
 
-        $column = new Column('__row_selector__', ' ');
+        $column = new Column(Column::SELECT_COLUMN_NAME, ' ');
         $column->setGrid($this);
 
         $column->display(function ($value) use ($grid, $column) {
@@ -639,15 +643,16 @@ class Grid
     }
 
     /**
-     * Export url.
+     * Get the export url.
+     *
+     * @param int  $scope
+     * @param null $args
      *
      * @return string
      */
-    public function exportUrl()
+    public function exportUrl($scope = 1, $args = null)
     {
-        $input = Input::all();
-
-        $input = array_merge($input, [Exporter::$queryName => true]);
+        $input = array_merge(Input::all(), Exporter::formatExportQuery($scope, $args));
 
         return $this->resource().'?'.http_build_query($input);
     }
@@ -683,33 +688,23 @@ class Grid
     }
 
     /**
-     * If allow batch delete.
-     *
-     * @return bool
-     */
-    public function allowBatchDeletion()
-    {
-        return $this->option('allowBatchDelete');
-    }
-
-    /**
-     * Disable batch deletion.
+     * Alias for method `disableCreateButton`.
      *
      * @return $this
      *
      * @deprecated
      */
-    public function disableBatchDeletion()
+    public function disableCreation()
     {
-        return $this->option('allowBatchDelete', false);
+        return $this->disableCreateButton();
     }
 
     /**
-     * Disable creation.
+     * Remove create button on grid.
      *
      * @return $this
      */
-    public function disableCreation()
+    public function disableCreateButton()
     {
         return $this->option('allowCreate', false);
     }
@@ -735,6 +730,38 @@ class Grid
     }
 
     /**
+     * Set grid footer.
+     *
+     * @param Closure|null $closure
+     *
+     * @return $this|Tools\Footer
+     */
+    public function footer(Closure $closure = null)
+    {
+        if (!$closure) {
+            return $this->footer;
+        }
+
+        $this->footer = $closure;
+
+        return $this;
+    }
+
+    /**
+     * Render grid footer.
+     *
+     * @return Tools\Footer|string
+     */
+    public function renderFooter()
+    {
+        if (!$this->footer) {
+            return '';
+        }
+
+        return new Tools\Footer($this);
+    }
+
+    /**
      * Get current resource uri.
      *
      * @param string $path
@@ -754,7 +781,6 @@ class Grid
         }
 
         return url(app('request')->getPathInfo());
-        //return app('router')->current()->getPath();
     }
 
     /**
@@ -881,19 +907,19 @@ class Grid
     public static function registerColumnDisplayer()
     {
         $map = [
-            'editable'      => \Encore\Admin\Grid\Displayers\Editable::class,
-            'switch'        => \Encore\Admin\Grid\Displayers\SwitchDisplay::class,
-            'switchGroup'   => \Encore\Admin\Grid\Displayers\SwitchGroup::class,
-            'select'        => \Encore\Admin\Grid\Displayers\Select::class,
-            'image'         => \Encore\Admin\Grid\Displayers\Image::class,
-            'label'         => \Encore\Admin\Grid\Displayers\Label::class,
-            'button'        => \Encore\Admin\Grid\Displayers\Button::class,
-            'link'          => \Encore\Admin\Grid\Displayers\Link::class,
-            'badge'         => \Encore\Admin\Grid\Displayers\Badge::class,
-            'progressBar'   => \Encore\Admin\Grid\Displayers\ProgressBar::class,
-            'radio'         => \Encore\Admin\Grid\Displayers\Radio::class,
-            'checkbox'      => \Encore\Admin\Grid\Displayers\Checkbox::class,
-            'orderable'     => \Encore\Admin\Grid\Displayers\Orderable::class,
+            'editable'    => \Encore\Admin\Grid\Displayers\Editable::class,
+            'switch'      => \Encore\Admin\Grid\Displayers\SwitchDisplay::class,
+            'switchGroup' => \Encore\Admin\Grid\Displayers\SwitchGroup::class,
+            'select'      => \Encore\Admin\Grid\Displayers\Select::class,
+            'image'       => \Encore\Admin\Grid\Displayers\Image::class,
+            'label'       => \Encore\Admin\Grid\Displayers\Label::class,
+            'button'      => \Encore\Admin\Grid\Displayers\Button::class,
+            'link'        => \Encore\Admin\Grid\Displayers\Link::class,
+            'badge'       => \Encore\Admin\Grid\Displayers\Badge::class,
+            'progressBar' => \Encore\Admin\Grid\Displayers\ProgressBar::class,
+            'radio'       => \Encore\Admin\Grid\Displayers\Radio::class,
+            'checkbox'    => \Encore\Admin\Grid\Displayers\Checkbox::class,
+            'orderable'   => \Encore\Admin\Grid\Displayers\Orderable::class,
         ];
 
         foreach ($map as $abstract => $class) {
@@ -943,19 +969,6 @@ class Grid
     }
 
     /**
-     * Set a view to render.
-     *
-     * @param string $view
-     * @param array  $variables
-     *
-     * @deprecated
-     */
-    public function view($view, $variables = [])
-    {
-        $this->setView($view, $variables);
-    }
-
-    /**
      * Get the string contents of the grid view.
      *
      * @return string
@@ -965,7 +978,7 @@ class Grid
         try {
             $this->build();
         } catch (\Exception $e) {
-            return Handle::renderException($e);
+            return Handler::renderException($e);
         }
 
         return view($this->view, $this->variables())->render();

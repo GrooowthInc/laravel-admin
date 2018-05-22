@@ -34,7 +34,7 @@ class BatchActions extends AbstractTool
      */
     protected function appendDefaultAction()
     {
-        $this->add(trans('admin::lang.delete'), new BatchDelete());
+        $this->add(trans('admin.delete'), new BatchDelete());
     }
 
     /**
@@ -104,15 +104,6 @@ $('.grid-select-all').on('ifChanged', function(event) {
     }
 });
 
-var selectedRows = function () {
-    var selected = [];
-    $('.grid-row-checkbox:checked').each(function(){
-        selected.push($(this).data('id'));
-    });
-
-    return selected;
-}
-
 EOT;
     }
 
@@ -123,7 +114,7 @@ EOT;
      */
     public function render()
     {
-        if (!$this->grid->allowBatchDeletion() || !$this->enableDelete) {
+        if (!$this->enableDelete) {
             $this->actions->shift();
         }
 

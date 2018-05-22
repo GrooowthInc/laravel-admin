@@ -88,6 +88,13 @@ class Builder
     protected $view = 'admin::form';
 
     /**
+     * Form title.
+     *
+     * @var string
+     */
+    protected $title;
+
+    /**
      * Builder constructor.
      *
      * @param Form $form
@@ -231,6 +238,20 @@ class Builder
     }
 
     /**
+     * Set title for form.
+     *
+     * @param string $title
+     *
+     * @return $this
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
      * Get fields of this builder.
      *
      * @return Collection
@@ -252,6 +273,26 @@ class Builder
         return $this->fields()->first(function (Field $field) use ($name) {
             return $field->column() == $name;
         });
+    }
+
+    /**
+     * If the parant form has rows.
+     *
+     * @return bool
+     */
+    public function hasRows()
+    {
+        return !empty($this->form->rows);
+    }
+
+    /**
+     * Get field rows of form.
+     *
+     * @return array
+     */
+    public function getRows()
+    {
+        return $this->form->rows;
     }
 
     /**
@@ -312,16 +353,20 @@ class Builder
      */
     public function title()
     {
+        if ($this->title) {
+            return $this->title;
+        }
+
         if ($this->mode == static::MODE_CREATE) {
-            return trans('admin::lang.create');
+            return trans('admin.create');
         }
 
         if ($this->mode == static::MODE_EDIT) {
-            return trans('admin::lang.edit');
+            return trans('admin.edit');
         }
 
         if ($this->mode == static::MODE_VIEW) {
-            return trans('admin::lang.view');
+            return trans('admin.view');
         }
 
         return '';
@@ -424,7 +469,11 @@ class Builder
             return '';
         }
 
-        $text = trans('admin::lang.submit');
+        if ($this->mode == self::MODE_EDIT) {
+            $text = trans('admin.save');
+        } else {
+            $text = trans('admin.submit');
+        }
 
         return <<<EOT
 <div class="btn-group pull-right">
@@ -444,7 +493,7 @@ EOT;
             return '';
         }
 
-        $text = trans('admin::lang.reset');
+        $text = trans('admin.reset');
 
         return <<<EOT
 <div class="btn-group pull-left">
@@ -514,9 +563,9 @@ SCRIPT;
         }
 
         $data = [
-            'form'     => $this,
-            'tabObj'   => $tabObj,
-            'width'    => $this->width,
+            'form'   => $this,
+            'tabObj' => $tabObj,
+            'width'  => $this->width,
         ];
 
         return view($this->view, $data)->render();

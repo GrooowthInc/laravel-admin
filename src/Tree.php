@@ -35,8 +35,8 @@ class Tree implements Renderable
      * @var string
      */
     protected $view = [
-        'tree'      => 'admin::tree',
-        'branch'    => 'admin::tree.branch',
+        'tree'   => 'admin::tree',
+        'branch' => 'admin::tree.branch',
     ];
 
     /**
@@ -53,6 +53,16 @@ class Tree implements Renderable
      * @var bool
      */
     public $useCreate = true;
+
+    /**
+     * @var bool
+     */
+    public $useSave = true;
+
+    /**
+     * @var bool
+     */
+    public $useRefresh = true;
 
     /**
      * @var array
@@ -163,6 +173,26 @@ class Tree implements Renderable
     }
 
     /**
+     * Disable save.
+     *
+     * @return void
+     */
+    public function disableSave()
+    {
+        $this->useSave = false;
+    }
+
+    /**
+     * Disable refresh.
+     *
+     * @return void
+     */
+    public function disableRefresh()
+    {
+        $this->useRefresh = false;
+    }
+
+    /**
      * Save tree order from a input.
      *
      * @param string $serialize
@@ -189,10 +219,12 @@ class Tree implements Renderable
      */
     protected function script()
     {
-        $confirm = trans('admin::lang.delete_confirm');
-        $saveSucceeded = trans('admin::lang.save_succeeded');
-        $refreshSucceeded = trans('admin::lang.refresh_succeeded');
-        $deleteSucceeded = trans('admin::lang.delete_succeeded');
+        $deleteConfirm = trans('admin.delete_confirm');
+        $saveSucceeded = trans('admin.save_succeeded');
+        $refreshSucceeded = trans('admin.refresh_succeeded');
+        $deleteSucceeded = trans('admin.delete_succeeded');
+        $confirm = trans('admin.confirm');
+        $cancel = trans('admin.cancel');
 
         $nestableOptions = json_encode($this->nestableOptions);
 
@@ -202,12 +234,36 @@ class Tree implements Renderable
 
         $('.tree_branch_delete').click(function() {
             var id = $(this).data('id');
-            if(confirm("{$confirm}")) {
-                $.post('{$this->path}/' + id, {_method:'delete','_token':LA.token}, function(data){
-                    $.pjax.reload('#pjax-container');
-                    toastr.success('{$deleteSucceeded}');
+            swal({
+              title: "$deleteConfirm",
+              type: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#DD6B55",
+              confirmButtonText: "$confirm",
+              closeOnConfirm: false,
+              cancelButtonText: "$cancel"
+            },
+            function(){
+                $.ajax({
+                    method: 'post',
+                    url: '{$this->path}/' + id,
+                    data: {
+                        _method:'delete',
+                        _token:LA.token,
+                    },
+                    success: function (data) {
+                        $.pjax.reload('#pjax-container');
+
+                        if (typeof data === 'object') {
+                            if (data.status) {
+                                swal(data.message, '', 'success');
+                            } else {
+                                swal(data.message, '', 'error');
+                            }
+                        }
+                    }
                 });
-            }
+            });
         });
 
         $('.{$this->elementId}-save').click(function () {
@@ -271,10 +327,12 @@ SCRIPT;
     public function variables()
     {
         return [
-            'id'        => $this->elementId,
-            'tools'     => $this->tools->render(),
-            'items'     => $this->getItems(),
-            'useCreate' => $this->useCreate,
+            'id'         => $this->elementId,
+            'tools'      => $this->tools->render(),
+            'items'      => $this->getItems(),
+            'useCreate'  => $this->useCreate,
+            'useSave'    => $this->useSave,
+            'useRefresh' => $this->useRefresh,
         ];
     }
 

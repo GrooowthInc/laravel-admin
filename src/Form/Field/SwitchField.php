@@ -7,11 +7,11 @@ use Encore\Admin\Form\Field;
 class SwitchField extends Field
 {
     protected static $css = [
-        '/packages/admin/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css',
+        '/vendor/laravel-admin/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css',
     ];
 
     protected static $js = [
-        '/packages/admin/bootstrap-switch/dist/js/bootstrap-switch.min.js',
+        '/vendor/laravel-admin/bootstrap-switch/dist/js/bootstrap-switch.min.js',
     ];
 
     protected $states = [
@@ -55,7 +55,7 @@ $('{$this->getElementClassSelector()}.la_checkbox').bootstrapSwitch({
     onColor: '{$this->states['on']['color']}',
     offColor: '{$this->states['off']['color']}',
     onSwitchChange: function(event, state) {
-        $('{$this->getElementClassSelector()}').val(state ? 'on' : 'off').change();
+        $(event.target).closest('.bootstrap-switch').next().val(state ? 'on' : 'off').change();
     }
 });
 

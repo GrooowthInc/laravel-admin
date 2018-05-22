@@ -38,6 +38,11 @@ class Admin
     public static $js = [];
 
     /**
+     * @var array
+     */
+    public static $extensions = [];
+
+    /**
      * @param $model
      * @param Closure $callable
      *
@@ -97,21 +102,6 @@ class Admin
         }
 
         throw new InvalidArgumentException("$model is not a valid model");
-    }
-
-    /**
-     * Get namespace of controllers.
-     *
-     * @return string
-     */
-    public function controllerNamespace()
-    {
-        $directory = config('admin.directory');
-
-        return ltrim(implode('\\',
-              array_map('ucfirst',
-                  explode(DIRECTORY_SEPARATOR, str_replace(app()->basePath(), '', $directory)))), '\\')
-              .'\\Controllers';
     }
 
     /**
@@ -175,28 +165,6 @@ class Admin
     }
 
     /**
-     * Admin url.
-     *
-     * @param $url
-     *
-     * @return string
-     */
-    public static function url($url)
-    {
-        $prefix = (string) config('admin.prefix');
-        $context = (string) config('admin.context');
-
-        if (empty($prefix) || $prefix == '/') {
-            return "/$context/" . trim($url, '/');
-        }
-        if (strpos($url, $context) === true) {
-            return "/$prefix/" . trim($url, '/');
-        } else {
-            return "/$context/$prefix/" . trim($url, '/');
-        }
-    }
-
-    /**
      * Left sider-bar menu.
      *
      * @return array
@@ -229,10 +197,16 @@ class Admin
     /**
      * Set navbar.
      *
-     * @param Closure $builder
+     * @param Closure|null $builder
+     *
+     * @return Navbar
      */
-    public function navbar(Closure $builder)
+    public function navbar(Closure $builder = null)
     {
+        if (is_null($builder)) {
+            return $this->getNavbar();
+        }
+
         call_user_func($builder, $this->getNavbar());
     }
 
@@ -250,19 +224,25 @@ class Admin
         return $this->navbar;
     }
 
+    /**
+     * Register the auth routes.
+     *
+     * @return void
+     */
     public function registerAuthRoutes()
     {
         $attributes = [
-            'prefix'        => config('admin.prefix'),
-            'namespace'     => 'Encore\Admin\Controllers',
-            'middleware'    => ['web', 'admin'],
+            'prefix'     => config('admin.route.prefix'),
+            'namespace'  => 'Encore\Admin\Controllers',
+            'middleware' => config('admin.route.middleware'),
         ];
 
         Route::group($attributes, function ($router) {
-            $attributes = ['middleware' => 'admin.permission:allow,administrator'];
 
             /* @var \Illuminate\Routing\Router $router */
-            $router->group($attributes, function ($router) {
+            $router->group([], function ($router) {
+
+                /* @var \Illuminate\Routing\Router $router */
                 $router->resource('auth/users', 'UserController');
                 $router->resource('auth/roles', 'RoleController');
                 $router->resource('auth/permissions', 'PermissionController');
@@ -278,22 +258,16 @@ class Admin
         });
     }
 
-    public function registerHelpersRoutes($attributes = [])
+    /**
+     * Extend a extension.
+     *
+     * @param string $name
+     * @param string $class
+     *
+     * @return void
+     */
+    public static function extend($name, $class)
     {
-        $attributes = array_merge([
-            'prefix'     => trim(config('admin.prefix'), '/').'/helpers',
-            'middleware' => ['web', 'admin'],
-        ], $attributes);
-
-        Route::group($attributes, function ($router) {
-
-            /* @var \Illuminate\Routing\Router $router */
-            $router->get('terminal/database', 'Encore\Admin\Controllers\TerminalController@database');
-            $router->post('terminal/database', 'Encore\Admin\Controllers\TerminalController@runDatabase');
-            $router->get('terminal/artisan', 'Encore\Admin\Controllers\TerminalController@artisan');
-            $router->post('terminal/artisan', 'Encore\Admin\Controllers\TerminalController@runArtisan');
-            $router->get('scaffold', 'Encore\Admin\Controllers\ScaffoldController@index');
-            $router->post('scaffold', 'Encore\Admin\Controllers\ScaffoldController@store');
-        });
+        static::$extensions[$name] = $class;
     }
 }

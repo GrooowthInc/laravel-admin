@@ -5,7 +5,7 @@ namespace Encore\Admin\Form\Field;
 class Decimal extends Text
 {
     protected static $js = [
-        '/packages/admin/AdminLTE/plugins/input-mask/jquery.inputmask.bundle.min.js',
+        '/vendor/laravel-admin/AdminLTE/plugins/input-mask/jquery.inputmask.bundle.min.js',
     ];
 
     /**
@@ -24,7 +24,7 @@ class Decimal extends Text
 
         $this->script = "$('{$this->getElementClassSelector()}').inputmask($options);";
 
-        $this->prepend('<i class="fa fa-terminal"></i>')
+        $this->prepend('<i class="fa fa-terminal fa-fw"></i>')
             ->defaultAttribute('style', 'width: 130px');
 
         return parent::render();

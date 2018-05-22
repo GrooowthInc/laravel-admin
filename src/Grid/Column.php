@@ -109,6 +109,8 @@ class Column
      */
     protected static $model;
 
+    const SELECT_COLUMN_NAME = '__row_selector__';
+
     /**
      * @param string $name
      * @param string $label
@@ -180,9 +182,10 @@ class Column
      * Set column attributes.
      *
      * @param array $attributes
+     *
      * @return $this
      */
-    public function setAttributes($attributes  = [])
+    public function setAttributes($attributes = [])
     {
         static::$htmlAttributes[$this->name] = $attributes;
 
@@ -193,6 +196,7 @@ class Column
      * Get column attributes.
      *
      * @param string $name
+     *
      * @return mixed
      */
     public static function getAttributes($name)
@@ -204,6 +208,7 @@ class Column
      * Set style of this column.
      *
      * @param string $style
+     *
      * @return Column
      */
     public function style($style)
@@ -281,20 +286,6 @@ class Column
         $this->sortable = true;
 
         return $this;
-    }
-
-    /**
-     * Alias for `display()` method.
-     *
-     * @param Closure $callable
-     *
-     * @deprecated please use `display()` method instead.
-     *
-     * @return $this
-     */
-    public function value(Closure $callable)
-    {
-        return $this->display($callable);
     }
 
     /**
@@ -540,7 +531,7 @@ class Column
     {
         if ($abstract instanceof Closure) {
             return $this->display(function ($value) use ($abstract, $arguments) {
-                return call_user_func_array($abstract->bindTo($this), array_merge([$value], $arguments));
+                return $abstract->call($this, ...array_merge([$value], $arguments));
             });
         }
 
