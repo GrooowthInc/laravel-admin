@@ -175,7 +175,11 @@ class AuthController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended($this->redirectPath());
+        if (config('admin.secure') == true) {
+          return redirect()->intended($this->redirectPath(), 302, [], TRUE);
+        } else {
+          return redirect()->intended($this->redirectPath());
+        }
     }
 
     /**
