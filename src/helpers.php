@@ -54,6 +54,10 @@ if (!function_exists('admin_base_path')) {
             return "/$context/" . trim($path, '/');
         }
 
+        if (empty($context) || $context == '/') {
+            return "/$prefix/" . trim($path, '/');
+        }
+
         if (strpos($path, $context) === true) {
             return "/$prefix/" . trim($path, '/');
         } else {
