@@ -292,7 +292,11 @@ trait UploadField
             return $this->storage->url($path);
         }
 
-        return Storage::disk(config('admin.upload.disk'))->url($path);
+        if (config('admin.upload.disk') == 's3') {
+            return Storage::disk(config('admin.upload.disk'))->url($path);
+        } else {
+            return url($path);
+        }
     }
 
     /**

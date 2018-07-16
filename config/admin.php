@@ -8,6 +8,11 @@ return [
     'name' => 'Laravel-admin',
 
     /*
+     * Laravel-admin corporation.
+     */
+    'corporation' => 'Laravel-admin',
+
+    /*
      * Logo in admin panel header.
      */
     'logo' => '<b>Laravel</b> admin',
@@ -23,6 +28,11 @@ return [
     'route' => [
 
         'prefix' => 'admin',
+
+        /*
+        * application context path.
+        */
+        'context'   => 'laravle-admin',
 
         'namespace' => 'App\\Admin\\Controllers',
 
