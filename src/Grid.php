@@ -780,7 +780,11 @@ class Grid
             return $this->resourcePath;
         }
 
-        return url(app('request')->getPathInfo());
+        if (config('admin.secure') == true) {
+            return str_replace('http:', 'https:', url(app('request')->getPathInfo()));
+        } else {
+            return url(app('request')->getPathInfo());
+        }
     }
 
     /**
