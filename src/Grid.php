@@ -753,8 +753,11 @@ class Grid
             return $this->resourcePath;
         }
 
-        return url(app('request')->getPathInfo());
-        //return app('router')->current()->getPath();
+        if (config('admin.secure') == true) {
+            return str_replace('http:', 'https:', url(app('request')->getPathInfo()));
+        } else {
+            return url(app('request')->getPathInfo());
+        }
     }
 
     /**
