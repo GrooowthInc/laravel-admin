@@ -20,7 +20,7 @@ class Authenticate
     {
         if (Auth::guard('admin')->guest() && !$this->shouldPassThrough($request)) {
             $prefix = (string) config('admin.route.prefix');
-            if (config('admin.secure') == true) {
+            if (config('admin.https') == true) {
                 return redirect()->guest("/$prefix/auth/login", 302, [], TRUE);
             } else {
                 return redirect()->guest("/$prefix/auth/login");
