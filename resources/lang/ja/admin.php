@@ -36,7 +36,9 @@ return [
     'show'         => '表示',
     'entries'      => '件',
     'captcha'      => 'Captcha',
+    'search'       => '検索',
 
+    'continue_editing'  => '編集を続き',
     'action'            => '操作',
     'title'             => 'タイトル',
     'description'       => '概要',
