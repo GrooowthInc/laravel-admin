@@ -503,7 +503,7 @@ class Column
         $query = app('request')->all();
         $query = array_merge($query, [$this->grid->model()->getSortName() => ['column' => $this->name, 'type' => $type]]);
 
-        $url = ((config('admin.https')) ? str_replace('http:', 'https:', URL::current()) : URL::current()) . '?' . http_build_query($query);
+        $url = ((config('admin.https')) ? str_replace('http:', 'https:', url()->current()) : url()->current()) . '?' . http_build_query($query);
 
         return "<a class=\"fa fa-fw $icon\" href=\"$url\"></a>";
     }
