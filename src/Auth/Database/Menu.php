@@ -66,7 +66,11 @@ class Menu extends Model
         $connection = config('admin.database.connection') ?: config('database.default');
         $orderColumn = DB::connection($connection)->getQueryGrammar()->wrap($this->orderColumn);
 
-        $byOrder = $orderColumn.' = 0,'.$orderColumn;
+        if (config('admin.database.connection') === 'oracle') {
+            $byOrder = $orderColumn;
+        } else {
+            $byOrder = $orderColumn.' = 0,'.$orderColumn;
+        }
 
         $query = static::query();
 

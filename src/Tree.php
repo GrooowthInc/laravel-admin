@@ -85,7 +85,8 @@ class Tree implements Renderable
     {
         $this->model = $model;
 
-        $this->path = \request()->getPathInfo();
+        $path = \request()->getPathInfo();
+        $this->path = (config('admin.https') || config('admin.secure')) ? str_replace('http:', 'https:', url($path)) : url($path);
         $this->elementId .= uniqid();
 
         $this->setupTools();

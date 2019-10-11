@@ -85,7 +85,11 @@ abstract class AbstractDisplayer
      */
     public function getResource()
     {
-        return $this->grid->resource();
+        if (config('admin.https') || config('admin.secure')) {
+            return str_replace('http:', 'https:', $this->grid->resource());
+        } else {
+            return $this->grid->resource();
+        }
     }
 
     /**

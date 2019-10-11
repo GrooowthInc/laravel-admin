@@ -49,7 +49,20 @@ if (!function_exists('admin_base_path')) {
      */
     function admin_base_path($path = '')
     {
-        $prefix = '/'.trim(config('admin.route.prefix'), '/');
+        $prefix  = trim(config('admin.route.prefix'), '/');
+        $context = trim(config('admin.route.context'), '/');
+
+        if (!empty($context)) {
+            if (empty($prefix) || $prefix == '/') {
+                return "/$context/" . trim($path, '/');
+            }
+
+            if (strpos($path, $context) === true) {
+                return '/' . trim($path, '/');
+            } else {
+                return "/$context/$prefix/" . trim($path, '/');
+            }
+        }
 
         $prefix = ($prefix == '/') ? '' : $prefix;
 

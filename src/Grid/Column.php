@@ -491,7 +491,7 @@ class Column
         $this->prefix(function ($_, $original) use ($name, $query) {
             Arr::set($query, $name, $original);
 
-            $url = request()->fullUrlWithQuery($query);
+            $url = (config('admin.https') || config('admin.secure')) ? str_replace('http:', 'https:', request()->fullUrlWithQuery($query)) : request()->fullUrlWithQuery($query);
 
             return "<a href=\"{$url}\"><i class=\"fa fa-search\"></i></a>";
         }, '&nbsp;&nbsp;');

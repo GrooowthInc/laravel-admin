@@ -20,7 +20,12 @@ class Authenticate
         $redirectTo = admin_base_path(config('admin.auth.redirect_to', 'auth/login'));
 
         if (Admin::guard()->guest() && !$this->shouldPassThrough($request)) {
-            return redirect()->guest($redirectTo);
+
+            if (config('admin.https') || config('admin.secure')) {
+                return redirect()->guest($redirectTo, 302, [], TRUE);
+            } else {
+                return redirect()->guest($redirectTo);
+            }
         }
 
         return $next($request);

@@ -15,6 +15,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Laravel-admin corporation
+    |--------------------------------------------------------------------------
+    |
+    | This value is the corporation of laravel-admin, This setting is displayed on the
+    | footer.
+    |
+    */
+    'corporation' => 'Laravel-admin',
+
+    /*
+    |--------------------------------------------------------------------------
     | Laravel-admin logo
     |--------------------------------------------------------------------------
     |
@@ -59,6 +70,11 @@ return [
     'route' => [
 
         'prefix' => env('ADMIN_ROUTE_PREFIX', 'admin'),
+
+        /**
+         * application contenxt path.
+         */
+        'context' => 'Laravel-admin',
 
         'namespace' => 'App\\Admin\\Controllers',
 
