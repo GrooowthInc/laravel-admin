@@ -12,7 +12,6 @@ use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Str;
 
@@ -103,12 +102,15 @@ class Model
      * Create a new grid model instance.
      *
      * @param EloquentModel $model
+     * @param Grid          $grid
      */
-    public function __construct(EloquentModel $model)
+    public function __construct(EloquentModel $model, Grid $grid = null)
     {
         $this->model = $model;
 
         $this->originalModel = $model;
+
+        $this->grid = $grid;
 
         $this->queries = collect();
 
@@ -127,6 +129,14 @@ class Model
         $class = get_class($model);
 
         $class::$snakeAttributes = false;
+    }
+
+    /**
+     * @return EloquentModel
+     */
+    public function getOriginalModel()
+    {
+        return $this->originalModel;
     }
 
     /**
@@ -169,6 +179,32 @@ class Model
     public function setPerPageName($name)
     {
         $this->perPageName = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get per-page number.
+     *
+     * @return int
+     */
+    public function getPerPage()
+    {
+        return $this->perPage;
+    }
+
+    /**
+     * Set per-page number.
+     *
+     * @param int $perPage
+     *
+     * @return $this
+     */
+    public function setPerPage($perPage)
+    {
+        $this->perPage = $perPage;
+
+        $this->__call('paginate', [$perPage]);
 
         return $this;
     }
@@ -458,7 +494,7 @@ class Model
      */
     protected function resolvePerPage($paginate)
     {
-        if ($perPage = app('request')->input($this->perPageName)) {
+        if ($perPage = request($this->perPageName)) {
             if (is_array($paginate)) {
                 $paginate['arguments'][0] = (int) $perPage;
 
@@ -473,7 +509,7 @@ class Model
         }
 
         if ($name = $this->grid->getName()) {
-            return [$this->perPage, null, "{$name}_page"];
+            return [$this->perPage, ['*'], "{$name}_page"];
         }
 
         return [$this->perPage];
@@ -500,7 +536,7 @@ class Model
      */
     protected function setSort()
     {
-        $this->sort = Input::get($this->sortName, []);
+        $this->sort = \request($this->sortName, []);
         if (!is_array($this->sort)) {
             return;
         }
@@ -509,14 +545,25 @@ class Model
             return;
         }
 
-        if (str_contains($this->sort['column'], '.')) {
+        if (Str::contains($this->sort['column'], '.')) {
             $this->setRelationSort($this->sort['column']);
         } else {
             $this->resetOrderBy();
 
+            // get column. if contains "cast", set set column as cast
+            if (!empty($this->sort['cast'])) {
+                $column = "CAST({$this->sort['column']} AS {$this->sort['cast']}) {$this->sort['type']}";
+                $method = 'orderByRaw';
+                $arguments = [$column];
+            } else {
+                $column = $this->sort['column'];
+                $method = 'orderBy';
+                $arguments = [$column, $this->sort['type']];
+            }
+
             $this->queries->push([
-                'method'    => 'orderBy',
-                'arguments' => [$this->sort['column'], $this->sort['type']],
+                'method'    => $method,
+                'arguments' => $arguments,
             ]);
         }
     }
@@ -536,6 +583,11 @@ class Model
             return $query['method'] == 'with' && in_array($relationName, $query['arguments']);
         })) {
             $relation = $this->model->$relationName();
+
+            $this->queries->push([
+                'method'    => 'select',
+                'arguments' => [$this->model->getTable().'.*'],
+            ]);
 
             $this->queries->push([
                 'method'    => 'join',
@@ -582,9 +634,11 @@ class Model
         $relatedTable = $relation->getRelated()->getTable();
 
         if ($relation instanceof BelongsTo) {
+            $foreignKeyMethod = version_compare(app()->version(), '5.8.0', '<') ? 'getForeignKey' : 'getForeignKeyName';
+
             return [
                 $relatedTable,
-                $relation->getForeignKey(),
+                $relation->{$foreignKeyMethod}(),
                 '=',
                 $relatedTable.'.'.$relation->getRelated()->getKeyName(),
             ];

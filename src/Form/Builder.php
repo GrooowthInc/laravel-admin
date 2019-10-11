@@ -5,6 +5,7 @@ namespace Encore\Admin\Form;
 use Encore\Admin\Admin;
 use Encore\Admin\Form;
 use Encore\Admin\Form\Field\Hidden;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Str;
@@ -169,6 +170,26 @@ class Builder
     public function isMode($mode)
     {
         return $this->mode == $mode;
+    }
+
+    /**
+     * Check if is creating resource.
+     *
+     * @return bool
+     */
+    public function isCreating()
+    {
+        return $this->isMode(static::MODE_CREATE);
+    }
+
+    /**
+     * Check if is editing resource.
+     *
+     * @return bool
+     */
+    public function isEditing()
+    {
+        return $this->isMode(static::MODE_EDIT);
     }
 
     /**
@@ -383,7 +404,7 @@ class Builder
     public function option($option, $value = null)
     {
         if (func_num_args() == 1) {
-            return array_get($this->options, $option);
+            return Arr::get($this->options, $option);
         }
 
         $this->options[$option] = $value;
@@ -463,10 +484,10 @@ class Builder
         $this->addRedirectUrlField();
 
         $attributes['action'] = $this->getAction();
-        $attributes['method'] = array_get($options, 'method', 'post');
+        $attributes['method'] = Arr::get($options, 'method', 'post');
         $attributes['accept-charset'] = 'UTF-8';
 
-        $attributes['class'] = array_get($options, 'class');
+        $attributes['class'] = Arr::get($options, 'class');
 
         if ($this->hasFile()) {
             $attributes['enctype'] = 'multipart/form-data';
@@ -500,7 +521,7 @@ class Builder
      */
     protected function removeReservedFields()
     {
-        if (!$this->isMode(static::MODE_CREATE)) {
+        if (!$this->isCreating()) {
             return;
         }
 
@@ -509,6 +530,8 @@ class Builder
             $this->form->model()->getCreatedAtColumn(),
             $this->form->model()->getUpdatedAtColumn(),
         ];
+
+        $this->form->getLayout()->removeReservedFields($reservedColumns);
 
         $this->fields = $this->fields()->reject(function (Field $field) use ($reservedColumns) {
             return in_array($field->column(), $reservedColumns);
@@ -577,6 +600,7 @@ SCRIPT;
             'form'   => $this,
             'tabObj' => $tabObj,
             'width'  => $this->width,
+            'layout' => $this->form->getLayout(),
         ];
 
         return view($this->view, $data)->render();

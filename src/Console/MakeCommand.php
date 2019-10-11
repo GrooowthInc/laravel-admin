@@ -4,6 +4,7 @@ namespace Encore\Admin\Console;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class MakeCommand extends GeneratorCommand
 {
@@ -12,7 +13,12 @@ class MakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $signature = 'admin:make {name} {--model=} {--O|output}';
+    protected $signature = 'admin:make {name} 
+        {--model=} 
+        {--title=} 
+        {--stub= : Path to the custom stub file. } 
+        {--namespace=} 
+        {--O|output}';
 
     /**
      * The console command description.
@@ -39,6 +45,14 @@ class MakeCommand extends GeneratorCommand
             return false;
         }
 
+        $stub = $this->option('stub');
+
+        if ($stub and !is_file($stub)) {
+            $this->error('The stub file dose not exist.');
+
+            return false;
+        }
+
         $modelName = $this->option('model');
 
         $this->generator = new ResourceGenerator($modelName);
@@ -47,7 +61,16 @@ class MakeCommand extends GeneratorCommand
             return $this->output($modelName);
         }
 
-        parent::handle();
+        if (parent::handle() !== false) {
+            $name = $this->argument('name');
+            $path = Str::plural(Str::kebab(class_basename($this->option('model'))));
+
+            $this->line('');
+            $this->comment('Add the following route to app/Admin/routes.php:');
+            $this->line('');
+            $this->info("    \$router->resource('{$path}', {$name}::class);");
+            $this->line('');
+        }
     }
 
     /**
@@ -93,6 +116,7 @@ class MakeCommand extends GeneratorCommand
         return str_replace(
             [
                 'DummyModelNamespace',
+                'DummyTitle',
                 'DummyModel',
                 'DummyGrid',
                 'DummyShow',
@@ -100,6 +124,7 @@ class MakeCommand extends GeneratorCommand
             ],
             [
                 $this->option('model'),
+                $this->option('title') ?: $this->option('model'),
                 class_basename($this->option('model')),
                 $this->indentCodes($this->generator->generateGrid()),
                 $this->indentCodes($this->generator->generateShow()),
@@ -128,6 +153,10 @@ class MakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
+        if ($stub = $this->option('stub')) {
+            return $stub;
+        }
+
         if ($this->option('model')) {
             return __DIR__.'/stubs/controller.stub';
         }
@@ -144,11 +173,11 @@ class MakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        $directory = config('admin.directory');
+        if ($namespace = $this->option('namespace')) {
+            return $namespace;
+        }
 
-        $namespace = ucfirst(basename($directory));
-
-        return $rootNamespace."\\$namespace\Controllers";
+        return config('admin.route.namespace');
     }
 
     /**

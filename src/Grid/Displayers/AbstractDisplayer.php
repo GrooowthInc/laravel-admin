@@ -4,6 +4,7 @@ namespace Encore\Admin\Grid\Displayers;
 
 use Encore\Admin\Grid;
 use Encore\Admin\Grid\Column;
+use Illuminate\Database\Eloquent\Model;
 
 abstract class AbstractDisplayer
 {
@@ -18,7 +19,7 @@ abstract class AbstractDisplayer
     protected $column;
 
     /**
-     * @var \stdClass
+     * @var Model
      */
     public $row;
 
@@ -44,6 +45,30 @@ abstract class AbstractDisplayer
     }
 
     /**
+     * @return mixed
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+
+    /**
+     * @return Grid
+     */
+    public function getGrid()
+    {
+        return $this->grid;
+    }
+
+    /**
+     * @return Column
+     */
+    public function getColumn()
+    {
+        return $this->column;
+    }
+
+    /**
      * Get key of current row.
      *
      * @return mixed
@@ -60,11 +85,7 @@ abstract class AbstractDisplayer
      */
     public function getResource()
     {
-        if (config('admin.https') == true) {
-            return str_replace('http:', 'https:', $this->grid->resource());
-        } else {
-            return $this->grid->resource();
-        }
+        return $this->grid->resource();
     }
 
     /**
