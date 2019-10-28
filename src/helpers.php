@@ -53,14 +53,16 @@ if (!function_exists('admin_base_path')) {
         $context = trim(config('admin.route.context'), '/');
 
         if (!empty($context)) {
-            if (empty($prefix) || $prefix == '/') {
-                return "/$context/" . trim($path, '/');
-            }
+            if (strpos(url(''), $context) === false) {
+                if (empty($prefix) || $prefix == '/') {
+                    return "/$context/" . trim($path, '/');
+                }
 
-            if (strpos($path, $context) === true) {
-                return '/' . trim($path, '/');
-            } else {
-                return "/$context/$prefix/" . trim($path, '/');
+                if (strpos($path, $context) === true) {
+                    return '/' . trim($path, '/');
+                } else {
+                    return "/$context/$prefix/" . trim($path, '/');
+                }
             }
         }
 
