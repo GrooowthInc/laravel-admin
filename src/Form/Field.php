@@ -1458,7 +1458,9 @@ class Field implements Renderable
             $this->value = $this->callback->call($this->form->model(), $this->value, $this);
         }
 
-        $this->addRequiredAttributeFromRules();
+        if (config('admin.required_validation')) {
+            $this->addRequiredAttributeFromRules();
+        }
 
         Admin::script($this->script);
 

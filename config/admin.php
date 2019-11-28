@@ -413,4 +413,12 @@ return [
     'extensions' => [
 
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Add Required Attribute From Rules
+    |--------------------------------------------------------------------------
+    |
+    */
+    'required_validation' => env('ADMIN_REQUIRED_VALIDATION', false),
 ];
