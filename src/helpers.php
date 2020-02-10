@@ -35,7 +35,11 @@ if (!function_exists('admin_url')) {
 
         $secure = $secure ?: (config('admin.https') || config('admin.secure'));
 
-        return url(admin_base_path($path), $parameters, $secure);
+        if (config('admin.https') || config('admin.secure')) {
+            return str_replace('http:', 'https:', url(admin_base_path($path), $parameters, $secure));
+        } else {
+            return url(admin_base_path($path), $parameters, $secure);
+        }
     }
 }
 
